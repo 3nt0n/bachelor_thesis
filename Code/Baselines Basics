@@ -1,0 +1,49 @@
+
+https://github.com/openai/baselines
+
+Baselines
+
+
+
+Training models:
+
+python -m baselines.run --alg=<name of the algorithm> --env=<environment_id> [additional arguments]
+
+Example:
+python -m baselines.run --alg=ppo2 --env=Humanoid-v2 --network=mlp --num_timesteps=2e7
+
+
+(See docstrings in common/models.py for description of network parameters for each type of model, and docstring for baselines/ppo2/ppo2.py/learn() for the description of the ppo2 hyperparameters.)
+
+
+
+Saving and loading the model:
+
+-use --save_path and --load_path options
+
+Example:
+-Train and Save:
+python -m baselines.run --alg=ppo2 --env=PongNoFrameskip-v4 --num_timesteps=2e7 --save_path=~/Bachelor_Thesis_AntonMai/Code/Models/pong_20M_ppo2
+
+-Load and Visualize:
+python -m baselines.run --alg=ppo2 --env=PongNoFrameskip-v4 --num_timesteps=0 --load_path=~/Bachelor_Thesis_AntonMai/Code/Models/pong_20M_ppo2 --play
+
+(NOTE: Mujoco environments require normalization to work properly, so we wrap them with VecNormalize wrapper. Currently, to ensure the models are saved with normalization (so that trained models can be restored and run without further training) the normalization coefficients are saved as tensorflow variables. This can decrease the performance somewhat, so if you require high-throughput steps with Mujoco and do not need saving/restoring the models, it may make sense to use numpy normalization instead. To do that, set 'use_tf=False` in baselines/run.py.)
+
+
+
+Logging and vizualizing learning curves etc:
+
+By default, all summary data, including progress, standard output, is saved to a unique directory in a temp folder, specified by a call to Python's tempfile.gettempdir(). The directory can be changed with the --log_path command-line option.
+
+Example:
+python -m baselines.run --alg=ppo2 --env=PongNoFrameskip-v4 --num_timesteps=2e7 --save_path=~/Bachelor_Thesis_AntonMai/Code/Models/pong_20M_ppo2 --log_path=~/Bachelor_Thesis_AntonMai/Code/logs/Pong/
+
+(NOTE: Please be aware that the logger will overwrite files of the same name in an existing directory, thus it's recommended that folder names be given a unique timestamp to prevent overwritten logs.
+Another way the temp directory can be changed is through the use of the $OPENAI_LOGDIR environment variable.)
+
+Examples how to load and display training data: https://github.com/openai/baselines/blob/master/docs/viz/viz.ipynb
+
+
+
+
