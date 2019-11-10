@@ -30,12 +30,21 @@
 ## Tools
 
 
-## OpenAI Gym
 
 
 
+## OpenAI
 
-## OpenAi Baselines
+### OpenAI - Gym
+ 
+ 
+ 
+ 
+ 
+
+
+
+### OpenAI - Baselines
 
 
 
