@@ -68,3 +68,4 @@
 
 ## Useful links
 
+Paper: Basketball throw - https://www.ias.informatik.tu-darmstadt.de/uploads/Teaching/RobotLearningProject/Michels_Hochlaender_PPRL_2013.pdf
