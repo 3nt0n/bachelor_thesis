@@ -35,6 +35,8 @@
 
 ## OpenAI
 
+Installing: https://github.com/openai/gym
+
 ### OpenAI - Gym
  
  
@@ -46,6 +48,17 @@
  https://stackoverflow.com/questions/45068568/how-to-create-a-new-gym-environment-in-openai
 
 
+ Running Environment in Python:
+ 
+ import gym
+ import gym_"customenv"
+ env = gym.make("EnvName")
+ env.reset()
+ env.step(env.action_space.sample())
+ env.render()
+ env.close()
+ 
+ 
  
  
  
