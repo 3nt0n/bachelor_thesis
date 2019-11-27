@@ -52,15 +52,21 @@ Installing: https://github.com/openai/gym
  
  import gym
  
+ 
  import gym_"customenv"
  
+ 
  env = gym.make("EnvName")
+ 
 
  env.reset()
  
+ 
  env.step(env.action_space.sample())
  
+ 
  env.render()
+ 
  
  env.close()
  
