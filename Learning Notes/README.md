@@ -1,5 +1,7 @@
 # Notes
 
+I am using Linux Ubuntu 16.04
+
 ## Machine Learning
 
 
@@ -27,7 +29,34 @@
 
 
 
-## Tools
+## Tools/Setup
+
+- A few tutorials which didn't work 100% for me anymore, the might still be helpful
+
+https://github.com/openai/mujoco-py
+https://github.com/reinforcement-learning-kr/pg_travel/wiki/Installing-Mujoco-py-on-Linux
+
+
+## Mujoco
+
+# Mujoco License
+
+Get a test license (30-days) first
+
+https://www.roboti.us/license.html
+
+**(Test first if everythong works and only get the student license (free) after 30 days if everything worked.)**
+
+
+# Mujoco Download
+
+Download the newest Mujoco https://www.roboti.us/index.html
+
+Make a new folder ~/.mujoco and put extract the downloaded Mujoco Folder inside it
+
+Put the mjkex.txt (your license) in the right folder (I am not sure where you have to put it, I copied and put it everywhere)
+
+
 
 
 
