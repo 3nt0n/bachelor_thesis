@@ -39,7 +39,7 @@ https://github.com/reinforcement-learning-kr/pg_travel/wiki/Installing-Mujoco-py
 
 ## Mujoco
 
-# Mujoco License
+#### Mujoco License
 
 Get a test license (30-days) first
 
