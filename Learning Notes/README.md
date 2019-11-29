@@ -110,6 +110,97 @@ Then run "python setup.py install" to install python-py
 Test if it worked: just run "python" in terminal and then run "import mujoco-py" in python. I just some files are generated and there are no errors, then it should be working
 
 
+
+
+#### Mujoco Modeling (when everything works) 
+
+http://www.mujoco.org/book/modeling.html
+
+Summary:
+
+Introduction:
+ Loading models: 
+   Can load Xml into MJCF or URDF format with mj_loadXML
+   Top-level element is mujoco for MJCF and robot for URDF
+   
+ Compiling models: 
+   Compiled into mjModel. Loading and Compiling are currently combined in one step
+
+ Saving models:
+   mjModel can be saved into binary MJB with mj_saveModel
+   (also possible to save as MJCF with mj_saveLastXML)
+   
+   
+MJCF Mechanisms:
+ Kinematic tree:
+   Main part of MJCF file is XML tree with nested body elements.
+   Top-level body is called worldbody.
+   A joint allows degree of freedoms between parent and child body
+   
+ Default settings:
+   You can set default values at the start.
+   You can define unlimited default classes.
+   
+   Example: 
+     <mujoco>
+      <default class="main">
+          <geom rgba="1 0 0 1"/>
+          <default class="sub">
+              <geom rgba="0 1 0 1"/>
+          </default>
+      </default>
+
+      <worldbody>
+          <geom type="box"/>
+          <body childclass="sub">
+              <geom type="ellipsoid"/>
+              <geom type="sphere" rgba="0 0 1 0"/>
+              <geom type="cylinder" class="main"/>
+          </geom>
+      </worldbody>
+    </mujoco>
+ 
+ 
+  Coordinate frames: 
+    There are global and local coordinates.
+    
+    Example (global):
+   <body>
+      <geom type="box" pos="1 0 0" size="0.5 0.5 0.5"/>
+   </body>
+   
+   
+  Frame orientations:
+    Spatial frames attributes:
+      quat : real(4), "1 0 0 0"
+      axisangle : real(4), optional
+      euler : real(3), optional
+      xyaxes : real(6), optional
+      zaxis : real(3), optional
+
+  Solver parameters:
+     #TODO
+     solimp : real(5), "0.9 0.95 0.001 0.5 2"
+     solref : real(2), "0.02 1"
+
+  Contact parameters:
+     geom pair can be explicitly defined with the XML element 'pair'.
+     Parameters:
+        condim - higher priority of two geoms condim is used. If same priority then maximum of oth condims
+        friction - contacts can have up to 5 friction coefficients, but geoms can only have 3. Higher priority geoms friction is used
+        margin,gap - maximum of those is used
+        solref, solimp - higher priority geoms is used. If same priority then weighted average is used
+        
+  Contact override:
+     override attribute of flag enables/disables this mechanism.
+     o_margin, o_solref, o_solimp attributes of option specify new solver parameters
+     
+  User parameters:
+     Some MJCF elements have the optional attribute user
+        
+
+
+
 ### OpenAI
 
 
