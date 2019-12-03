@@ -2,12 +2,12 @@
 
 I am using Linux Ubuntu 16.04
 
-python 3.5.2
-Tensorflow 1.14.0
-Mujoco200
-mujoco-py 2.0.2.5
-gym 0.14.0
-baselines 0.1.6
+python 3.5.2  
+Tensorflow 1.14.0  
+Mujoco200  
+mujoco-py 2.0.2.5  
+gym 0.14.0  
+baselines 0.1.6  
 
 
 
@@ -44,8 +44,8 @@ baselines 0.1.6
 
 - A few tutorials which didn't work 100% for me anymore, the might still be helpful
 
-https://github.com/openai/mujoco-py
-https://github.com/reinforcement-learning-kr/pg_travel/wiki/Installing-Mujoco-py-on-Linux
+https://github.com/openai/mujoco-py  
+https://github.com/reinforcement-learning-kr/pg_travel/wiki/Installing-Mujoco-py-on-Linux  
 https://www.tensorflow.org/install/pip?lang=python3
 
 
@@ -118,27 +118,27 @@ http://www.mujoco.org/book/modeling.html
 
 Summary:
 
-Introduction:
- Loading models: 
-   Can load Xml into MJCF or URDF format with mj_loadXML
+Introduction:  
+ Loading models:   
+   Can load Xml into MJCF or URDF format with mj_loadXML  
    Top-level element is mujoco for MJCF and robot for URDF
    
- Compiling models: 
+ Compiling models:   
    Compiled into mjModel. Loading and Compiling are currently combined in one step
 
- Saving models:
-   mjModel can be saved into binary MJB with mj_saveModel
+ Saving models:  
+   mjModel can be saved into binary MJB with mj_saveModel  
    (also possible to save as MJCF with mj_saveLastXML)
    
    
-MJCF Mechanisms:
- Kinematic tree:
-   Main part of MJCF file is XML tree with nested body elements.
-   Top-level body is called worldbody.
+MJCF Mechanisms:  
+ Kinematic tree:  
+   Main part of MJCF file is XML tree with nested body elements.  
+   Top-level body is called worldbody.  
    A joint allows degree of freedoms between parent and child body
    
- Default settings:
-   You can set default values at the start.
+ Default settings:  
+   You can set default values at the start.  
    You can define unlimited default classes.
    
    Example: 
@@ -161,7 +161,7 @@ MJCF Mechanisms:
     </mujoco>
  
  
-  Coordinate frames: 
+  Coordinate frames:   
     There are global and local coordinates.
     
     Example (global):
@@ -170,32 +170,32 @@ MJCF Mechanisms:
    </body>
    
    
-  Frame orientations:
-    Spatial frames attributes:
-      quat : real(4), "1 0 0 0"
-      axisangle : real(4), optional
-      euler : real(3), optional
-      xyaxes : real(6), optional
+  Frame orientations:  
+    Spatial frames attributes:  
+      quat : real(4), "1 0 0 0"  
+      axisangle : real(4), optional  
+      euler : real(3), optional  
+      xyaxes : real(6), optional  
       zaxis : real(3), optional
 
-  Solver parameters:
-     #TODO
-     solimp : real(5), "0.9 0.95 0.001 0.5 2"
+  Solver parameters:  
+     #TODO  
+     solimp : real(5), "0.9 0.95 0.001 0.5 2"  
      solref : real(2), "0.02 1"
 
-  Contact parameters:
-     geom pair can be explicitly defined with the XML element 'pair'.
-     Parameters:
-        condim - higher priority of two geoms condim is used. If same priority then maximum of oth condims
-        friction - contacts can have up to 5 friction coefficients, but geoms can only have 3. Higher priority geoms friction is used
-        margin,gap - maximum of those is used
+  Contact parameters:  
+     geom pair can be explicitly defined with the XML element 'pair'.  
+     Parameters:  
+        condim - higher priority of two geoms condim is used. If same priority then maximum of oth condims  
+        friction - contacts can have up to 5 friction coefficients, but geoms can only have 3. Higher priority geoms friction is used  
+        margin,gap - maximum of those is used  
         solref, solimp - higher priority geoms is used. If same priority then weighted average is used
         
-  Contact override:
-     override attribute of flag enables/disables this mechanism.
+  Contact override:  
+     override attribute of flag enables/disables this mechanism.  
      o_margin, o_solref, o_solimp attributes of option specify new solver parameters
      
-  User parameters:
+  User parameters:  
      Some MJCF elements have the optional attribute user
         
 
@@ -284,55 +284,55 @@ I had problems because my PC was too old and didn't support AVX instructions (In
 ## Gym Fetch Tree
 
 
-gym
-  setup.py
-  gym
-    core.py
-    error.py
-    logger.py
-    version.py
-    __init__.py
-    envs
-      registration.py
-      __init__.py
-      robotics
-        utils.py
-        rotations.py (??)
-        robot_env.py
-        fetch_env.py
-        __init__.py
-        assets
-          fetch
-            robot.xml
-            shared.xml
-            reach.xml
-            push.xml
-            slide.xml
-            pick_and_place.xml
-          stl
-            base_link_collision.stl          
-            bellows_link_collision.stl       
-            elbow_flex_link_collision.stl    
-            estop_link.stl                   
-            forearm_roll_link_collision.stl  
-            gripper_link.stl                 
-            head_pan_link_collision.stl      
-            head_tilt_link_collision.stl     
-            laser_link.stl
-            l_wheel_link_collision.stl
-            r_wheel_link_collision.stl
-            shoulder_lift_link_collision.stl
-            shoulder_pan_link_collision.stl
-            torso_fixed_link.stl
-            torso_lift_link_collision.stl
-            upperarm_roll_link_collision.stl
-            wrist_flex_link_collision.stl
-            wrist_roll_link_collision.stl            
-        fetch
-          reach.py
-          push.py
-          slide.py
-          pick_and_place.py
+gym  
+  setup.py  
+  gym  
+    core.py  
+    error.py  
+    logger.py  
+    version.py  
+    __init__.py  
+    envs  
+      registration.py  
+      __init__.py  
+      robotics  
+        utils.py  
+        rotations.py (??)  
+        robot_env.py  
+        fetch_env.py  
+        __init__.py  
+        assets  
+          fetch  
+            robot.xml  
+            shared.xml  
+            reach.xml  
+            push.xml  
+            slide.xml  
+            pick_and_place.xml  
+          stl  
+            base_link_collision.stl            
+            bellows_link_collision.stl         
+            elbow_flex_link_collision.stl      
+            estop_link.stl                     
+            forearm_roll_link_collision.stl    
+            gripper_link.stl                   
+            head_pan_link_collision.stl        
+            head_tilt_link_collision.stl       
+            laser_link.stl  
+            l_wheel_link_collision.stl  
+            r_wheel_link_collision.stl  
+            shoulder_lift_link_collision.stl  
+            shoulder_pan_link_collision.stl  
+            torso_fixed_link.stl  
+            torso_lift_link_collision.stl  
+            upperarm_roll_link_collision.stl  
+            wrist_flex_link_collision.stl  
+            wrist_roll_link_collision.stl              
+        fetch  
+          reach.py  
+          push.py  
+          slide.py  
+          pick_and_place.py  
 
 
 
