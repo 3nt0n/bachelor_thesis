@@ -280,6 +280,66 @@ I had problems because my PC was too old and didn't support AVX instructions (In
 ## Notes
 
 
+
+## Gym Fetch Tree
+
+
+gym
+  setup.py
+  gym
+    core.py
+    error.py
+    logger.py
+    version.py
+    __init__.py
+    envs
+      registration.py
+      __init__.py
+      robotics
+        utils.py
+        rotations.py (??)
+        robot_env.py
+        fetch_env.py
+        __init__.py
+        assets
+          fetch
+            robot.xml
+            shared.xml
+            reach.xml
+            push.xml
+            slide.xml
+            pick_and_place.xml
+          stl
+            base_link_collision.stl          
+            bellows_link_collision.stl       
+            elbow_flex_link_collision.stl    
+            estop_link.stl                   
+            forearm_roll_link_collision.stl  
+            gripper_link.stl                 
+            head_pan_link_collision.stl      
+            head_tilt_link_collision.stl     
+            laser_link.stl
+            l_wheel_link_collision.stl
+            r_wheel_link_collision.stl
+            shoulder_lift_link_collision.stl
+            shoulder_pan_link_collision.stl
+            torso_fixed_link.stl
+            torso_lift_link_collision.stl
+            upperarm_roll_link_collision.stl
+            wrist_flex_link_collision.stl
+            wrist_roll_link_collision.stl            
+        fetch
+          reach.py
+          push.py
+          slide.py
+          pick_and_place.py
+
+
+
+
+
+
+
 ## Useful links
 
 Paper: Basketball throw - https://www.ias.informatik.tu-darmstadt.de/uploads/Teaching/RobotLearningProject/Michels_Hochlaender_PPRL_2013.pdf
