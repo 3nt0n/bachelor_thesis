@@ -116,6 +116,8 @@ Test if it worked: just run "python" in terminal and then run "import mujoco-py"
 
 http://www.mujoco.org/book/modeling.html
 
+```bash
+
 Summary:
 
 Introduction:  
@@ -198,7 +200,7 @@ MJCF Mechanisms:
   User parameters:  
      Some MJCF elements have the optional attribute user
         
-
+```
 
 
 ### OpenAI
@@ -283,6 +285,7 @@ I had problems because my PC was too old and didn't support AVX instructions (In
 
 ## Gym Fetch Tree
 
+```bash
 
 gym  
   setup.py  
@@ -335,7 +338,7 @@ gym
           pick_and_place.py  
 
 
-
+```
 
 
 
