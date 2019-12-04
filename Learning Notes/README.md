@@ -345,19 +345,19 @@ gym
 -gym
     setup.py: Setting up everything for gym. Specify needed dependencies and packages for environments **No edit needed**  
     -gym  
-        core.py: #Todo  
+        core.py: super class for environments, everything needed (Env class, reset(), render(), step() is in here) **Check this for more understanding**  
         error.py: Error classes  
         logger.py: warning/error message if current "level" is too high  
         version.py: sets this version  
         __init__.py: put files and folders together  
         -envs  
-            registration.py  
-            __init__.py  
+            registration.py: super class for registering environments  
+            __init__.py: Register environments here **Edit if you insert new environment**  
             -robotics  
-                utils.py  
+                utils.py: checks if mujoco_py is installed, robot (mocap) movements are controlled here  
                 rotations.py (??)  
-                robot_env.py  
-                fetch_env.py  
+                robot_env.py: implementation of RoboticEnv methods **check this for understanding**  
+                fetch_env.py: #todo  
                 __init__.py  
                 -assets  
                     -fetch  
