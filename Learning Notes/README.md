@@ -342,6 +342,69 @@ gym
 
 
 
+-gym
+    setup.py: Setting up everything for gym. Specify needed dependencies and packages for environments **No edit needed**  
+    -gym  
+        core.py: #Todo  
+        error.py: Error classes  
+        logger.py: warning/error message if current "level" is too high  
+        version.py: sets this version  
+        __init__.py: put files and folders together  
+        -envs  
+            registration.py  
+            __init__.py  
+            -robotics  
+                utils.py  
+                rotations.py (??)  
+                robot_env.py  
+                fetch_env.py  
+                __init__.py  
+                -assets  
+                    -fetch  
+                        robot.xml  
+                        shared.xml  
+                        reach.xml  
+                        push.xml  
+                        slide.xml  
+                        pick_and_place.xml  
+                    -stl  
+                        base_link_collision.stl            
+                        bellows_link_collision.stl         
+                        elbow_flex_link_collision.stl      
+                        estop_link.stl                     
+                        forearm_roll_link_collision.stl    
+                        gripper_link.stl                   
+                        head_pan_link_collision.stl        
+                        head_tilt_link_collision.stl       
+                        laser_link.stl  
+                        l_wheel_link_collision.stl  
+                        r_wheel_link_collision.stl  
+                        shoulder_lift_link_collision.stl  
+                        shoulder_pan_link_collision.stl  
+                        torso_fixed_link.stl  
+                        torso_lift_link_collision.stl  
+                        upperarm_roll_link_collision.stl  
+                        wrist_flex_link_collision.stl  
+                        wrist_roll_link_collision.stl              
+                -fetch  
+                    reach.py  
+                    push.py  
+                    slide.py  
+                    pick_and_place.py  
+
+
+
+
+## Python Stuff
+
+setuptools: Tools for installing and setting up python packages
+sys: System-specific stuff, works strongly with interpreter
+os.path: pathname manipulation
+
+
+
+
+
 
 ## Useful links
 
