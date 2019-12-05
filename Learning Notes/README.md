@@ -338,9 +338,16 @@ gym
           pick_and_place.py  
 
 
+
 ```
 
 
+
+
+**Folder structure explained**
+
+
+```bash
 
 -gym
     setup.py: Setting up everything for gym. Specify needed dependencies and packages for environments **No edit needed**  
@@ -392,7 +399,7 @@ gym
                     slide.py  
                     pick_and_place.py  
 
-
+```
 
 
 ## Python Stuff
