@@ -199,6 +199,71 @@ MJCF Mechanisms:
      
   User parameters:  
      Some MJCF elements have the optional attribute user
+     
+  Algorithms and related settings:  
+     There are 3 algorithms for solving the optimization problem: CG, Newton, PGS. 
+     Newton is often the best, if not, try CG. PGS is not bad, but rarely the best
+     
+  Actuator shortcuts:  
+     actuators are accessible via XML element 'general', but also with motor, position, velocity, cylinder and muscle.
+     actuators interact with defaults, there is always only one actuator used.
+     What to do: Use same actuator shortcut in both default class and creation of actual element
+     
+  Actuator length range:
+     for muscle actuators, approximation to minimum and maximum that the actuator can reach
+     
+  Muscle actuators:  
+     #read website for lots of info
+     Example:
+      <actuator>
+          <muscle name="mymuscle" tendon="mytendon">
+      </actuator>
+   
+  Sensors:  
+     described in 'sensor'. evaluated by callback mjcb_sensor.
+     Xml-Attributes:
+        name : string, optional
+        noise : real, "0"
+        cutoff : real, "0"
+        user : real(nuser_sensor), "0 0 ..."
+
+  Composite objects:
+     collection of small objects to simulate things like ropes
+     
+     Example:
+      <composite type="grid" count="9 9 1" spacing="0.05" offset="0 0 1">
+        <skin material="matcarpet" inflate="0.001" subgrid="3" texcoord="true"/>
+        <geom size=".02"/>
+        <pin coord="0 0"/>
+        <pin coord="8 0"/>
+      </composite>
+      
+  Including files:
+     MJCF files can include other XML files with the 'include' element
+     
+  Naming Elements:
+     Only if they are needed or referenced. It is shorter to keep them nameless otherwise
+    
+  URDF extensions:
+     popular xml file format for robots. Needed for mesh directories.
+     
+     Example:
+     <robot name="darwin">
+        <mujoco>
+            <compiler meshdir="../mesh/darwin/" balanceinertia="true"/>
+        </mujoco>
+        <link name="MP_BODY">
+            ...
+     </robot>
+  
+
+
+
+     
+     
+  
+   
+     
         
 ```
 
@@ -364,17 +429,17 @@ gym
                 utils.py: checks if mujoco_py is installed, robot (mocap) movements are controlled here  
                 rotations.py (??)  
                 robot_env.py: implementation of RoboticEnv methods **check this for understanding**  
-                fetch_env.py: #todo  
-                __init__.py  
+                fetch_env.py: super class for fetch environments, attributes are set and explained here **check for understanding**
+                __init__.py: import environments here **Edit if you insert new environment**   
                 -assets  
                     -fetch  
-                        robot.xml  
+                        robot.xml:  
                         shared.xml  
                         reach.xml  
                         push.xml  
                         slide.xml  
                         pick_and_place.xml  
-                    -stl  
+                    -stl: Mesh files (Not accessible via editor)  
                         base_link_collision.stl            
                         bellows_link_collision.stl         
                         elbow_flex_link_collision.stl      
