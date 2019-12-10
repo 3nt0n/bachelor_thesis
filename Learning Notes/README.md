@@ -13,6 +13,24 @@ baselines 0.1.6
 
 
 
+
+
+## Physik
+
+### Reibung:
+
+https://www.leifiphysik.de/mechanik/reibung-und-fortbewegung
+
+Haftreibung: Für stehende Körper  
+
+Gleitreibung: Für bewegende Körper  
+
+
+Reibungszahl my berechnen: Reibungszahl = Reibungskraft / Gewichtskraft  
+Gewichtskraft = 9,81 N/kg * m
+
+
+
 ## Machine Learning
 
 
