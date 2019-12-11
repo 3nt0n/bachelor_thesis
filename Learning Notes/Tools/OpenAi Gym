@@ -1,0 +1,155 @@
+
+## Gym Fetch Tree
+
+```bash
+
+gym  
+  setup.py  
+  gym  
+    core.py  
+    error.py  
+    logger.py  
+    version.py  
+    __init__.py  
+    envs  
+      registration.py  
+      __init__.py  
+      robotics  
+        utils.py  
+        rotations.py (??)  
+        robot_env.py  
+        fetch_env.py  
+        __init__.py  
+        assets  
+          fetch  
+            robot.xml  
+            shared.xml  
+            reach.xml  
+            push.xml  
+            slide.xml  
+            pick_and_place.xml  
+          stl  
+            base_link_collision.stl            
+            bellows_link_collision.stl         
+            elbow_flex_link_collision.stl      
+            estop_link.stl                     
+            forearm_roll_link_collision.stl    
+            gripper_link.stl                   
+            head_pan_link_collision.stl        
+            head_tilt_link_collision.stl       
+            laser_link.stl  
+            l_wheel_link_collision.stl  
+            r_wheel_link_collision.stl  
+            shoulder_lift_link_collision.stl  
+            shoulder_pan_link_collision.stl  
+            torso_fixed_link.stl  
+            torso_lift_link_collision.stl  
+            upperarm_roll_link_collision.stl  
+            wrist_flex_link_collision.stl  
+            wrist_roll_link_collision.stl              
+        fetch  
+          reach.py  
+          push.py  
+          slide.py  
+          pick_and_place.py  
+
+
+
+```
+
+
+
+
+**Folder structure explained**
+
+
+```bash
+
+-gym
+    setup.py: Setting up everything for gym. Specify needed dependencies and packages for environments **No edit needed**  
+    -gym  
+        core.py: super class for environments, everything needed (Env class, reset(), render(), step() is in here) **Check this for more understanding**  
+        error.py: Error classes  
+        logger.py: warning/error message if current "level" is too high  
+        version.py: sets this version  
+        __init__.py: put files and folders together  
+        -envs  
+            registration.py: super class for registering environments  
+            __init__.py: Register environments here **Edit if you insert new environment**  
+            -robotics  
+                utils.py: checks if mujoco_py is installed, robot (mocap) movements are controlled here  
+                rotations.py (??)  
+                robot_env.py: implementation of RoboticEnv methods **check this for understanding**  
+                fetch_env.py: super class for fetch environments, attributes are set and explained here **check for understanding**
+                __init__.py: import environments here **Edit if you insert new environment**   
+                -assets  
+                    -fetch  
+                        robot.xml:  
+                        shared.xml  
+                        reach.xml  
+                        push.xml  
+                        slide.xml  
+                        pick_and_place.xml  
+                    -stl: Mesh files (Not accessible via editor)  
+                        base_link_collision.stl            
+                        bellows_link_collision.stl         
+                        elbow_flex_link_collision.stl      
+                        estop_link.stl                     
+                        forearm_roll_link_collision.stl    
+                        gripper_link.stl                   
+                        head_pan_link_collision.stl        
+                        head_tilt_link_collision.stl       
+                        laser_link.stl  
+                        l_wheel_link_collision.stl  
+                        r_wheel_link_collision.stl  
+                        shoulder_lift_link_collision.stl  
+                        shoulder_pan_link_collision.stl  
+                        torso_fixed_link.stl  
+                        torso_lift_link_collision.stl  
+                        upperarm_roll_link_collision.stl  
+                        wrist_flex_link_collision.stl  
+                        wrist_roll_link_collision.stl              
+                -fetch  
+                    reach.py  
+                    push.py  
+                    slide.py  
+                    pick_and_place.py  
+
+
+```
+
+
+
+
+ 
+ 
+ Create your own environment:
+ https://github.com/openai/gym/blob/master/docs/creating-environments.md
+ 
+ https://www.novatec-gmbh.de/en/blog/creating-a-gym-environment/
+ https://towardsdatascience.com/creating-a-custom-openai-gym-environment-for-stock-trading-be532be3910e
+ https://stackoverflow.com/questions/45068568/how-to-create-a-new-gym-environment-in-openai
+
+
+ Running Environment in Python:
+ 
+ import gym
+ 
+ 
+ import gym_"customenv"
+ 
+ 
+ env = gym.make("EnvName")
+ 
+
+ env.reset()
+ 
+ 
+ env.step(env.action_space.sample())
+ 
+ 
+ env.render()
+ 
+ 
+ env.close()
+ 

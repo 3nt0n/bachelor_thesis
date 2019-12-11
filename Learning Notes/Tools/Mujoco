@@ -1,0 +1,296 @@
+
+#### Mujoco Modeling (when everything works) 
+
+http://www.mujoco.org/book/modeling.html
+
+```bash
+
+Summary:
+
+Introduction:  
+ Loading models:   
+   Can load Xml into MJCF or URDF format with mj_loadXML  
+   Top-level element is mujoco for MJCF and robot for URDF
+   
+ Compiling models:   
+   Compiled into mjModel. Loading and Compiling are currently combined in one step
+
+ Saving models:  
+   mjModel can be saved into binary MJB with mj_saveModel  
+   (also possible to save as MJCF with mj_saveLastXML)
+   
+   
+MJCF Mechanisms:  
+ Kinematic tree:  
+   Main part of MJCF file is XML tree with nested body elements.  
+   Top-level body is called worldbody.  
+   A joint allows degree of freedoms between parent and child body
+   
+ Default settings:  
+   You can set default values at the start.  
+   You can define unlimited default classes.
+   
+   Example: 
+     <mujoco>
+      <default class="main">
+          <geom rgba="1 0 0 1"/>
+          <default class="sub">
+              <geom rgba="0 1 0 1"/>
+          </default>
+      </default>
+
+      <worldbody>
+          <geom type="box"/>
+          <body childclass="sub">
+              <geom type="ellipsoid"/>
+              <geom type="sphere" rgba="0 0 1 0"/>
+              <geom type="cylinder" class="main"/>
+          </geom>
+      </worldbody>
+    </mujoco>
+ 
+ 
+  Coordinate frames:   
+    There are global and local coordinates.
+    
+    Example (global):
+   <body>
+      <geom type="box" pos="1 0 0" size="0.5 0.5 0.5"/>
+   </body>
+   
+   
+  Frame orientations:  
+    Spatial frames attributes:  
+      quat : real(4), "1 0 0 0"  
+      axisangle : real(4), optional  
+      euler : real(3), optional  
+      xyaxes : real(6), optional  
+      zaxis : real(3), optional
+
+  Solver parameters:  
+     #TODO  
+     solimp : real(5), "0.9 0.95 0.001 0.5 2"  
+     solref : real(2), "0.02 1"
+
+  Contact parameters:  
+     geom pair can be explicitly defined with the XML element 'pair'.  
+     Parameters:  
+        condim - higher priority of two geoms condim is used. If same priority then maximum of oth condims  
+        friction - contacts can have up to 5 friction coefficients, but geoms can only have 3. Higher priority geoms friction is used  
+        margin,gap - maximum of those is used  
+        solref, solimp - higher priority geoms is used. If same priority then weighted average is used
+        
+  Contact override:  
+     override attribute of flag enables/disables this mechanism.  
+     o_margin, o_solref, o_solimp attributes of option specify new solver parameters
+     
+  User parameters:  
+     Some MJCF elements have the optional attribute user
+     
+  Algorithms and related settings:  
+     There are 3 algorithms for solving the optimization problem: CG, Newton, PGS. 
+     Newton is often the best, if not, try CG. PGS is not bad, but rarely the best
+     
+  Actuator shortcuts:  
+     actuators are accessible via XML element 'general', but also with motor, position, velocity, cylinder and muscle.
+     actuators interact with defaults, there is always only one actuator used.
+     What to do: Use same actuator shortcut in both default class and creation of actual element
+     
+  Actuator length range:
+     for muscle actuators, approximation to minimum and maximum that the actuator can reach
+     
+  Muscle actuators:  
+     #read website for lots of info
+     Example:
+      <actuator>
+          <muscle name="mymuscle" tendon="mytendon">
+      </actuator>
+   
+  Sensors:  
+     described in 'sensor'. evaluated by callback mjcb_sensor.
+     Xml-Attributes:
+        name : string, optional
+        noise : real, "0"
+        cutoff : real, "0"
+        user : real(nuser_sensor), "0 0 ..."
+
+  Composite objects:
+     collection of small objects to simulate things like ropes
+     
+     Example:
+      <composite type="grid" count="9 9 1" spacing="0.05" offset="0 0 1">
+        <skin material="matcarpet" inflate="0.001" subgrid="3" texcoord="true"/>
+        <geom size=".02"/>
+        <pin coord="0 0"/>
+        <pin coord="8 0"/>
+      </composite>
+      
+  Including files:
+     MJCF files can include other XML files with the 'include' element
+     
+  Naming Elements:
+     Only if they are needed or referenced. It is shorter to keep them nameless otherwise
+    
+  URDF extensions:
+     popular xml file format for robots. Needed for mesh directories.
+     
+     Example:
+     <robot name="darwin">
+        <mujoco>
+            <compiler meshdir="../mesh/darwin/" balanceinertia="true"/>
+        </mujoco>
+        <link name="MP_BODY">
+            ...
+     </robot>
+  
+       
+        
+```
+
+
+#### Mujoco XML Reference
+
+
+```bash
+
+ mujoco  
+        compiler           
+             lengthrange   
+     
+        option        
+             flag     
+   
+        size
+
+        visual        
+            global
+            quality
+            headlight
+            map
+            scale
+            rgba     
+   
+        statistic
+
+        default        
+            mesh
+            material
+            joint
+            geom
+            site
+            camera
+            light
+            pair
+            equality
+            tendon
+            general
+            motor
+            position
+            velocity
+            cylinder
+            muscle  
+      
+        custom        
+            numeric
+            text
+            tuple            
+                element            
+        
+        asset        
+            texture
+            hfield
+            mesh
+            skin            
+	            bone            
+            material        
+        (world) body        
+            inertial
+            joint
+            freejoint
+            geom
+            site
+            camera
+            light
+            composite            
+	            joint
+	            tendon
+	            geom
+	            site
+                    skin
+	            pin
+                    
+        contact        
+            pair
+            exclude
+        
+        equality        
+            connect
+            weld
+            joint
+            tendon
+            distance
+        
+        tendon        
+            spatial            
+                site
+                geom
+                pulley              
+            fixed            
+                joint
+                    
+        actuator        
+            general
+            motor
+            position
+            velocity
+            cylinder
+            muscle
+          
+        sensor        
+            touch
+            accelerometer
+            velocimeter
+            gyro
+            force
+            torque
+            magnetometer
+            rangefinder
+            jointpos
+            jointvel
+            tendonpos
+            tendonvel
+            actuatorpos
+            actuatorvel
+            actuatorfrc
+            ballquat
+            ballangvel
+            jointlimitpos
+            jointlimitvel
+            jointlimitfrc
+            tendonlimitpos
+            tendonlimitvel
+            tendonlimitfrc
+            framepos
+            framequat
+            framexaxis
+            frameyaxis
+            framezaxis
+            framelinvel
+            frameangvel
+            framelinacc
+            frameangacc
+            subtreecom
+            subtreelinvel
+            subtreeangmom
+            user
+          
+        keyframe        
+            key
+
+```
+
+
+
+
+
+

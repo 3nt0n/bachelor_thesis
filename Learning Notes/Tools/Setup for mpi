@@ -1,0 +1,1435 @@
+I am using Ubuntu 16.04
+
+
+I put every Input/Output from my terminal in here. I omitted some things like spelling mistakes or 'pip list's to see what I am missing.
+
+At the bottom I have a short version with only the inputs. Maybe that is easier for you to work with.
+Goal of this is to get mpirun to work.
+
+
+
+My working virtual environment now:
+
+> pip list
+
+Package                       Version   Location                       
+----------------------------- --------- -------------------------------
+absl-py                       0.8.0     
+alabaster                     0.7.12    
+astor                         0.8.0     
+atari-py                      0.2.6     
+atomicwrites                  1.3.0     
+attrs                         19.1.0    
+Babel                         2.7.0     
+backcall                      0.1.0     
+baseline                      0.2.1     
+baselines                     0.1.6     /home/anton/openai/baselines   
+bleach                        1.5.0     
+certifi                       2019.9.11 
+cffi                          1.12.3    
+chardet                       3.0.4     
+Click                         7.0       
+cloudpickle                   1.2.2     
+cycler                        0.10.0    
+Cython                        0.29.13   
+decorator                     4.4.0     
+defusedxml                    0.6.0     
+docutils                      0.15.2    
+entrypoints                   0.3       
+enum34                        1.1.6     
+filelock                      3.0.12    
+future                        0.18.0    
+gast                          0.2.2     
+glfw                          1.8.3     
+glob2                         0.7       
+google-pasta                  0.1.7     
+grpcio                        1.24.1    
+gym                           0.14.0    /home/anton/openai/gym         
+gym-pushball                  0.0.1     /home/anton/openai/gym_pushball
+gym-toss                      0.0.1     /home/anton/openai/gym_toss    
+h5py                          2.10.0    
+html5lib                      0.9999999 
+idna                          2.8       
+ImageHash                     4.0       
+imageio                       2.5.0     
+imagesize                     1.1.0     
+importlib-metadata            0.23      
+imutils                       0.5.3     
+ipdb                          0.12.2    
+ipykernel                     5.1.2     
+ipython                       7.8.0     
+ipython-genutils              0.2.0     
+ipywidgets                    7.5.1     
+jedi                          0.15.1    
+Jinja2                        2.10.1    
+joblib                        0.13.2    
+jsonschema                    3.1.1     
+jupyter                       1.0.0     
+jupyter-client                5.3.4     
+jupyter-console               6.0.0     
+jupyter-core                  4.6.0     
+Keras                         2.1.0     
+Keras-Applications            1.0.8     
+Keras-Preprocessing           1.0.5     
+kiwisolver                    1.1.0     
+lockfile                      0.12.2    
+Markdown                      3.1.1     
+MarkupSafe                    1.1.1     
+matplotlib                    3.0.3     
+mistune                       0.8.4     
+mock                          3.0.5     
+more-itertools                7.2.0     
+mpi4py                        3.0.2     
+mujoco-py                     2.0.2.5   
+nbconvert                     5.6.0     
+nbformat                      4.4.0     
+networkx                      2.3       
+notebook                      6.0.1     
+numpy                         1.16.4    
+numpydoc                      0.9.1     
+opencv-python                 4.1.1.26  
+opt-einsum                    3.1.0     
+packaging                     19.2      
+pandas                        0.24.2    
+pandocfilters                 1.4.2     
+parso                         0.5.1     
+pathlib2                      2.3.5     
+pexpect                       4.7.0     
+pickleshare                   0.7.5     
+Pillow                        6.1.0     
+pip                           19.3.1    
+pip-autoremove                0.9.1     
+pluggy                        0.13.0    
+progressbar2                  3.46.1    
+prometheus-client             0.7.1     
+prompt-toolkit                2.0.9     
+protobuf                      3.9.2     
+ptyprocess                    0.6.0     
+py                            1.8.0     
+pycparser                     2.19      
+pyglet                        1.3.2     
+Pygments                      2.4.2     
+pyparsing                     2.4.2     
+pyrsistent                    0.15.4    
+pytest                        5.2.0     
+pytest-instafail              0.3.0     
+python-dateutil               2.8.0     
+python-utils                  2.3.0     
+pytz                          2019.2    
+PyWavelets                    1.0.3     
+PyYAML                        5.1.2     
+pyzmq                         18.1.0    
+qtconsole                     4.5.5     
+requests                      2.22.0    
+scikit-image                  0.15.0    
+scikit-learn                  0.21.3    
+scipy                         1.3.1     
+seaborn                       0.9.0     
+Send2Trash                    1.5.0     
+setuptools                    41.4.0    
+six                           1.12.0    
+snowballstemmer               1.9.1     
+Sphinx                        2.2.0     
+sphinx-rtd-theme              0.4.3     
+sphinxcontrib-applehelp       1.0.1     
+sphinxcontrib-devhelp         1.0.1     
+sphinxcontrib-htmlhelp        1.0.2     
+sphinxcontrib-jsmath          1.0.1     
+sphinxcontrib-qthelp          1.0.2     
+sphinxcontrib-serializinghtml 1.1.3     
+tensorboard                   1.14.0    
+tensorflow                    1.14.0    
+tensorflow-estimator          1.14.0    
+termcolor                     1.1.0     
+terminado                     0.8.2     
+testpath                      0.4.2     
+tornado                       6.0.3     
+tqdm                          4.36.1    
+traitlets                     4.3.2     
+urllib3                       1.25.6    
+wcwidth                       0.1.7     
+Werkzeug                      0.16.0    
+wheel                         0.33.6    
+widgetsnbextension            3.5.1     
+wrapt                         1.11.2    
+zipp                          0.6.0   
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+
+
+
+##########################################################
+
+Lets make a new virtual environment and get mpirun to work.
+
+
+> mkvirtualenv test
+
+Using base prefix '/usr'
+New python executable in /home/anton/.virtualenvs/test/bin/python3
+Also creating executable in /home/anton/.virtualenvs/test/bin/python
+Installing setuptools, pip, wheel...
+done.
+virtualenvwrapper.user_scripts creating /home/anton/.virtualenvs/test/bin/predeactivate
+virtualenvwrapper.user_scripts creating /home/anton/.virtualenvs/test/bin/postdeactivate
+virtualenvwrapper.user_scripts creating /home/anton/.virtualenvs/test/bin/preactivate
+virtualenvwrapper.user_scripts creating /home/anton/.virtualenvs/test/bin/postactivate
+virtualenvwrapper.user_scripts creating /home/anton/.virtualenvs/test/bin/get_env_details
+
+> workon test
+
+
+> pip install tensorflow==1.14
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting tensorflow==1.14
+  Downloading https://files.pythonhosted.org/packages/7c/fb/7b2c5b3e85ad335b53ca67deb2ef4af574dc0a8759f43b7f45e15005e449/tensorflow-1.14.0-cp35-cp35m-manylinux1_x86_64.whl (109.2MB)
+     |████████████████████████████████| 109.2MB 727kB/s 
+Collecting six>=1.10.0
+  Downloading https://files.pythonhosted.org/packages/65/26/32b8464df2a97e6dd1b656ed26b2c194606c16fe163c695a992b36c11cdf/six-1.13.0-py2.py3-none-any.whl
+Collecting keras-applications>=1.0.6
+  Downloading https://files.pythonhosted.org/packages/71/e3/19762fdfc62877ae9102edf6342d71b28fbfd9dea3d2f96a882ce099b03f/Keras_Applications-1.0.8-py3-none-any.whl (50kB)
+     |████████████████████████████████| 51kB 465kB/s 
+Collecting grpcio>=1.8.6
+  Downloading https://files.pythonhosted.org/packages/2b/dd/ad8ae8e63b4ec93058dec07c3fdd2b702a34c43744dd84060abe20213fed/grpcio-1.25.0-cp35-cp35m-manylinux2010_x86_64.whl (2.4MB)
+     |████████████████████████████████| 2.4MB 1.1MB/s 
+Collecting google-pasta>=0.1.6
+  Downloading https://files.pythonhosted.org/packages/c3/fd/1e86bc4837cc9a3a5faf3db9b1854aa04ad35b5f381f9648fbe81a6f94e4/google_pasta-0.1.8-py3-none-any.whl (57kB)
+     |████████████████████████████████| 61kB 544kB/s 
+Collecting termcolor>=1.1.0
+  Downloading https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz
+Collecting absl-py>=0.7.0
+  Downloading https://files.pythonhosted.org/packages/3b/72/e6e483e2db953c11efa44ee21c5fdb6505c4dffa447b4263ca8af6676b62/absl-py-0.8.1.tar.gz (103kB)
+     |████████████████████████████████| 112kB 861kB/s 
+Collecting wrapt>=1.11.1
+  Downloading https://files.pythonhosted.org/packages/23/84/323c2415280bc4fc880ac5050dddfb3c8062c2552b34c2e512eb4aa68f79/wrapt-1.11.2.tar.gz
+Collecting astor>=0.6.0
+  Downloading https://files.pythonhosted.org/packages/d1/4f/950dfae467b384fc96bc6469de25d832534f6b4441033c39f914efd13418/astor-0.8.0-py2.py3-none-any.whl
+Collecting tensorboard<1.15.0,>=1.14.0
+  Downloading https://files.pythonhosted.org/packages/91/2d/2ed263449a078cd9c8a9ba50ebd50123adf1f8cfbea1492f9084169b89d9/tensorboard-1.14.0-py3-none-any.whl (3.1MB)
+     |████████████████████████████████| 3.2MB 460kB/s 
+Collecting numpy<2.0,>=1.14.5
+  Downloading https://files.pythonhosted.org/packages/ab/e9/2561dbfbc05146bffa02167e09b9902e273decb2dc4cd5c43314ede20312/numpy-1.17.4-cp35-cp35m-manylinux1_x86_64.whl (19.8MB)
+     |████████████████████████████████| 19.8MB 888kB/s 
+Requirement already satisfied: wheel>=0.26 in ./.virtualenvs/test/lib/python3.5/site-packages (from tensorflow==1.14) (0.33.6)
+Collecting keras-preprocessing>=1.0.5
+  Downloading https://files.pythonhosted.org/packages/28/6a/8c1f62c37212d9fc441a7e26736df51ce6f0e38455816445471f10da4f0a/Keras_Preprocessing-1.1.0-py2.py3-none-any.whl (41kB)
+     |████████████████████████████████| 51kB 598kB/s 
+Collecting gast>=0.2.0
+  Downloading https://files.pythonhosted.org/packages/1f/04/4e36c33f8eb5c5b6c622a1f4859352a6acca7ab387257d4b3c191d23ec1d/gast-0.3.2.tar.gz
+Collecting protobuf>=3.6.1
+  Downloading https://files.pythonhosted.org/packages/c1/1b/fb8a213ee760ae8b5a66b14babebe40d448843f81bf4777f7375b3d387ed/protobuf-3.11.0-cp35-cp35m-manylinux1_x86_64.whl (1.3MB)
+     |████████████████████████████████| 1.3MB 862kB/s 
+Collecting tensorflow-estimator<1.15.0rc0,>=1.14.0rc0
+  Downloading https://files.pythonhosted.org/packages/3c/d5/21860a5b11caf0678fbc8319341b0ae21a07156911132e0e71bffed0510d/tensorflow_estimator-1.14.0-py2.py3-none-any.whl (488kB)
+     |████████████████████████████████| 491kB 760kB/s 
+Collecting h5py
+  Downloading https://files.pythonhosted.org/packages/10/56/d5c53cd170529bb40cd7dd43e2b68944cb65a45f65ab4c78a68f4ac9e51e/h5py-2.10.0-cp35-cp35m-manylinux1_x86_64.whl (2.8MB)
+     |████████████████████████████████| 2.8MB 977kB/s 
+Collecting markdown>=2.6.8
+  Downloading https://files.pythonhosted.org/packages/c0/4e/fd492e91abdc2d2fcb70ef453064d980688762079397f779758e055f6575/Markdown-3.1.1-py2.py3-none-any.whl (87kB)
+     |████████████████████████████████| 92kB 1.1MB/s 
+Collecting werkzeug>=0.11.15
+  Downloading https://files.pythonhosted.org/packages/ce/42/3aeda98f96e85fd26180534d36570e4d18108d62ae36f87694b476b83d6f/Werkzeug-0.16.0-py2.py3-none-any.whl (327kB)
+     |████████████████████████████████| 327kB 829kB/s 
+Requirement already satisfied: setuptools>=41.0.0 in ./.virtualenvs/test/lib/python3.5/site-packages (from tensorboard<1.15.0,>=1.14.0->tensorflow==1.14) (42.0.2)
+Building wheels for collected packages: termcolor, absl-py, wrapt, gast
+  WARNING: Building wheel for termcolor failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/7c'
+  WARNING: Building wheel for absl-py failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/a7'
+  WARNING: Building wheel for wrapt failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/d7'
+  WARNING: Building wheel for gast failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/59'
+Failed to build termcolor absl-py wrapt gast
+Installing collected packages: six, numpy, h5py, keras-applications, grpcio, google-pasta, termcolor, absl-py, wrapt, astor, markdown, protobuf, werkzeug, tensorboard, keras-preprocessing, gast, tensorflow-estimator, tensorflow
+    Running setup.py install for termcolor ... done
+    Running setup.py install for absl-py ... done
+    Running setup.py install for wrapt ... done
+    Running setup.py install for gast ... done
+Successfully installed absl-py-0.8.1 astor-0.8.0 gast-0.3.2 google-pasta-0.1.8 grpcio-1.25.0 h5py-2.10.0 keras-applications-1.0.8 keras-preprocessing-1.1.0 markdown-3.1.1 numpy-1.17.4 protobuf-3.11.0 six-1.13.0 tensorboard-1.14.0 tensorflow-1.14.0 tensorflow-estimator-1.14.0 termcolor-1.1.0 werkzeug-0.16.0 wrapt-1.11.2
+
+
+> python --version
+
+Python 3.5.2
+
+> cd
+> mkdir abc
+> cd abc 
+
+
+> git clone https://github.com/openai/gym.git
+
+Cloning into 'gym'...
+remote: Enumerating objects: 10172, done.
+remote: Total 10172 (delta 0), reused 0 (delta 0), pack-reused 10172
+Receiving objects: 100% (10172/10172), 3.92 MiB | 1.01 MiB/s, done.
+Resolving deltas: 100% (6849/6849), done.
+Checking connectivity... done.
+
+> cd gym
+> pip install -e .
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Obtaining file:///home/anton/abc/gym
+Collecting scipy
+  Downloading https://files.pythonhosted.org/packages/1e/9c/4d7a573d49c449c95d33df6648a62a522ec46403f13ffe2c8cd3f094f746/scipy-1.3.3-cp35-cp35m-manylinux1_x86_64.whl (25.1MB)
+     |████████████████████████████████| 25.1MB 965kB/s 
+Requirement already satisfied: numpy>=1.10.4 in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from gym==0.15.4) (1.17.4)
+Requirement already satisfied: six in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from gym==0.15.4) (1.13.0)
+Collecting pyglet<=1.3.2,>=1.2.0
+  Downloading https://files.pythonhosted.org/packages/1c/fc/dad5eaaab68f0c21e2f906a94ddb98175662cc5a654eee404d59554ce0fa/pyglet-1.3.2-py2.py3-none-any.whl (1.0MB)
+     |████████████████████████████████| 1.0MB 967kB/s 
+Collecting cloudpickle~=1.2.0
+  Downloading https://files.pythonhosted.org/packages/c1/49/334e279caa3231255725c8e860fa93e72083567625573421db8875846c14/cloudpickle-1.2.2-py2.py3-none-any.whl
+Collecting opencv-python
+  Downloading https://files.pythonhosted.org/packages/59/dc/f4a3c35673512e3bfaa48c4e3b6c1bc3e262a8a2bfc9ffef986780d15ad3/opencv_python-4.1.2.30-cp35-cp35m-manylinux1_x86_64.whl (28.3MB)
+     |████████████████████████████████| 28.3MB 1.1MB/s 
+Collecting future
+  Downloading https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz (829kB)
+     |████████████████████████████████| 829kB 729kB/s 
+Building wheels for collected packages: future
+  WARNING: Building wheel for future failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/8b'
+Failed to build future
+Installing collected packages: scipy, future, pyglet, cloudpickle, opencv-python, gym
+    Running setup.py install for future ... done
+  Running setup.py develop for gym
+Successfully installed cloudpickle-1.2.2 future-0.18.2 gym opencv-python-4.1.2.30 pyglet-1.3.2 scipy-1.3.3
+
+> cd ..
+> sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
+
+[sudo] password for anton:
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:2 http://de.archive.ubuntu.com/ubuntu xenial InRelease                     
+Hit:3 http://ppa.launchpad.net/graphics-drivers/ppa/ubuntu xenial InRelease    
+Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]     
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release                     
+Hit:6 http://de.archive.ubuntu.com/ubuntu xenial-updates InRelease             
+Hit:7 http://ppa.launchpad.net/obsproject/obs-studio/ubuntu xenial InRelease   
+Hit:8 http://de.archive.ubuntu.com/ubuntu xenial-backports InRelease           
+Hit:9 http://archive.canonical.com/ubuntu xenial InRelease                     
+Hit:11 https://packagecloud.io/slacktechnologies/slack/debian jessie InRelease 
+Fetched 109 kB in 1s (64,6 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-dev is already the newest version (3.5.1-3).
+libopenmpi-dev is already the newest version (1.10.2-8ubuntu1).
+cmake is already the newest version (3.5.1-1ubuntu3).
+zlib1g-dev is already the newest version (1:1.2.8.dfsg-2ubuntu4.1).
+0 upgraded, 0 newly installed, 0 to remove and 8 not upgraded.
+
+> git clone https://github.com/openai/baselines.git
+
+Cloning into 'baselines'...
+remote: Enumerating objects: 3612, done.
+remote: Total 3612 (delta 0), reused 0 (delta 0), pack-reused 3612
+Receiving objects: 100% (3612/3612), 6.46 MiB | 1.00 MiB/s, done.
+Resolving deltas: 100% (2416/2416), done.
+Checking connectivity... done.
+
+> cd baselines/
+> pip install -e .
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Obtaining file:///home/anton/abc/baselines
+Requirement already satisfied: gym<0.16.0,>=0.15.4 in /home/anton/abc/gym (from baselines==0.1.6) (0.15.4)
+Requirement already satisfied: scipy in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from baselines==0.1.6) (1.3.3)
+Collecting tqdm
+  Downloading https://files.pythonhosted.org/packages/a5/13/cd55c23e3e158ed5b87cae415ee3844fc54cb43803fa3a0a064d23ecb883/tqdm-4.40.0-py2.py3-none-any.whl (54kB)
+     |████████████████████████████████| 61kB 533kB/s 
+Collecting joblib
+  Downloading https://files.pythonhosted.org/packages/8f/42/155696f85f344c066e17af287359c9786b436b1bf86029bb3411283274f3/joblib-0.14.0-py2.py3-none-any.whl (294kB)
+     |████████████████████████████████| 296kB 935kB/s 
+Requirement already satisfied: cloudpickle in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from baselines==0.1.6) (1.2.2)
+Collecting click
+  Downloading https://files.pythonhosted.org/packages/fa/37/45185cb5abbc30d7257104c434fe0b07e5a195a6847506c074527aa599ec/Click-7.0-py2.py3-none-any.whl (81kB)
+     |████████████████████████████████| 81kB 1.0MB/s 
+Requirement already satisfied: opencv-python in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from baselines==0.1.6) (4.1.2.30)
+Requirement already satisfied: numpy>=1.10.4 in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from gym<0.16.0,>=0.15.4->baselines==0.1.6) (1.17.4)
+Requirement already satisfied: six in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from gym<0.16.0,>=0.15.4->baselines==0.1.6) (1.13.0)
+Requirement already satisfied: pyglet<=1.3.2,>=1.2.0 in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from gym<0.16.0,>=0.15.4->baselines==0.1.6) (1.3.2)
+Requirement already satisfied: future in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from pyglet<=1.3.2,>=1.2.0->gym<0.16.0,>=0.15.4->baselines==0.1.6) (0.18.2)
+Installing collected packages: tqdm, joblib, click, baselines
+  Running setup.py develop for baselines
+Successfully installed baselines click-7.0 joblib-0.14.0 tqdm-4.40.0
+
+
+> git clone https://github.com/openai/mujoco-py.git
+
+Cloning into 'mujoco-py'...
+remote: Enumerating objects: 1962, done.
+remote: Total 1962 (delta 0), reused 0 (delta 0), pack-reused 1962
+Receiving objects: 100% (1962/1962), 5.56 MiB | 1.05 MiB/s, done.
+Resolving deltas: 100% (1207/1207), done.
+Checking connectivity... done.
+
+> cd mujoco-py/
+
+> pip install -e .
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Obtaining file:///home/anton/abc/mujoco-py
+  Installing build dependencies ... done
+  WARNING: Missing build requirements in pyproject.toml for file:///home/anton/abc/mujoco-py.
+  WARNING: The project does not specify a build backend, and pip cannot fall back to setuptools without 'wheel'.
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+    Preparing wheel metadata ... done
+ERROR: Package 'mujoco-py' requires a different Python: 3.5.2 not in '>=3.6'
+
+
+
+--(Try https://github.com/openai/mujoco-py/issues/198)
+
+> pip install -r requirements.txt 
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting glfw>=1.4.0
+  Downloading https://files.pythonhosted.org/packages/c8/4b/994bb5712f2b6476c1ba43685e23830ccda650f0b2f0e530647cfd8c9684/glfw-1.8.5.tar.gz
+Requirement already satisfied: numpy>=1.11 in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from -r requirements.txt (line 3)) (1.17.4)
+Collecting Cython>=0.27.2
+  Downloading https://files.pythonhosted.org/packages/57/a7/90eda986421c74b104ec35f84d4a7fbaa57cc7d8edc0865615695156a0df/Cython-0.29.14-cp35-cp35m-manylinux1_x86_64.whl (2.1MB)
+     |████████████████████████████████| 2.1MB 1.1MB/s 
+Collecting imageio>=2.1.2
+  Downloading https://files.pythonhosted.org/packages/1a/de/f7f985018f462ceeffada7f6e609919fbcc934acd9301929cba14bc2c24a/imageio-2.6.1-py3-none-any.whl (3.3MB)
+     |████████████████████████████████| 3.3MB 1.1MB/s 
+Collecting cffi>=1.10
+  Downloading https://files.pythonhosted.org/packages/a8/8d/986e0c4e2aa3b24db56a0affc50d1a379150e3c4da45d51d549dc2697d53/cffi-1.13.2-cp35-cp35m-manylinux1_x86_64.whl (397kB)
+     |████████████████████████████████| 399kB 817kB/s 
+Collecting fasteners~=0.15
+  Downloading https://files.pythonhosted.org/packages/18/bd/55eb2d6397b9c0e263af9d091ebdb756b15756029b3cededf6461481bc63/fasteners-0.15-py2.py3-none-any.whl
+Collecting pillow
+  Downloading https://files.pythonhosted.org/packages/dc/bd/ba64273d3fdeb68c74b040e3e42f5a3c2f643e8e65b0b1ad0b18425ed67a/Pillow-6.2.1-cp35-cp35m-manylinux1_x86_64.whl (2.1MB)
+     |████████████████████████████████| 2.1MB 1.1MB/s 
+Collecting pycparser
+  Downloading https://files.pythonhosted.org/packages/68/9e/49196946aee219aead1290e00d1e7fdeab8567783e83e1b9ab5585e6206a/pycparser-2.19.tar.gz (158kB)
+     |████████████████████████████████| 163kB 794kB/s 
+Collecting monotonic>=0.1
+  Downloading https://files.pythonhosted.org/packages/ac/aa/063eca6a416f397bd99552c534c6d11d57f58f2e94c14780f3bbf818c4cf/monotonic-1.5-py2.py3-none-any.whl
+Requirement already satisfied: six in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from fasteners~=0.15->-r requirements.txt (line 7)) (1.13.0)
+Building wheels for collected packages: glfw, pycparser
+  WARNING: Building wheel for glfw failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/76'
+  WARNING: Building wheel for pycparser failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/f2'
+Failed to build glfw pycparser
+Installing collected packages: glfw, Cython, pillow, imageio, pycparser, cffi, monotonic, fasteners
+    Running setup.py install for glfw ... done
+    Running setup.py install for pycparser ... done
+Successfully installed Cython-0.29.14 cffi-1.13.2 fasteners-0.15 glfw-1.8.5 imageio-2.6.1 monotonic-1.5 pillow-6.2.1 pycparser-2.19
+
+> pip install -r requirements.dev.txt 
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting imagehash>=3.4
+  Downloading https://files.pythonhosted.org/packages/58/47/e639093d67f54e59163f9d259575a10bd16e4d0ff3bb1259ba64b9c77a42/ImageHash-4.0-py2.py3-none-any.whl (295kB)
+     |████████████████████████████████| 296kB 461kB/s 
+Collecting ipdb
+  Downloading https://files.pythonhosted.org/packages/df/78/3d0d7253dc85549db182cbe4b43b30c506c84008fcd39898122c9b6306a9/ipdb-0.12.2.tar.gz
+Requirement already satisfied: Pillow>=4.0.0 in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from -r requirements.dev.txt (line 3)) (6.2.1)
+Requirement already satisfied: pycparser>=2.17.0 in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from -r requirements.dev.txt (line 4)) (2.19)
+Collecting pytest>=3.0.5
+  Downloading https://files.pythonhosted.org/packages/da/ed/d22d7f06eb1107271694ed2171b9d52e8eea38d9757124e75ba13324ac77/pytest-5.3.1-py3-none-any.whl (233kB)
+     |████████████████████████████████| 235kB 831kB/s 
+Collecting pytest-instafail==0.3.0
+  Downloading https://files.pythonhosted.org/packages/11/d0/371d9e86e823c775e9f23ad797d7738b1afa94223ac82c20b5bdc735ea1d/pytest-instafail-0.3.0.tar.gz
+Collecting sphinx
+  Downloading https://files.pythonhosted.org/packages/1d/58/a547b02946af1cf337c701cafcf3267065c1c83d6e701f540961f4907b5d/Sphinx-2.2.1-py3-none-any.whl (3.3MB)
+     |████████████████████████████████| 3.3MB 999kB/s 
+Collecting sphinx_rtd_theme
+  Downloading https://files.pythonhosted.org/packages/60/b4/4df37087a1d36755e3a3bfd2a30263f358d2dea21938240fa02313d45f51/sphinx_rtd_theme-0.4.3-py2.py3-none-any.whl (6.4MB)
+     |████████████████████████████████| 6.4MB 353kB/s 
+Collecting numpydoc
+  Downloading https://files.pythonhosted.org/packages/6a/f3/7cfe4c616e4b9fe05540256cc9c6661c052c8a4cec2915732793b36e1843/numpydoc-0.9.1.tar.gz
+Requirement already satisfied: scipy in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from imagehash>=3.4->-r requirements.dev.txt (line 1)) (1.3.3)
+Collecting pywavelets
+  Downloading https://files.pythonhosted.org/packages/7f/25/b2a6099c528fee4a132e1070033191dbaacded2ebe48804ec31b4c9aac13/PyWavelets-1.1.1-cp35-cp35m-manylinux1_x86_64.whl (4.4MB)
+     |████████████████████████████████| 4.4MB 1.1MB/s 
+Requirement already satisfied: numpy in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from imagehash>=3.4->-r requirements.dev.txt (line 1)) (1.17.4)
+Requirement already satisfied: six in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from imagehash>=3.4->-r requirements.dev.txt (line 1)) (1.13.0)
+Requirement already satisfied: setuptools in /home/anton/.virtualenvs/test/lib/python3.5/site-packages (from ipdb->-r requirements.dev.txt (line 2)) (42.0.2)
+Collecting ipython>=5.1.0
+  Downloading https://files.pythonhosted.org/packages/81/2e/59cdacea6476a4c21b7c090a91250ffbcd085900f5eb9f4e4d68dd2ee4e3/ipython-7.9.0-py3-none-any.whl (775kB)
+     |████████████████████████████████| 778kB 926kB/s 
+Collecting py>=1.5.0
+  Downloading https://files.pythonhosted.org/packages/76/bc/394ad449851729244a97857ee14d7cba61ddb268dce3db538ba2f2ba1f0f/py-1.8.0-py2.py3-none-any.whl (83kB)
+     |████████████████████████████████| 92kB 1.1MB/s 
+Collecting attrs>=17.4.0
+  Downloading https://files.pythonhosted.org/packages/a2/db/4313ab3be961f7a763066401fb77f7748373b6094076ae2bda2806988af6/attrs-19.3.0-py2.py3-none-any.whl
+Collecting wcwidth
+  Downloading https://files.pythonhosted.org/packages/7e/9f/526a6947247599b084ee5232e4f9190a38f398d7300d866af3ab571a5bfe/wcwidth-0.1.7-py2.py3-none-any.whl
+Collecting packaging
+  Downloading https://files.pythonhosted.org/packages/cf/94/9672c2d4b126e74c4496c6b3c58a8b51d6419267be9e70660ba23374c875/packaging-19.2-py2.py3-none-any.whl
+Collecting pluggy<1.0,>=0.12
+  Downloading https://files.pythonhosted.org/packages/a0/28/85c7aa31b80d150b772fbe4a229487bc6644da9ccb7e427dd8cc60cb8a62/pluggy-0.13.1-py2.py3-none-any.whl
+Collecting more-itertools>=4.0.0
+  Downloading https://files.pythonhosted.org/packages/5c/1d/3df99de956abb96305956e09e6a1fa955883295e1f28808f9c97b3d5364d/more_itertools-8.0.0-py3-none-any.whl (40kB)
+     |████████████████████████████████| 40kB 905kB/s 
+Collecting importlib-metadata>=0.12; python_version < "3.8"
+  Downloading https://files.pythonhosted.org/packages/ed/82/ebece33bc20b9097683d09e47563d487e411e2cf3a37789d7ec0a88c4ce4/importlib_metadata-1.1.0-py2.py3-none-any.whl
+Collecting pathlib2>=2.2.0; python_version < "3.6"
+  Downloading https://files.pythonhosted.org/packages/e9/45/9c82d3666af4ef9f221cbb954e1d77ddbb513faf552aea6df5f37f1a4859/pathlib2-2.3.5-py2.py3-none-any.whl
+Collecting Jinja2>=2.3
+  Downloading https://files.pythonhosted.org/packages/65/e0/eb35e762802015cab1ccee04e8a277b03f1d8e53da3ec3106882ec42558b/Jinja2-2.10.3-py2.py3-none-any.whl (125kB)
+     |████████████████████████████████| 133kB 808kB/s 
+Collecting sphinxcontrib-devhelp
+  Downloading https://files.pythonhosted.org/packages/b0/a3/fea98741f0b2f2902fbf6c35c8e91b22cd0dd13387291e81d457f9a93066/sphinxcontrib_devhelp-1.0.1-py2.py3-none-any.whl (84kB)
+     |████████████████████████████████| 92kB 969kB/s 
+Collecting docutils>=0.12
+  Downloading https://files.pythonhosted.org/packages/22/cd/a6aa959dca619918ccb55023b4cb151949c64d4d5d55b3f4ffd7eee0c6e8/docutils-0.15.2-py3-none-any.whl (547kB)
+     |████████████████████████████████| 552kB 728kB/s 
+Collecting sphinxcontrib-serializinghtml
+  Downloading https://files.pythonhosted.org/packages/57/b3/3648e48fa5682e61e9839d62de4e23af1795ceb738d68d73bd974257a95c/sphinxcontrib_serializinghtml-1.1.3-py2.py3-none-any.whl (89kB)
+     |████████████████████████████████| 92kB 794kB/s 
+Collecting imagesize
+  Downloading https://files.pythonhosted.org/packages/fc/b6/aef66b4c52a6ad6ac18cf6ebc5731ed06d8c9ae4d3b2d9951f261150be67/imagesize-1.1.0-py2.py3-none-any.whl
+Collecting babel!=2.0,>=1.3
+  Downloading https://files.pythonhosted.org/packages/2c/60/f2af68eb046c5de5b1fe6dd4743bf42c074f7141fe7b2737d3061533b093/Babel-2.7.0-py2.py3-none-any.whl (8.4MB)
+     |████████████████████████████████| 8.4MB 997kB/s 
+Collecting sphinxcontrib-htmlhelp
+  Downloading https://files.pythonhosted.org/packages/e4/35/80a67cc493f4a8a9634ab203a77aaa1b84d79ccb1c02eca72cb084d2c7f7/sphinxcontrib_htmlhelp-1.0.2-py2.py3-none-any.whl (96kB)
+     |████████████████████████████████| 102kB 1.1MB/s 
+Collecting snowballstemmer>=1.1
+  Downloading https://files.pythonhosted.org/packages/7d/4b/cdf1113a0e88b641893b814e9c36f69a6fda28cd88b62c7f0d858cde3166/snowballstemmer-2.0.0-py2.py3-none-any.whl (97kB)
+     |████████████████████████████████| 102kB 940kB/s 
+Collecting sphinxcontrib-applehelp
+  Downloading https://files.pythonhosted.org/packages/13/9a/4428b3114d654cb1cd34d90d5e6fab938d5436f94a571155187ea1dd78b4/sphinxcontrib_applehelp-1.0.1-py2.py3-none-any.whl (121kB)
+     |████████████████████████████████| 122kB 658kB/s 
+Collecting sphinxcontrib-jsmath
+  Downloading https://files.pythonhosted.org/packages/c2/42/4c8646762ee83602e3fb3fbe774c2fac12f317deb0b5dbeeedd2d3ba4b77/sphinxcontrib_jsmath-1.0.1-py2.py3-none-any.whl
+Collecting sphinxcontrib-qthelp
+  Downloading https://files.pythonhosted.org/packages/ce/5b/4747c3ba98b3a3e21a66faa183d8f79b9ded70e74212a7988d236a6eb78a/sphinxcontrib_qthelp-1.0.2-py2.py3-none-any.whl (90kB)
+     |████████████████████████████████| 92kB 879kB/s 
+Collecting Pygments>=2.0
+  Downloading https://files.pythonhosted.org/packages/be/39/32da3184734730c0e4d3fa3b2b5872104668ad6dc1b5a73d8e477e5fe967/Pygments-2.5.2-py2.py3-none-any.whl (896kB)
+     |████████████████████████████████| 901kB 770kB/s 
+Collecting requests>=2.5.0
+  Downloading https://files.pythonhosted.org/packages/51/bd/23c926cd341ea6b7dd0b2a00aba99ae0f828be89d72b2190f27c11d4b7fb/requests-2.22.0-py2.py3-none-any.whl (57kB)
+     |████████████████████████████████| 61kB 987kB/s 
+Collecting alabaster<0.8,>=0.7
+  Downloading https://files.pythonhosted.org/packages/10/ad/00b090d23a222943eb0eda509720a404f531a439e803f6538f35136cae9e/alabaster-0.7.12-py2.py3-none-any.whl
+Collecting prompt-toolkit<2.1.0,>=2.0.0
+  Downloading https://files.pythonhosted.org/packages/87/61/2dfea88583d5454e3a64f9308a686071d58d59a55db638268a6413e1eb6d/prompt_toolkit-2.0.10-py3-none-any.whl (340kB)
+     |████████████████████████████████| 348kB 774kB/s 
+Collecting traitlets>=4.2
+  Downloading https://files.pythonhosted.org/packages/ca/ab/872a23e29cec3cf2594af7e857f18b687ad21039c1f9b922fac5b9b142d5/traitlets-4.3.3-py2.py3-none-any.whl (75kB)
+     |████████████████████████████████| 81kB 1.1MB/s 
+Collecting pexpect; sys_platform != "win32"
+  Downloading https://files.pythonhosted.org/packages/0e/3e/377007e3f36ec42f1b84ec322ee12141a9e10d808312e5738f52f80a232c/pexpect-4.7.0-py2.py3-none-any.whl (58kB)
+     |████████████████████████████████| 61kB 809kB/s 
+Collecting pickleshare
+  Downloading https://files.pythonhosted.org/packages/9a/41/220f49aaea88bc6fa6cba8d05ecf24676326156c23b991e80b3f2fc24c77/pickleshare-0.7.5-py2.py3-none-any.whl
+Collecting backcall
+  Downloading https://files.pythonhosted.org/packages/84/71/c8ca4f5bb1e08401b916c68003acf0a0655df935d74d93bf3f3364b310e0/backcall-0.1.0.tar.gz
+Collecting decorator
+  Downloading https://files.pythonhosted.org/packages/8f/b7/f329cfdc75f3d28d12c65980e4469e2fa373f1953f5df6e370e84ea2e875/decorator-4.4.1-py2.py3-none-any.whl
+Collecting jedi>=0.10
+  Downloading https://files.pythonhosted.org/packages/55/54/da994f359e4e7da4776a200e76dbc85ba5fc319eefc22e33d55296d95a1d/jedi-0.15.1-py2.py3-none-any.whl (1.0MB)
+     |████████████████████████████████| 1.0MB 938kB/s 
+Collecting pyparsing>=2.0.2
+  Downloading https://files.pythonhosted.org/packages/c0/0c/fc2e007d9a992d997f04a80125b0f183da7fb554f1de701bbb70a8e7d479/pyparsing-2.4.5-py2.py3-none-any.whl (67kB)
+     |████████████████████████████████| 71kB 1.2MB/s 
+Collecting zipp>=0.5
+  Downloading https://files.pythonhosted.org/packages/74/3d/1ee25a26411ba0401b43c6376d2316a71addcc72ef8690b101b4ea56d76a/zipp-0.6.0-py2.py3-none-any.whl
+Collecting MarkupSafe>=0.23
+  Downloading https://files.pythonhosted.org/packages/6e/57/d40124076756c19ff2269678de7ae25a14ebbb3f6314eb5ce9477f191350/MarkupSafe-1.1.1-cp35-cp35m-manylinux1_x86_64.whl
+Collecting pytz>=2015.7
+  Downloading https://files.pythonhosted.org/packages/e7/f9/f0b53f88060247251bf481fa6ea62cd0d25bf1b11a87888e53ce5b7c8ad2/pytz-2019.3-py2.py3-none-any.whl (509kB)
+     |████████████████████████████████| 512kB 743kB/s 
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading https://files.pythonhosted.org/packages/b4/40/a9837291310ee1ccc242ceb6ebfd9eb21539649f193a7c8c86ba15b98539/urllib3-1.25.7-py2.py3-none-any.whl (125kB)
+     |████████████████████████████████| 133kB 658kB/s 
+Collecting idna<2.9,>=2.5
+  Downloading https://files.pythonhosted.org/packages/14/2c/cd551d81dbe15200be1cf41cd03869a46fe7226e7450af7a6545bfc474c9/idna-2.8-py2.py3-none-any.whl (58kB)
+     |████████████████████████████████| 61kB 852kB/s 
+Collecting certifi>=2017.4.17
+  Downloading https://files.pythonhosted.org/packages/b9/63/df50cac98ea0d5b006c55a399c3bf1db9da7b5a24de7890bc9cfd5dd9e99/certifi-2019.11.28-py2.py3-none-any.whl (156kB)
+     |████████████████████████████████| 163kB 669kB/s 
+Collecting chardet<3.1.0,>=3.0.2
+  Downloading https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl (133kB)
+     |████████████████████████████████| 143kB 783kB/s 
+Collecting ipython-genutils
+  Downloading https://files.pythonhosted.org/packages/fa/bc/9bd3b5c2b4774d5f33b2d544f1460be9df7df2fe42f352135381c347c69a/ipython_genutils-0.2.0-py2.py3-none-any.whl
+Collecting ptyprocess>=0.5
+  Downloading https://files.pythonhosted.org/packages/d1/29/605c2cc68a9992d18dada28206eeada56ea4bd07a239669da41674648b6f/ptyprocess-0.6.0-py2.py3-none-any.whl
+Collecting parso>=0.5.0
+  Downloading https://files.pythonhosted.org/packages/a3/bd/bf4e5bd01d79906e5b945a7af033154da49fd2b0d5b5c705a21330323305/parso-0.5.1-py2.py3-none-any.whl (95kB)
+     |████████████████████████████████| 102kB 962kB/s 
+Building wheels for collected packages: ipdb, pytest-instafail, numpydoc, backcall
+  WARNING: Building wheel for ipdb failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/7a'
+  WARNING: Building wheel for pytest-instafail failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/6e'
+  WARNING: Building wheel for numpydoc failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/51'
+  WARNING: Building wheel for backcall failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/98'
+Failed to build ipdb pytest-instafail numpydoc backcall
+Installing collected packages: pywavelets, imagehash, wcwidth, prompt-toolkit, ipython-genutils, decorator, traitlets, ptyprocess, pexpect, Pygments, pickleshare, backcall, parso, jedi, ipython, ipdb, py, attrs, pyparsing, packaging, more-itertools, zipp, importlib-metadata, pluggy, pathlib2, pytest, pytest-instafail, MarkupSafe, Jinja2, sphinxcontrib-devhelp, docutils, sphinxcontrib-serializinghtml, imagesize, pytz, babel, sphinxcontrib-htmlhelp, snowballstemmer, sphinxcontrib-applehelp, sphinxcontrib-jsmath, sphinxcontrib-qthelp, urllib3, idna, certifi, chardet, requests, alabaster, sphinx, sphinx-rtd-theme, numpydoc
+    Running setup.py install for backcall ... done
+    Running setup.py install for ipdb ... done
+    Running setup.py install for pytest-instafail ... done
+    Running setup.py install for numpydoc ... done
+Successfully installed Jinja2-2.10.3 MarkupSafe-1.1.1 Pygments-2.5.2 alabaster-0.7.12 attrs-19.3.0 babel-2.7.0 backcall-0.1.0 certifi-2019.11.28 chardet-3.0.4 decorator-4.4.1 docutils-0.15.2 idna-2.8 imagehash-4.0 imagesize-1.1.0 importlib-metadata-1.1.0 ipdb-0.12.2 ipython-7.9.0 ipython-genutils-0.2.0 jedi-0.15.1 more-itertools-8.0.0 numpydoc-0.9.1 packaging-19.2 parso-0.5.1 pathlib2-2.3.5 pexpect-4.7.0 pickleshare-0.7.5 pluggy-0.13.1 prompt-toolkit-2.0.10 ptyprocess-0.6.0 py-1.8.0 pyparsing-2.4.5 pytest-5.3.1 pytest-instafail-0.3.0 pytz-2019.3 pywavelets-1.1.1 requests-2.22.0 snowballstemmer-2.0.0 sphinx-2.2.1 sphinx-rtd-theme-0.4.3 sphinxcontrib-applehelp-1.0.1 sphinxcontrib-devhelp-1.0.1 sphinxcontrib-htmlhelp-1.0.2 sphinxcontrib-jsmath-1.0.1 sphinxcontrib-qthelp-1.0.2 sphinxcontrib-serializinghtml-1.1.3 traitlets-4.3.3 urllib3-1.25.7 wcwidth-0.1.7 zipp-0.6.0
+
+> python setup.py install
+
+running install
+running bdist_egg
+running egg_info
+writing top-level names to mujoco_py.egg-info/top_level.txt
+writing requirements to mujoco_py.egg-info/requires.txt
+writing mujoco_py.egg-info/PKG-INFO
+writing dependency_links to mujoco_py.egg-info/dependency_links.txt
+reading manifest file 'mujoco_py.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching 'mujoco_py/generated/cymj_*_linuxcpuextensionbuilder.so'
+warning: no files found matching 'mujoco_py/generated/cymj_*_linuxgpuextensionbuilder.so'
+writing manifest file 'mujoco_py.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib
+creating build/lib/mujoco_py
+copying mujoco_py/modder.py -> build/lib/mujoco_py
+copying mujoco_py/version.py -> build/lib/mujoco_py
+copying mujoco_py/builder.py -> build/lib/mujoco_py
+copying mujoco_py/mjrenderpool.py -> build/lib/mujoco_py
+copying mujoco_py/__init__.py -> build/lib/mujoco_py
+copying mujoco_py/utils.py -> build/lib/mujoco_py
+copying mujoco_py/mjviewer.py -> build/lib/mujoco_py
+creating build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_render_pool.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_opengl_context.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_gen_wrappers.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_cymj.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/__init__.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_modder.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_pid.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/utils.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_composite.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_substep.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_examples.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_viewer.py -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test_vfs.py -> build/lib/mujoco_py/tests
+creating build/lib/mujoco_py/gl
+copying mujoco_py/gl/__init__.py -> build/lib/mujoco_py/gl
+creating build/lib/mujoco_py/pxd
+copying mujoco_py/pxd/__init__.py -> build/lib/mujoco_py/pxd
+creating build/lib/mujoco_py/generated
+copying mujoco_py/generated/__init__.py -> build/lib/mujoco_py/generated
+copying mujoco_py/generated/const.py -> build/lib/mujoco_py/generated
+copying mujoco_py/cymj.pyx -> build/lib/mujoco_py
+copying mujoco_py/mjbatchrenderer.pyx -> build/lib/mujoco_py
+copying mujoco_py/mjpid.pyx -> build/lib/mujoco_py
+copying mujoco_py/mjrendercontext.pyx -> build/lib/mujoco_py
+copying mujoco_py/mjsim.pyx -> build/lib/mujoco_py
+copying mujoco_py/mjsimstate.pyx -> build/lib/mujoco_py
+copying mujoco_py/opengl_context.pyx -> build/lib/mujoco_py
+copying mujoco_py/tests/include.xml -> build/lib/mujoco_py/tests
+copying mujoco_py/tests/test.xml -> build/lib/mujoco_py/tests
+copying mujoco_py/gl/dummyshim.c -> build/lib/mujoco_py/gl
+copying mujoco_py/gl/egl.h -> build/lib/mujoco_py/gl
+copying mujoco_py/gl/eglext.h -> build/lib/mujoco_py/gl
+copying mujoco_py/gl/eglplatform.h -> build/lib/mujoco_py/gl
+copying mujoco_py/gl/eglshim.c -> build/lib/mujoco_py/gl
+copying mujoco_py/gl/glshim.h -> build/lib/mujoco_py/gl
+copying mujoco_py/gl/khrplatform.h -> build/lib/mujoco_py/gl
+copying mujoco_py/gl/osmesashim.c -> build/lib/mujoco_py/gl
+copying mujoco_py/pxd/mjdata.pxd -> build/lib/mujoco_py/pxd
+copying mujoco_py/pxd/mjmodel.pxd -> build/lib/mujoco_py/pxd
+copying mujoco_py/pxd/mjrender.pxd -> build/lib/mujoco_py/pxd
+copying mujoco_py/pxd/mjui.pxd -> build/lib/mujoco_py/pxd
+copying mujoco_py/pxd/mjvisualize.pxd -> build/lib/mujoco_py/pxd
+copying mujoco_py/pxd/mujoco.pxd -> build/lib/mujoco_py/pxd
+copying mujoco_py/generated/wrappers.pxi -> build/lib/mujoco_py/generated
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/mjsim.pyx -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/modder.py -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/version.py -> build/bdist.linux-x86_64/egg/mujoco_py
+creating build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_render_pool.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test.xml -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_opengl_context.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_gen_wrappers.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_cymj.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/__init__.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_modder.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_pid.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/utils.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/include.xml -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_composite.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_substep.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_examples.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_viewer.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/tests/test_vfs.py -> build/bdist.linux-x86_64/egg/mujoco_py/tests
+copying build/lib/mujoco_py/builder.py -> build/bdist.linux-x86_64/egg/mujoco_py
+creating build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/glshim.h -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/khrplatform.h -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/__init__.py -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/egl.h -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/eglshim.c -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/dummyshim.c -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/eglext.h -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/osmesashim.c -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+copying build/lib/mujoco_py/gl/eglplatform.h -> build/bdist.linux-x86_64/egg/mujoco_py/gl
+creating build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/pxd/mjdata.pxd -> build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/pxd/mjvisualize.pxd -> build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/pxd/mjrender.pxd -> build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/pxd/mjmodel.pxd -> build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/pxd/__init__.py -> build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/pxd/mjui.pxd -> build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/pxd/mujoco.pxd -> build/bdist.linux-x86_64/egg/mujoco_py/pxd
+copying build/lib/mujoco_py/mjrendercontext.pyx -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/mjrenderpool.py -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/__init__.py -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/cymj.pyx -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/utils.py -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/mjpid.pyx -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/mjsimstate.pyx -> build/bdist.linux-x86_64/egg/mujoco_py
+creating build/bdist.linux-x86_64/egg/mujoco_py/generated
+copying build/lib/mujoco_py/generated/__init__.py -> build/bdist.linux-x86_64/egg/mujoco_py/generated
+copying build/lib/mujoco_py/generated/const.py -> build/bdist.linux-x86_64/egg/mujoco_py/generated
+copying build/lib/mujoco_py/generated/wrappers.pxi -> build/bdist.linux-x86_64/egg/mujoco_py/generated
+copying build/lib/mujoco_py/opengl_context.pyx -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/mjbatchrenderer.pyx -> build/bdist.linux-x86_64/egg/mujoco_py
+copying build/lib/mujoco_py/mjviewer.py -> build/bdist.linux-x86_64/egg/mujoco_py
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/modder.py to modder.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/version.py to version.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_render_pool.py to test_render_pool.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_opengl_context.py to test_opengl_context.cpython-35.pyc
+  File "build/bdist.linux-x86_64/egg/mujoco_py/tests/test_opengl_context.py", line 59
+    assert buf.sum() == 0, f'{buf.sum()}'
+                                        ^
+SyntaxError: invalid syntax
+
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_gen_wrappers.py to test_gen_wrappers.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_cymj.py to test_cymj.cpython-35.pyc
+  File "build/bdist.linux-x86_64/egg/mujoco_py/tests/test_cymj.py", line 55
+    for fname in glob.glob(f"{path}/*.so"):
+                                        ^
+SyntaxError: invalid syntax
+
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/__init__.py to __init__.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_modder.py to test_modder.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_pid.py to test_pid.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/utils.py to utils.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_composite.py to test_composite.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_substep.py to test_substep.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_examples.py to test_examples.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_viewer.py to test_viewer.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/tests/test_vfs.py to test_vfs.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/builder.py to builder.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/gl/__init__.py to __init__.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/pxd/__init__.py to __init__.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/mjrenderpool.py to mjrenderpool.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/__init__.py to __init__.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/utils.py to utils.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/generated/__init__.py to __init__.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/generated/const.py to const.cpython-35.pyc
+byte-compiling build/bdist.linux-x86_64/egg/mujoco_py/mjviewer.py to mjviewer.cpython-35.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+copying mujoco_py.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mujoco_py.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mujoco_py.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mujoco_py.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying mujoco_py.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+mujoco_py.__pycache__.builder.cpython-35: module references __file__
+mujoco_py.tests.__pycache__.test_examples.cpython-35: module references __file__
+mujoco_py.tests.__pycache__.test_gen_wrappers.cpython-35: module references __file__
+mujoco_py.tests.__pycache__.test_render_pool.cpython-35: module references __file__
+mujoco_py.tests.__pycache__.utils.cpython-35: module references __file__
+creating dist
+creating 'dist/mujoco_py-2.0.2.9-py3.5.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing mujoco_py-2.0.2.9-py3.5.egg
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg
+Extracting mujoco_py-2.0.2.9-py3.5.egg to /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+  File "/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/tests/test_cymj.py", line 55
+    for fname in glob.glob(f"{path}/*.so"):
+                                        ^
+SyntaxError: invalid syntax
+
+  File "/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/tests/test_opengl_context.py", line 59
+    assert buf.sum() == 0, f'{buf.sum()}'
+                                        ^
+SyntaxError: invalid syntax
+
+Adding mujoco-py 2.0.2.9 to easy-install.pth file
+
+Installed /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg
+Processing dependencies for mujoco-py==2.0.2.9
+Searching for fasteners==0.15
+Best match: fasteners 0.15
+Adding fasteners 0.15 to easy-install.pth file
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for cffi==1.13.2
+Best match: cffi 1.13.2
+Adding cffi 1.13.2 to easy-install.pth file
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for imageio==2.6.1
+Best match: imageio 2.6.1
+Adding imageio 2.6.1 to easy-install.pth file
+Installing imageio_remove_bin script to /home/anton/.virtualenvs/test/bin
+Installing imageio_download_bin script to /home/anton/.virtualenvs/test/bin
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for Cython==0.29.14
+Best match: Cython 0.29.14
+Adding Cython 0.29.14 to easy-install.pth file
+Installing cython script to /home/anton/.virtualenvs/test/bin
+Installing cygdb script to /home/anton/.virtualenvs/test/bin
+Installing cythonize script to /home/anton/.virtualenvs/test/bin
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for numpy==1.17.4
+Best match: numpy 1.17.4
+Adding numpy 1.17.4 to easy-install.pth file
+Installing f2py3.5 script to /home/anton/.virtualenvs/test/bin
+Installing f2py3 script to /home/anton/.virtualenvs/test/bin
+Installing f2py script to /home/anton/.virtualenvs/test/bin
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for glfw==1.8.5
+Best match: glfw 1.8.5
+Adding glfw 1.8.5 to easy-install.pth file
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for six==1.13.0
+Best match: six 1.13.0
+Adding six 1.13.0 to easy-install.pth file
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for monotonic==1.5
+Best match: monotonic 1.5
+Adding monotonic 1.5 to easy-install.pth file
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for pycparser==2.19
+Best match: pycparser 2.19
+Adding pycparser 2.19 to easy-install.pth file
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Searching for Pillow==6.2.1
+Best match: Pillow 6.2.1
+Adding Pillow 6.2.1 to easy-install.pth file
+
+Using /home/anton/.virtualenvs/test/lib/python3.5/site-packages
+Finished processing dependencies for mujoco-py==2.0.2.9
+
+
+> cd ..
+> mkdir basemodel
+> mkdir baselog
+> cd baselines
+
+> python -m baselines.run --alg=her --env=FetchReach-v1 --num_timesteps=5000 --save_path=~/abc/basemodel/reach5k --log_path=~/abc/baselog/reach5k
+
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Logging to /home/anton/abc/baselog/reach5k
+env_type: robotics
+Traceback (most recent call last):
+  File "/home/anton/abc/baselines/baselines/run.py", line 158, in get_alg_module
+    alg_module = import_module('.'.join(['baselines', alg, submodule]))
+  File "/home/anton/.virtualenvs/test/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 958, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 673, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 665, in exec_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "/home/anton/abc/baselines/baselines/her/her.py", line 6, in <module>
+    from mpi4py import MPI
+ImportError: No module named 'mpi4py'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/runpy.py", line 184, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.5/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/anton/abc/baselines/baselines/run.py", line 250, in <module>
+    main(sys.argv)
+  File "/home/anton/abc/baselines/baselines/run.py", line 216, in main
+    model, env = train(args, extra_args)
+  File "/home/anton/abc/baselines/baselines/run.py", line 60, in train
+    learn = get_learn_function(args.alg)
+  File "/home/anton/abc/baselines/baselines/run.py", line 167, in get_learn_function
+    return get_alg_module(alg).learn
+  File "/home/anton/abc/baselines/baselines/run.py", line 161, in get_alg_module
+    alg_module = import_module('.'.join(['rl_' + 'algs', alg, submodule]))
+  File "/home/anton/.virtualenvs/test/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'rl_algs'
+
+--(Try a solution in https://github.com/openai/mlsh/issues/1)
+
+> pip install mpi4py
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting mpi4py
+  Downloading https://files.pythonhosted.org/packages/ec/8f/bbd8de5ba566dd77e408d8136e2bab7fdf2b97ce06cab830ba8b50a2f588/mpi4py-3.0.3.tar.gz (1.4MB)
+     |████████████████████████████████| 1.4MB 76kB/s 
+Building wheels for collected packages: mpi4py
+  WARNING: Building wheel for mpi4py failed: [Errno 13] Permission denied: '/home/anton/.cache/pip/wheels/18'
+Failed to build mpi4py
+Installing collected packages: mpi4py
+    Running setup.py install for mpi4py ... done
+Successfully installed mpi4py-3.0.3
+
+
+> python -m baselines.run --alg=her --env=FetchReach-v1 --num_timesteps=5000 --save_path=~/abc/basemodel/reach5k --log_path=~/abc/baselog/reach5k
+
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+Logging to /home/anton/abc/baselog/reach5k
+env_type: robotics
+WARNING:tensorflow:From /home/anton/abc/baselines/baselines/run.py:106: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From /home/anton/abc/baselines/baselines/common/tf_util.py:53: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+WARNING:tensorflow:From /home/anton/abc/baselines/baselines/common/tf_util.py:70: The name tf.InteractiveSession is deprecated. Please use tf.compat.v1.InteractiveSession instead.
+
+2019-12-02 16:47:05.886064: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-12-02 16:47:05.891322: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2208000000 Hz
+2019-12-02 16:47:05.891985: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x577cc40 executing computations on platform Host. Devices:
+2019-12-02 16:47:05.891998: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+WARNING:tensorflow:From /home/anton/abc/baselines/baselines/common/misc_util.py:58: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+Compiling /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/cymj.pyx because it changed.
+[1/1] Cythonizing /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/cymj.pyx
+running build_ext
+building 'mujoco_py.cymj' extension
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/gl
+x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py -I/home/anton/.mujoco/mujoco200/include -I/home/anton/.virtualenvs/test/lib/python3.5/site-packages/numpy/core/include -I/usr/include/python3.5m -I/home/anton/.virtualenvs/test/include/python3.5m -c /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/cymj.c -o /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/cymj.o -fopenmp -w
+x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py -I/home/anton/.mujoco/mujoco200/include -I/home/anton/.virtualenvs/test/lib/python3.5/site-packages/numpy/core/include -I/usr/include/python3.5m -I/home/anton/.virtualenvs/test/include/python3.5m -c /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/gl/osmesashim.c -o /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/gl/osmesashim.o -fopenmp -w
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/lib.linux-x86_64-3.5
+creating /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/lib.linux-x86_64-3.5/mujoco_py
+x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-Bsymbolic-functions -Wl,-z,relro -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/cymj.o /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/temp.linux-x86_64-3.5/home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/gl/osmesashim.o -L/home/anton/.mujoco/mujoco200/bin -Wl,--enable-new-dtags,-R/home/anton/.mujoco/mujoco200/bin -lmujoco200 -lglewosmesa -lOSMesa -lGL -o /home/anton/.virtualenvs/test/lib/python3.5/site-packages/mujoco_py-2.0.2.9-py3.5.egg/mujoco_py/generated/_pyxbld_2.0.2.9_35_linuxcpuextensionbuilder/lib.linux-x86_64-3.5/mujoco_py/cymj.cpython-35m-x86_64-linux-gnu.so -fopenmp
+Training her on robotics:FetchReach-v1 with arguments 
+{'network': 'mlp'}
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+aux_loss_weight: 0.0078
+bc_loss: 0
+ddpg_params: {'pi_lr': 0.001, 'Q_lr': 0.001, 'max_u': 1.0, 'buffer_size': 1000000, 'batch_size': 256, 'polyak': 0.95, 'clip_obs': 200.0, 'scope': 'ddpg', 'norm_clip': 5, 'norm_eps': 0.01, 'layers': 3, 'relative_goals': False, 'hidden': 256, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'action_l2': 1.0}
+demo_batch_size: 128
+env_name: FetchReach-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7f29b3e2d1e0>
+n_batches: 40
+n_cycles: 10
+n_test_rollouts: 10
+noise_eps: 0.2
+num_demo: 100
+prm_loss_weight: 0.001
+q_filter: 0
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 1
+test_with_polyak: False
+
+*** Warning ***
+You are running HER with just a single MPI worker. This will work, but the experiments that we report in Plappert et al. (2018, https://arxiv.org/abs/1802.09464) were obtained with --num_cpu 19. This makes a significant difference and if you are looking to reproduce those results, be aware of this. Please also refer to https://github.com/openai/baselines/issues/314 for further details.
+****************
+
+WARNING:tensorflow:From /home/anton/abc/baselines/baselines/her/ddpg.py:87: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+Creating a DDPG agent with action space 4 x 1.0...
+WARNING:tensorflow:From /home/anton/abc/baselines/baselines/her/util.py:66: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9278>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33d30b8>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33d30b8>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9b70>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9b70>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9b70>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9b70>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33f9128>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b338cdd8>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33c6320>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33c6320>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33c6320>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33c6320>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b346f198>>: AssertionError: Bad argument number for Name: 3, expecting 4
+WARNING:tensorflow:Entity <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33c6320>> could not be transformed and will be executed as-is. Please report this to the AutgoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: converting <bound method Dense.call of <tensorflow.python.layers.core.Dense object at 0x7f29b33c6320>>: AssertionError: Bad argument number for Name: 3, expecting 4
+2019-12-02 16:47:45.063564: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Training...
+---------------------------------
+| epoch              | 0        |
+| stats_g/mean       | 0.877    |
+| stats_g/std        | 0.103    |
+| stats_o/mean       | 0.262    |
+| stats_o/std        | 0.0334   |
+| test/episode       | 10       |
+| test/mean_Q        | -0.655   |
+| test/success_rate  | 0.7      |
+| train/episode      | 10       |
+| train/success_rate | 0.1      |
+---------------------------------
+---------------------------------
+| epoch              | 1        |
+| stats_g/mean       | 0.874    |
+| stats_g/std        | 0.101    |
+| stats_o/mean       | 0.262    |
+| stats_o/std        | 0.033    |
+| test/episode       | 20       |
+| test/mean_Q        | -0.607   |
+| test/success_rate  | 1        |
+| train/episode      | 20       |
+| train/success_rate | 0.5      |
+---------------------------------
+---------------------------------
+| epoch              | 2        |
+| stats_g/mean       | 0.867    |
+| stats_g/std        | 0.101    |
+| stats_o/mean       | 0.261    |
+| stats_o/std        | 0.0331   |
+| test/episode       | 30       |
+| test/mean_Q        | -0.427   |
+| test/success_rate  | 1        |
+| train/episode      | 30       |
+| train/success_rate | 0.9      |
+---------------------------------
+---------------------------------
+| epoch              | 3        |
+| stats_g/mean       | 0.863    |
+| stats_g/std        | 0.0996   |
+| stats_o/mean       | 0.259    |
+| stats_o/std        | 0.0331   |
+| test/episode       | 40       |
+| test/mean_Q        | -0.602   |
+| test/success_rate  | 0.9      |
+| train/episode      | 40       |
+| train/success_rate | 0.9      |
+---------------------------------
+---------------------------------
+| epoch              | 4        |
+| stats_g/mean       | 0.868    |
+| stats_g/std        | 0.0981   |
+| stats_o/mean       | 0.261    |
+| stats_o/std        | 0.033    |
+| test/episode       | 50       |
+| test/mean_Q        | -0.339   |
+| test/success_rate  | 1        |
+| train/episode      | 50       |
+| train/success_rate | 0.7      |
+---------------------------------
+---------------------------------
+| epoch              | 5        |
+| stats_g/mean       | 0.869    |
+| stats_g/std        | 0.0959   |
+| stats_o/mean       | 0.261    |
+| stats_o/std        | 0.0327   |
+| test/episode       | 60       |
+| test/mean_Q        | -0.133   |
+| test/success_rate  | 1        |
+| train/episode      | 60       |
+| train/success_rate | 0.9      |
+---------------------------------
+---------------------------------
+| epoch              | 6        |
+| stats_g/mean       | 0.869    |
+| stats_g/std        | 0.0953   |
+| stats_o/mean       | 0.261    |
+| stats_o/std        | 0.0327   |
+| test/episode       | 70       |
+| test/mean_Q        | -0.119   |
+| test/success_rate  | 1        |
+| train/episode      | 70       |
+| train/success_rate | 0.8      |
+---------------------------------
+---------------------------------
+| epoch              | 7        |
+| stats_g/mean       | 0.869    |
+| stats_g/std        | 0.0932   |
+| stats_o/mean       | 0.261    |
+| stats_o/std        | 0.0322   |
+| test/episode       | 80       |
+| test/mean_Q        | -0.115   |
+| test/success_rate  | 1        |
+| train/episode      | 80       |
+| train/success_rate | 0.8      |
+---------------------------------
+---------------------------------
+| epoch              | 8        |
+| stats_g/mean       | 0.869    |
+| stats_g/std        | 0.0924   |
+| stats_o/mean       | 0.261    |
+| stats_o/std        | 0.0321   |
+| test/episode       | 90       |
+| test/mean_Q        | -0.229   |
+| test/success_rate  | 1        |
+| train/episode      | 90       |
+| train/success_rate | 0.8      |
+---------------------------------
+---------------------------------
+| epoch              | 9        |
+| stats_g/mean       | 0.867    |
+| stats_g/std        | 0.0924   |
+| stats_o/mean       | 0.261    |
+| stats_o/std        | 0.0322   |
+| test/episode       | 100      |
+| test/mean_Q        | -0.1     |
+| test/success_rate  | 1        |
+| train/episode      | 100      |
+| train/success_rate | 1        |
+---------------------------------
+
+
+> mpirun -np 10 python -m baselines.run --alg=her --env=FetchSlide-v1 --num_env=2 --num_timesteps=15000 --save_path=~/abc/basemodel/mpislide15knp10env2 --log_path=~/abc/baselog/mpislide15knp10env2
+
+env_type: robotics
+env_type: robotics
+Logging to /home/anton/abc/baselog/mpislide15knp10env2
+env_type: robotics
+env_type: robotics
+env_type: robotics
+env_type: robotics
+env_type: robotics
+env_type: robotics
+env_type: robotics
+env_type: robotics
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+...way to many warnings
+2019-12-02 16:54:15.343994: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+2019-12-02 16:54:15.913777: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+Training...
+---------------------------------
+| epoch              | 0        |
+| stats_g/mean       | 0.746    |
+| stats_g/std        | 0.117    |
+| stats_o/mean       | 0.166    |
+| stats_o/std        | 0.061    |
+| test/episode       | 20       |
+| test/mean_Q        | -2.99    |
+| test/success_rate  | 0        |
+| train/episode      | 100      |
+| train/success_rate | 0.003    |
+---------------------------------
+---------------------------------
+| epoch              | 1        |
+| stats_g/mean       | 0.747    |
+| stats_g/std        | 0.118    |
+| stats_o/mean       | 0.166    |
+| stats_o/std        | 0.0617   |
+| test/episode       | 40       |
+| test/mean_Q        | -5.07    |
+| test/success_rate  | 0.005    |
+| train/episode      | 200      |
+| train/success_rate | 0.002    |
+---------------------------------
+---------------------------------
+| epoch              | 2        |
+| stats_g/mean       | 0.747    |
+| stats_g/std        | 0.119    |
+| stats_o/mean       | 0.166    |
+| stats_o/std        | 0.0613   |
+| test/episode       | 60       |
+| test/mean_Q        | -7.15    |
+| test/success_rate  | 0.01     |
+| train/episode      | 300      |
+| train/success_rate | 0.003    |
+---------------------------------
+/home/anton/.virtualenvs/test/lib/python3.5/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+...more too many warnings
+
+
+--(Try https://github.com/tensorflow/tensorflow/issues/31249)
+
+> pip uninstall numpy
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Uninstalling numpy-1.17.4:
+  Would remove:
+    /home/anton/.virtualenvs/test/bin/f2py
+    /home/anton/.virtualenvs/test/bin/f2py3
+    /home/anton/.virtualenvs/test/bin/f2py3.5
+    /home/anton/.virtualenvs/test/lib/python3.5/site-packages/numpy-1.17.4.dist-info/*
+    /home/anton/.virtualenvs/test/lib/python3.5/site-packages/numpy/*
+Proceed (y/n)? y
+  Successfully uninstalled numpy-1.17.4
+
+> pip install numpy==1.16.4
+
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+WARNING: The directory '/home/anton/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting numpy==1.16.4
+  Downloading https://files.pythonhosted.org/packages/bb/ef/d5a21cbc094d3f4d5b5336494dbcc9550b70c766a8345513c7c24ed18418/numpy-1.16.4-cp35-cp35m-manylinux1_x86_64.whl (17.2MB)
+     |████████████████████████████████| 17.2MB 834kB/s 
+Installing collected packages: numpy
+Successfully installed numpy-1.16.4
+
+--tested running again, still some warnings, but less than earlier
+
+> pip list
+
+Package                       Version    Location                 
+----------------------------- ---------- -------------------------
+absl-py                       0.8.1      
+alabaster                     0.7.12     
+astor                         0.8.0      
+attrs                         19.3.0     
+Babel                         2.7.0      
+backcall                      0.1.0      
+baselines                     0.1.6      /home/anton/abc/baselines
+certifi                       2019.11.28 
+cffi                          1.13.2     
+chardet                       3.0.4      
+Click                         7.0        
+cloudpickle                   1.2.2      
+Cython                        0.29.14    
+decorator                     4.4.1      
+docutils                      0.15.2     
+fasteners                     0.15       
+future                        0.18.2     
+gast                          0.3.2      
+glfw                          1.8.5      
+google-pasta                  0.1.8      
+grpcio                        1.25.0     
+gym                           0.15.4     /home/anton/abc/gym      
+h5py                          2.10.0     
+idna                          2.8        
+ImageHash                     4.0        
+imageio                       2.6.1      
+imagesize                     1.1.0      
+importlib-metadata            1.1.0      
+ipdb                          0.12.2     
+ipython                       7.9.0      
+ipython-genutils              0.2.0      
+jedi                          0.15.1     
+Jinja2                        2.10.3     
+joblib                        0.14.0     
+Keras-Applications            1.0.8      
+Keras-Preprocessing           1.1.0      
+Markdown                      3.1.1      
+MarkupSafe                    1.1.1      
+monotonic                     1.5        
+more-itertools                8.0.0      
+mpi4py                        3.0.3      
+mujoco-py                     2.0.2.9    
+numpy                         1.16.4     
+numpydoc                      0.9.1      
+opencv-python                 4.1.2.30   
+packaging                     19.2       
+parso                         0.5.1      
+pathlib2                      2.3.5      
+pexpect                       4.7.0      
+pickleshare                   0.7.5      
+Pillow                        6.2.1      
+pip                           19.3.1     
+pluggy                        0.13.1     
+prompt-toolkit                2.0.10     
+protobuf                      3.11.0     
+ptyprocess                    0.6.0      
+py                            1.8.0      
+pycparser                     2.19       
+pyglet                        1.3.2      
+Pygments                      2.5.2      
+pyparsing                     2.4.5      
+pytest                        5.3.1      
+pytest-instafail              0.3.0      
+pytz                          2019.3     
+PyWavelets                    1.1.1      
+requests                      2.22.0     
+scipy                         1.3.3      
+setuptools                    42.0.2     
+six                           1.13.0     
+snowballstemmer               2.0.0      
+Sphinx                        2.2.1      
+sphinx-rtd-theme              0.4.3      
+sphinxcontrib-applehelp       1.0.1      
+sphinxcontrib-devhelp         1.0.1      
+sphinxcontrib-htmlhelp        1.0.2      
+sphinxcontrib-jsmath          1.0.1      
+sphinxcontrib-qthelp          1.0.2      
+sphinxcontrib-serializinghtml 1.1.3      
+tensorboard                   1.14.0     
+tensorflow                    1.14.0     
+tensorflow-estimator          1.14.0     
+termcolor                     1.1.0      
+tqdm                          4.40.0     
+traitlets                     4.3.3      
+urllib3                       1.25.7     
+wcwidth                       0.1.7      
+Werkzeug                      0.16.0     
+wheel                         0.33.6     
+wrapt                         1.11.2     
+zipp                          0.6.0      
+WARNING: The directory '/home/anton/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+
+
+##################################################
+
+Short version:
+
+
+--make virtual environment
+> mkvirtualenv test
+> workon test
+
+--install tensorflow 1.14
+> pip install tensorflow==1.14
+
+--check if python is version 3.5.2
+> python --version
+Python 3.5.2
+
+--make some directory to have everything sorted
+> cd
+> mkdir abc
+> cd abc 
+
+--install gym
+> git clone https://github.com/openai/gym.git
+> cd gym
+> pip install -e .
+
+--install baselines
+> cd ..
+> sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
+> git clone https://github.com/openai/baselines.git
+> cd baselines/
+> pip install -e .
+
+--install mujoco
+> git clone https://github.com/openai/mujoco-py.git
+> cd mujoco-py/
+> pip install -e . (this didn't work)
+> pip install -r requirements.txt 
+> pip install -r requirements.dev.txt 
+> python setup.py install
+
+--make some directories to save baseline training
+> cd ..
+> mkdir basemodel
+> mkdir baselog
+> cd baselines
+> python -m baselines.run --alg=her --env=FetchReach-v1 --num_timesteps=5000 --save_path=~/abc/basemodel/reach5k --log_path=~/abc/baselog/reach5k (didn't work)
+> pip install mpi4py
+> python -m baselines.run --alg=her --env=FetchReach-v1 --num_timesteps=5000 --save_path=~/abc/basemodel/reach5k --log_path=~/abc/baselog/reach5k
+
+--mpirun
+> mpirun -np 10 python -m baselines.run --alg=her --env=FetchSlide-v1 --num_env=2 --num_timesteps=15000 --save_path=~/abc/basemodel/mpislide15knp10env2 --log_path=~/abc/baselog/mpislide15knp10env2
+--> works but still a lot of warnings
+
+-- solve some warnings
+> pip uninstall numpy
+> pip install numpy==1.16.4
+
+
+If you know how to solve more warnings, please tell everyone.
+
+
+And if something doesn't work or you have any questions, don't hesitate to ask me :)  -Anton Mai
+
+
+
+
+
+
+
+
