@@ -281,7 +281,10 @@ MJCF Mechanisms:
 
 #### Mujoco XML Reference
 
- mujoco    
+
+```bash
+
+ mujoco  
         compiler           
              lengthrange   
      
@@ -415,7 +418,7 @@ MJCF Mechanisms:
         keyframe        
             key
 
-
+```
 
 
 
