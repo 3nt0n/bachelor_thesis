@@ -274,16 +274,153 @@ MJCF Mechanisms:
             ...
      </robot>
   
-
-
-
-     
-     
-  
-   
-     
+       
         
 ```
+
+
+#### Mujoco XML Reference
+
+ mujoco    
+        compiler           
+             lengthrange   
+     
+        option        
+             flag     
+   
+        size
+
+        visual        
+            global
+            quality
+            headlight
+            map
+            scale
+            rgba     
+   
+        statistic
+
+        default        
+            mesh
+            material
+            joint
+            geom
+            site
+            camera
+            light
+            pair
+            equality
+            tendon
+            general
+            motor
+            position
+            velocity
+            cylinder
+            muscle  
+      
+        custom        
+            numeric
+            text
+            tuple            
+                element            
+        
+        asset        
+            texture
+            hfield
+            mesh
+            skin            
+	            bone            
+            material        
+        (world) body        
+            inertial
+            joint
+            freejoint
+            geom
+            site
+            camera
+            light
+            composite            
+	            joint
+	            tendon
+	            geom
+	            site
+                    skin
+	            pin
+                    
+        contact        
+            pair
+            exclude
+        
+        equality        
+            connect
+            weld
+            joint
+            tendon
+            distance
+        
+        tendon        
+            spatial            
+                site
+                geom
+                pulley              
+            fixed            
+                joint
+                    
+        actuator        
+            general
+            motor
+            position
+            velocity
+            cylinder
+            muscle
+          
+        sensor        
+            touch
+            accelerometer
+            velocimeter
+            gyro
+            force
+            torque
+            magnetometer
+            rangefinder
+            jointpos
+            jointvel
+            tendonpos
+            tendonvel
+            actuatorpos
+            actuatorvel
+            actuatorfrc
+            ballquat
+            ballangvel
+            jointlimitpos
+            jointlimitvel
+            jointlimitfrc
+            tendonlimitpos
+            tendonlimitvel
+            tendonlimitfrc
+            framepos
+            framequat
+            framexaxis
+            frameyaxis
+            framezaxis
+            framelinvel
+            frameangvel
+            framelinacc
+            frameangacc
+            subtreecom
+            subtreelinvel
+            subtreeangmom
+            user
+          
+        keyframe        
+            key
+
+
+
+
+
+
+
 
 
 ### OpenAI
