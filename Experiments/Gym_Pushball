@@ -8,3 +8,6 @@ edit gym/gym/envs/robotics/__init__.py
 fetch_env_ball.py
 pushball.xml
 pushball.py
+
+
+edit baselines/baselines/run.py
