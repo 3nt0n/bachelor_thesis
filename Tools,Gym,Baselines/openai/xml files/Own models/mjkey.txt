@@ -1,0 +1,20 @@
+MuJoCo Pro Personal license activation key, number 68348, type 6.
+
+Issued to Anton Mai <anton.mai@tum.de>.
+
+Expires September 2, 2020.
+
+This file activates MuJoCo Pro on a single computer with id:
+LINUX_b9b0md_614v2ac2a38e4c9291bdeab40f57b0e5432
+
+Do not modify this file. Its entire content, including the
+plain text section, is used by the activation manager.
+
+3ffe8ff24e42b204d9a61e80144d9ccb0f2a0393a4bd35f92f26fcc4736f4087
+0829b4e332066746d8c8bd58f87f88c84bf0fb292882466227ec33113ddca53c
+3dd10717d4097615967f1452974ed1292205edf2e3bff526d34880af6da92eaf
+c8d3786253523a21c8f184778c035b0fa1ac366064dc101e82ade691517ca215
+0696b964ef6ed14a14dd8600336e56752babb7e18351c8304080e2fc30a658ba
+65eff6a3ff0b9ba60665a874c9737e671836aeade85032bbc6d858b383e68c0c
+4e7f1dc7a14b25c00bbb0841b8bbab6625b6650a975b25ecee2076e8c82aafa2
+7b773214f76e738be00cdc2975651bab2dccfd282f128c035833c15b9e4d9677
