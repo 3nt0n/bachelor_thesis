@@ -20,3 +20,11 @@ make own environment:
 
 
 
+
+
+TODO today:
+
+- note standard parameters.
+- change parameters to double, triple distance and try to train fetchslide somehow
+- create some kind of basket and put the goal in the air
+- check out other types of baselines algorithms

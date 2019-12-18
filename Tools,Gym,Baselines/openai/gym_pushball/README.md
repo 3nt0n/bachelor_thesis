@@ -1,3 +1,0 @@
-
-
-Robotic arm pushing ball

@@ -1,0 +1,2 @@
+{"train/success_rate": 0.0, "test/mean_Q": -3.0699429512023926, "stats_g/mean": 0.7463895678520203, "stats_g/std": 0.1111273393034935, "train/episode": 50.0, "stats_o/mean": 0.16880299150943756, "stats_o/std": 0.06647179275751114, "test/episode": 10.0, "test/success_rate": 0.0, "epoch": 0}
+{"train/success_rate": 0.0, "test/mean_Q": -5.154488563537598, "stats_g/mean": 0.7459397912025452, "stats_g/std": 0.1133916899561882, "train/episode": 100.0, "stats_o/mean": 0.16788190603256226, "stats_o/std": 0.06141677871346474, "test/episode": 20.0, "test/success_rate": 0.0, "epoch": 1}
