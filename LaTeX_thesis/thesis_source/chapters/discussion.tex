@@ -1,0 +1,46 @@
+\chapter{Conclusions and Future Work}
+\label{section:conclusions}
+
+This thesis shows an example implementation of direct communication between a GPU and a FPGA over PCIe for use in OpenCL.
+Several major problems had to be solved, e.g. the lack of official support of the GPUDirect RDMA technology for OpenCL and the lack of an ICD from Altera.
+Unfortunately, only the transfer direction from FPGA to GPU could be realized.
+This direction showed significant performance improvement compared to the indirect method with a round-trip via CPU.
+Moreover, an alternative to the direct method, that is simple to implement yet yields decent results and works for both directions, has been evaluated.
+
+%summary
+
+Several enhancements, that either could not be finished in time or go beyond the scope of this thesis, are still imaginable:
+
+%-real application
+%-investigate the reasons why GPU-to-FPGA direction fails.
+
+\begin{itemize}
+\item The largest drawback of the implemented method is that the GPU-to-FPGA direction could not be enabled.
+Further investigation is required to find out the reasons why this direction fails.
+A possible approach may include a thorough analysis of the OpenCL Verilog code provided by Altera.
+\item The Installable Client Driver that was implemented for Altera OpenCL during the practical part of this thesis is still incomplete as it only wraps the most basic OpenCL functions.
+But also those that were implemented lack the support for OpenCL events, which can be useful for asynchronous transfers.
+Supporting events would require a rather complicated memory management system that keeps track of the event objects' lifetimes.
+The development of a full ICD is more time consuming than could be achieved during this thesis.
+However, Altera announced a full ICD implementation in the upcoming SDK version 15.0.
+
+\item The GPUDirect RDMA technology that was used as the basis for direct GPU-FPGA communication is only available for the NVIDIA Quadro and Tesla graphics cards.
+A possible alternative is to utilize a similar approach as Bittner and Ruf, which is described in section \ref{bittner}, however without their Speedy PCIe IP core.
+In theory, its functionality can be provided by the Altera's PCIe driver and PCIe core.
+In contrast to this thesis which utilizes the DMA controller on the FPGA, this alternative would employ the GPU's DMA controller.
+Not only may this enable the direct communication also for the popular GeForce cards but also the still missing GPU-to-FPGA direction.
+
+\item It may be interesting see to which extent the higher bandwidth will speed up an existing application that uses a heterogeneous computing system employing GPUs and FPGAs.
+A candidate could be the lane detection algorithm for automated driving, used at the TU Munich \cite{lanedetection} or some of the examples provided in \cite{chimera}.
+
+
+
+\end{itemize}
+
+%TODO: find out why direct write to fpga fails: maybe analze verilog/vhdl
+% test with a real life application
+
+
+
+
+

@@ -1,0 +1,48 @@
+\chapter{Setup Instructions}
+
+\label{chapter:appendixB}
+
+
+This section provides an overview of the procedures needed to run the benchmarks from the source code package included for this thesis.
+The Ubuntu 14.04 OS is assumed.
+
+
+The following commands install the Altera ICD on the system:
+\begin{lstlisting}[label={}, caption={}]
+sudo mkdir /etc/OpenCL/AlteraICD
+sudo cp -r altera_icd/bin/* /etc/OpenCL/AlteraICD
+sudo sh -c "echo '/etc/OpenCL/AlteraICD/libalteraicd.so.1' \
+     >> /etc/OpenCL/vendors/altera.icd"
+\end{lstlisting}
+
+The modified Altera PCIe module can be compiled with the following script:
+\begin{lstlisting}[label={}, caption={}]
+./make_all.sh
+\end{lstlisting}
+
+The modified NVIDIA module can be compiled with the following command:
+\begin{lstlisting}[label={}, caption={}]
+make module
+\end{lstlisting}
+
+To load the modified modules, the original modules have to be removed first.
+Since the display manager depends on the NVIDIA module it must be stopped too.
+To do this, the TTY has to be switched, e.g. with the key combination \texttt{CTRL+ALT+F4}.
+Then, the following command sequence will replace the modules:
+\begin{lstlisting}[label={}, caption={}]
+sudo service lightdm stop
+sudo rmmod nvidia-uvm aclpci_drv nvidia
+sudo insmod nvidia.ko
+sudo insmod aclpci_drv.ko
+sudo service lightdm start
+\end{lstlisting}
+
+To load the modules automatically during the boot procedure, the previous modules should be overwritten:
+\begin{lstlisting}[label={}, caption={}]
+sudo cp aclpci_drv.ko /lib/modules/$(uname -r)/misc/
+sudo cp nvidia.ko /lib/modules/$(uname -r)/kernel/drivers/
+\end{lstlisting}
+
+For testing, the code from appendix \ref{chapter:appendixA} or the provided benchmark \texttt{direct\_benchmark} can be used.
+
+
