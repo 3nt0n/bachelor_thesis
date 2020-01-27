@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2020.1.22)  23 JAN 2020 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2020.1.22)  27 JAN 2020 20:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -697,16 +697,17 @@ File: standard.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
 \c@bbx:relatedcount=\count280
 \c@bbx:relatedtotal=\count281
 ))
-Package biblatex Info: Trying to load citation style 'alphabetic'...
-Package biblatex Info: ... file 'alphabetic.cbx' found.
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/alphabetic.cbx
-File: alphabetic.cbx 2016/03/03 v3.3 biblatex citation style (PK/JW/AB)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2016/03/03 v3.3 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Redefining '\cites'.
@@ -766,7 +767,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package scrhack Info: loading listings hack on input line 20.
+Package scrhack Info: loading listings hack on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/listings.hak
 File: listings.hak 2015/10/03 v3.19a KOMA-Script package (hacking package listi
@@ -1264,7 +1265,7 @@ Package caption Info: listings package is loaded.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of KOMA-Script class, that doesn't
-(scrhack)             need that hack, on input line 28.
+(scrhack)             need that hack, on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -1370,7 +1371,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip66
 )
 Package tocbasic Info: defining new hook before heading of `toc' on input line 
-35.
+36.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1583,37 +1584,37 @@ LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
 (Font)              Font shape `T1/pplx/m/it' tried instead on input line 39.
  [6] (./chapters/introduction.tex
 chapter 1.
-LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 6.
-) (./chapters/theory.tex [1
+[1
 
 
 
-]
+] [2]) (./chapters/theory.tex [3]
 chapter 2.
-) (./chapters/methodology.tex [2
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 5.
+) (./chapters/methodology.tex [4
 
 
 ]
 chapter 3.
-) (./chapters/environment.tex [3
+) (./chapters/environment.tex [5
 
 
 ]
 chapter 4.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <12> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 19.
-) (./chapters/experiments.tex [4
+) (./chapters/experiments.tex [6
 
 
 ]
 chapter 5.
-) (./chapters/conclusion.tex [5
+) (./chapters/conclusion.tex [7
 
 
 ]
 chapter 6.
-) [6
+) [8
 
 
 ]
@@ -1623,7 +1624,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 59
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [7
+ [9
 
 
 ]
@@ -1638,7 +1639,7 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 60
 LaTeX Warning: Empty bibliography on input line 62.
 
 No complaints by nag.
-[8
+[10
 
 
 ]
@@ -1648,27 +1649,27 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D33D521045900D51F921255D4517C2BE;1996.
+(rerunfilecheck)             Checksum: 4652249BB0726B0FDCE5007BAC53FBF5;1868.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38239 strings out of 493029
- 848465 string characters out of 6136234
- 1484676 words of memory out of 5000000
- 41009 multiletter control sequences out of 15000+600000
- 36792 words of font info for 83 fonts, out of 8000000 for 9000
+ 38348 strings out of 493029
+ 849421 string characters out of 6136234
+ 1485016 words of memory out of 5000000
+ 41015 multiletter control sequences out of 15000+600000
+ 42465 words of font info for 160 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
  75i,8n,84p,823b,1896s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/palatino/uplri8a.pfb>
-Output written on main.pdf (15 pages, 59839 bytes).
+Output written on main.pdf (17 pages, 71218 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 252 compressed objects within 3 object streams
+ 273 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
  54 named destinations out of 1000 (max. 500000)
- 26909 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 26893 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -1,0 +1,24 @@
+Robotic Arms:
+
+https://science.howstuffworks.com/robot2.htm
+
+most common use: manufactoring -> automatic, precise repititive motions. For tasks, that are hard, dangerous and boring to humans. 
+
+consists of segments connected by joints. Number of joints -> Degrees of Freedom.
+Step motors at each joint to rotate -> very precise
+
+job is to move the end effector (hand) to some place.
+
+motion is done by a handheld controller which is stored and then repeated.
+
+
+https://uk.rs-online.com/web/generalDisplay.html?id=ideas-and-advice/robotic-arms-guide
+
+skills of robotic arms, why use them.
+robotic use cases.
+summary :)
+
+
+https://interestingengineering.com/why-was-the-robotic-arm-invented
+
+history of robotic arms from da vinci to now
