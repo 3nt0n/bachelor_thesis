@@ -49,8 +49,7 @@ Versions:
 -Slideball-v2: Same as version 1, but doubled goal distance
 (trained ~20ep/100k)
 
--Slideball-v3: Same as version 2, but with bigger goal
-(not trained yet)
+-Slideball-v3: Same as version 1, but tripled goal distance #todo
 
 -Slideball-v4: Same as version 1, but make the goal as big as version 1 and 2 together
 

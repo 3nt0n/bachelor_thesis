@@ -1,0 +1,11 @@
+**Own files I put in gym**
+
+
+edit gym/gym/envs/__init__.py: add the environment to register it, change timesteps
+edit gym/gym/envs/robotics/__init__.py: import needed fetch environments
+
+insert gym/gym/envs/robotics/fetch_env_ball4.py: change the goal distance
+insert gym/gym/envs/robotics/assets/fetch/slideball4.xml: own xml model file, change friction
+insert gym/gym/envs/robotics/fetch/slideball4.py: put in own environment with own parameters
+
+edit baselines/baselines/run.py: add environment to let baselines know that it is used with the robotics environment

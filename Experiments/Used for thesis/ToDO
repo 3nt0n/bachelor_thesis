@@ -1,0 +1,40 @@
+Construct Golf Obstacle
+
+Construct Basket Hoop
+
+Train:
+
+HER:
+
+Golf
+PickPlace          Done
+Reach              Done
+Slideball-v1       Done
+Slideball-v2       Done
+Slide              Done
+Toss
+
+
+
+HGG:
+
+Translate+
+
+Golf
+Toss
+Slideball-v2       Done
+Slideball-v1
+
+(Slide)            Done
+(PickPlace)        Done
+
+an
+Next: Do HER Reach 250k -
+      Do HER PickPlace 250k -
+      Do HGG Slideball-v1 -
+      Test HGG Slideball-v10000 - Fail ?
+      Construct Golf (Obstacle)
+      Train Golf
+      Construct Basket
+      Train Basket
+      Translate HGG accs

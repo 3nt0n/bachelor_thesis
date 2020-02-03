@@ -1,0 +1,4835 @@
+env: FetchSlideball-v2
+timesteps: 50
+buffer_type: energy
+pi_lr: 0.001
+save_acc: True
+buffer_size: 10000
+polyak: 0.95
+train_batches: 20
+hgg_pool_size: 1000
+gamma: 0.98
+clip_return: True
+pool_rule: full
+hgg_L: 5.0
+alg: ddpg
+cycles: 20
+warmup: 10000
+her_ratio: 0.8
+tag: HGG_fetch_slideball-v2
+batch_size: 256
+std_act: 0.2
+her: future
+init_offset: 1.0
+clip_return_r: 0.0
+epoches: 20
+goal: interval
+act_l2: 1.0
+episodes: 50
+clip_return_l: -49.99999999999996
+eps_act: 0.3
+q_lr: 0.001
+learn: hgg
+goal_based: True
+hgg_c: 3.0
+*** network initialization complete ***
+*** tester initialization complete ***
+2020-01-13 00:28:14 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 0/20   |
+| Episodes         | 50     |
+| Timesteps        | 2500   |
+| TimeCost(sec)    | 12.979 |
+| Pi_l2_loss       |        |
+| Q_loss           |        |
+| Pi_q_loss        |        |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:28:29 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 1/20   |
+| Episodes         | 100    |
+| Timesteps        | 5000   |
+| TimeCost(sec)    | 15.021 |
+| Pi_l2_loss       |        |
+| Q_loss           |        |
+| Pi_q_loss        |        |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:28:44 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 2/20   |
+| Episodes         | 150    |
+| Timesteps        | 7500   |
+| TimeCost(sec)    | 15.008 |
+| Pi_l2_loss       |        |
+| Q_loss           |        |
+| Pi_q_loss        |        |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:29:00 HGG_fetch_slideball-v2
++------------------+-------+
+| Epoch            | 0/20  |
+| Cycle            | 3/20  |
+| Episodes         | 200   |
+| Timesteps        | 10000 |
+| TimeCost(sec)    | 15.72 |
+| Pi_l2_loss       | 0.01  |
+| Q_loss           | 0.241 |
+| Pi_q_loss        | 0.481 |
+| Success/interval | 0.0   |
++------------------+-------+
+2020-01-13 00:29:28 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 4/20   |
+| Episodes         | 250    |
+| Timesteps        | 12500  |
+| TimeCost(sec)    | 28.186 |
+| Pi_l2_loss       | 0.005  |
+| Q_loss           | 0.034  |
+| Pi_q_loss        | 0.978  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:29:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 5/20   |
+| Episodes         | 300    |
+| Timesteps        | 15000  |
+| TimeCost(sec)    | 28.347 |
+| Pi_l2_loss       | 0.006  |
+| Q_loss           | 0.025  |
+| Pi_q_loss        | 1.91   |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:30:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 6/20   |
+| Episodes         | 350    |
+| Timesteps        | 17500  |
+| TimeCost(sec)    | 29.019 |
+| Pi_l2_loss       | 0.017  |
+| Q_loss           | 0.041  |
+| Pi_q_loss        | 2.732  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:30:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 7/20   |
+| Episodes         | 400    |
+| Timesteps        | 20000  |
+| TimeCost(sec)    | 29.363 |
+| Pi_l2_loss       | 0.035  |
+| Q_loss           | 0.068  |
+| Pi_q_loss        | 3.369  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:31:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 8/20   |
+| Episodes         | 450    |
+| Timesteps        | 22500  |
+| TimeCost(sec)    | 29.399 |
+| Pi_l2_loss       | 0.056  |
+| Q_loss           | 0.078  |
+| Pi_q_loss        | 3.859  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:31:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 9/20   |
+| Episodes         | 500    |
+| Timesteps        | 25000  |
+| TimeCost(sec)    | 29.053 |
+| Pi_l2_loss       | 0.063  |
+| Q_loss           | 0.091  |
+| Pi_q_loss        | 4.23   |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:32:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 10/20  |
+| Episodes         | 550    |
+| Timesteps        | 27500  |
+| TimeCost(sec)    | 29.335 |
+| Pi_l2_loss       | 0.066  |
+| Q_loss           | 0.106  |
+| Pi_q_loss        | 4.566  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:32:52 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 11/20  |
+| Episodes         | 600    |
+| Timesteps        | 30000  |
+| TimeCost(sec)    | 29.626 |
+| Pi_l2_loss       | 0.074  |
+| Q_loss           | 0.128  |
+| Pi_q_loss        | 4.845  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:33:21 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 12/20  |
+| Episodes         | 650    |
+| Timesteps        | 32500  |
+| TimeCost(sec)    | 28.659 |
+| Pi_l2_loss       | 0.08   |
+| Q_loss           | 0.139  |
+| Pi_q_loss        | 5.105  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:33:50 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 13/20  |
+| Episodes         | 700    |
+| Timesteps        | 35000  |
+| TimeCost(sec)    | 28.919 |
+| Pi_l2_loss       | 0.087  |
+| Q_loss           | 0.142  |
+| Pi_q_loss        | 5.286  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:34:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 14/20  |
+| Episodes         | 750    |
+| Timesteps        | 37500  |
+| TimeCost(sec)    | 28.909 |
+| Pi_l2_loss       | 0.087  |
+| Q_loss           | 0.142  |
+| Pi_q_loss        | 5.459  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:34:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 15/20  |
+| Episodes         | 800    |
+| Timesteps        | 40000  |
+| TimeCost(sec)    | 28.897 |
+| Pi_l2_loss       | 0.087  |
+| Q_loss           | 0.166  |
+| Pi_q_loss        | 5.674  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:35:18 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 16/20  |
+| Episodes         | 850    |
+| Timesteps        | 42500  |
+| TimeCost(sec)    | 30.449 |
+| Pi_l2_loss       | 0.089  |
+| Q_loss           | 0.212  |
+| Pi_q_loss        | 5.962  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:35:47 HGG_fetch_slideball-v2
++------------------+-------+
+| Epoch            | 0/20  |
+| Cycle            | 17/20 |
+| Episodes         | 900   |
+| Timesteps        | 45000 |
+| TimeCost(sec)    | 29.06 |
+| Pi_l2_loss       | 0.091 |
+| Q_loss           | 0.227 |
+| Pi_q_loss        | 6.376 |
+| Success/interval | 0.0   |
++------------------+-------+
+2020-01-13 00:36:17 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 18/20  |
+| Episodes         | 950    |
+| Timesteps        | 47500  |
+| TimeCost(sec)    | 29.985 |
+| Pi_l2_loss       | 0.09   |
+| Q_loss           | 0.241  |
+| Pi_q_loss        | 6.491  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:36:46 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 0/20   |
+| Cycle            | 19/20  |
+| Episodes         | 1000   |
+| Timesteps        | 50000  |
+| TimeCost(sec)    | 29.148 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.254  |
+| Pi_q_loss        | 6.594  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:37:15 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 0/20   |
+| Episodes         | 1050   |
+| Timesteps        | 52500  |
+| TimeCost(sec)    | 28.954 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.275  |
+| Pi_q_loss        | 6.779  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:37:44 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 1/20   |
+| Episodes         | 1100   |
+| Timesteps        | 55000  |
+| TimeCost(sec)    | 29.037 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.321  |
+| Pi_q_loss        | 6.832  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:38:13 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 2/20   |
+| Episodes         | 1150   |
+| Timesteps        | 57500  |
+| TimeCost(sec)    | 28.689 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.332  |
+| Pi_q_loss        | 6.859  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:38:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 3/20   |
+| Episodes         | 1200   |
+| Timesteps        | 60000  |
+| TimeCost(sec)    | 28.637 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.337  |
+| Pi_q_loss        | 6.912  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:39:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 4/20   |
+| Episodes         | 1250   |
+| Timesteps        | 62500  |
+| TimeCost(sec)    | 29.297 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.371  |
+| Pi_q_loss        | 7.047  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:39:40 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 5/20   |
+| Episodes         | 1300   |
+| Timesteps        | 65000  |
+| TimeCost(sec)    | 29.003 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.426  |
+| Pi_q_loss        | 7.31   |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:40:09 HGG_fetch_slideball-v2
++------------------+-------+
+| Epoch            | 1/20  |
+| Cycle            | 6/20  |
+| Episodes         | 1350  |
+| Timesteps        | 67500 |
+| TimeCost(sec)    | 29.43 |
+| Pi_l2_loss       | 0.111 |
+| Q_loss           | 0.409 |
+| Pi_q_loss        | 7.412 |
+| Success/interval | 0.05  |
++------------------+-------+
+2020-01-13 00:40:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 7/20   |
+| Episodes         | 1400   |
+| Timesteps        | 70000  |
+| TimeCost(sec)    | 29.112 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.426  |
+| Pi_q_loss        | 7.527  |
+| Success/interval | 0.0    |
++------------------+--------+
+2020-01-13 00:41:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 8/20   |
+| Episodes         | 1450   |
+| Timesteps        | 72500  |
+| TimeCost(sec)    | 29.513 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.44   |
+| Pi_q_loss        | 7.703  |
+| Success/interval | 0.01   |
++------------------+--------+
+2020-01-13 00:41:37 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 9/20   |
+| Episodes         | 1500   |
+| Timesteps        | 75000  |
+| TimeCost(sec)    | 29.527 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.475  |
+| Pi_q_loss        | 7.862  |
+| Success/interval | 0.09   |
++------------------+--------+
+2020-01-13 00:42:07 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 10/20  |
+| Episodes         | 1550   |
+| Timesteps        | 77500  |
+| TimeCost(sec)    | 29.735 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.449  |
+| Pi_q_loss        | 7.947  |
+| Success/interval | 0.04   |
++------------------+--------+
+2020-01-13 00:42:36 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 11/20  |
+| Episodes         | 1600   |
+| Timesteps        | 80000  |
+| TimeCost(sec)    | 29.246 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.465  |
+| Pi_q_loss        | 8.082  |
+| Success/interval | 0.01   |
++------------------+--------+
+2020-01-13 00:43:06 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 12/20  |
+| Episodes         | 1650   |
+| Timesteps        | 82500  |
+| TimeCost(sec)    | 29.144 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.473  |
+| Pi_q_loss        | 8.184  |
+| Success/interval | 0.01   |
++------------------+--------+
+2020-01-13 00:43:35 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 13/20  |
+| Episodes         | 1700   |
+| Timesteps        | 85000  |
+| TimeCost(sec)    | 29.622 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.478  |
+| Pi_q_loss        | 8.215  |
+| Success/interval | 0.11   |
++------------------+--------+
+2020-01-13 00:44:04 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 14/20  |
+| Episodes         | 1750   |
+| Timesteps        | 87500  |
+| TimeCost(sec)    | 29.316 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.483  |
+| Pi_q_loss        | 8.251  |
+| Success/interval | 0.09   |
++------------------+--------+
+2020-01-13 00:44:34 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 15/20  |
+| Episodes         | 1800   |
+| Timesteps        | 90000  |
+| TimeCost(sec)    | 29.547 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.475  |
+| Pi_q_loss        | 8.286  |
+| Success/interval | 0.07   |
++------------------+--------+
+2020-01-13 00:45:03 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 16/20  |
+| Episodes         | 1850   |
+| Timesteps        | 92500  |
+| TimeCost(sec)    | 29.214 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.489  |
+| Pi_q_loss        | 8.269  |
+| Success/interval | 0.14   |
++------------------+--------+
+2020-01-13 00:45:33 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 17/20  |
+| Episodes         | 1900   |
+| Timesteps        | 95000  |
+| TimeCost(sec)    | 29.492 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.475  |
+| Pi_q_loss        | 8.268  |
+| Success/interval | 0.01   |
++------------------+--------+
+2020-01-13 00:46:02 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 18/20  |
+| Episodes         | 1950   |
+| Timesteps        | 97500  |
+| TimeCost(sec)    | 29.676 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.486  |
+| Pi_q_loss        | 8.351  |
+| Success/interval | 0.16   |
++------------------+--------+
+2020-01-13 00:46:32 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 1/20   |
+| Cycle            | 19/20  |
+| Episodes         | 2000   |
+| Timesteps        | 100000 |
+| TimeCost(sec)    | 29.382 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.458  |
+| Pi_q_loss        | 8.334  |
+| Success/interval | 0.02   |
++------------------+--------+
+2020-01-13 00:47:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 0/20   |
+| Episodes         | 2050   |
+| Timesteps        | 102500 |
+| TimeCost(sec)    | 29.082 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.459  |
+| Pi_q_loss        | 8.407  |
+| Success/interval | 0.08   |
++------------------+--------+
+2020-01-13 00:47:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 1/20   |
+| Episodes         | 2100   |
+| Timesteps        | 105000 |
+| TimeCost(sec)    | 29.181 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.488  |
+| Pi_q_loss        | 8.491  |
+| Success/interval | 0.27   |
++------------------+--------+
+2020-01-13 00:48:00 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 2/20   |
+| Episodes         | 2150   |
+| Timesteps        | 107500 |
+| TimeCost(sec)    | 29.766 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.474  |
+| Pi_q_loss        | 8.676  |
+| Success/interval | 0.09   |
++------------------+--------+
+2020-01-13 00:48:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 3/20   |
+| Episodes         | 2200   |
+| Timesteps        | 110000 |
+| TimeCost(sec)    | 29.877 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.506  |
+| Pi_q_loss        | 8.774  |
+| Success/interval | 0.04   |
++------------------+--------+
+2020-01-13 00:49:00 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 4/20   |
+| Episodes         | 2250   |
+| Timesteps        | 112500 |
+| TimeCost(sec)    | 29.964 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.467  |
+| Pi_q_loss        | 8.895  |
+| Success/interval | 0.13   |
++------------------+--------+
+2020-01-13 00:49:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 5/20   |
+| Episodes         | 2300   |
+| Timesteps        | 115000 |
+| TimeCost(sec)    | 29.813 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.465  |
+| Pi_q_loss        | 8.96   |
+| Success/interval | 0.38   |
++------------------+--------+
+2020-01-13 00:50:00 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 6/20   |
+| Episodes         | 2350   |
+| Timesteps        | 117500 |
+| TimeCost(sec)    | 30.396 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.523  |
+| Pi_q_loss        | 9.016  |
+| Success/interval | 0.3    |
++------------------+--------+
+2020-01-13 00:50:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 7/20   |
+| Episodes         | 2400   |
+| Timesteps        | 120000 |
+| TimeCost(sec)    | 29.666 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.518  |
+| Pi_q_loss        | 9.133  |
+| Success/interval | 0.2    |
++------------------+--------+
+2020-01-13 00:51:00 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 8/20   |
+| Episodes         | 2450   |
+| Timesteps        | 122500 |
+| TimeCost(sec)    | 30.106 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.529  |
+| Pi_q_loss        | 9.187  |
+| Success/interval | 0.33   |
++------------------+--------+
+2020-01-13 00:51:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 9/20   |
+| Episodes         | 2500   |
+| Timesteps        | 125000 |
+| TimeCost(sec)    | 29.968 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.56   |
+| Pi_q_loss        | 9.191  |
+| Success/interval | 0.29   |
++------------------+--------+
+2020-01-13 00:52:00 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 10/20  |
+| Episodes         | 2550   |
+| Timesteps        | 127500 |
+| TimeCost(sec)    | 30.801 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.525  |
+| Pi_q_loss        | 9.169  |
+| Success/interval | 0.16   |
++------------------+--------+
+2020-01-13 00:52:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 11/20  |
+| Episodes         | 2600   |
+| Timesteps        | 130000 |
+| TimeCost(sec)    | 29.762 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.549  |
+| Pi_q_loss        | 9.059  |
+| Success/interval | 0.04   |
++------------------+--------+
+2020-01-13 00:53:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 12/20  |
+| Episodes         | 2650   |
+| Timesteps        | 132500 |
+| TimeCost(sec)    | 30.729 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.541  |
+| Pi_q_loss        | 9.001  |
+| Success/interval | 0.21   |
++------------------+--------+
+2020-01-13 00:53:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 13/20  |
+| Episodes         | 2700   |
+| Timesteps        | 135000 |
+| TimeCost(sec)    | 29.838 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.528  |
+| Pi_q_loss        | 8.928  |
+| Success/interval | 0.44   |
++------------------+--------+
+2020-01-13 00:54:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 14/20  |
+| Episodes         | 2750   |
+| Timesteps        | 137500 |
+| TimeCost(sec)    | 29.715 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.544  |
+| Pi_q_loss        | 8.939  |
+| Success/interval | 0.27   |
++------------------+--------+
+2020-01-13 00:54:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 15/20  |
+| Episodes         | 2800   |
+| Timesteps        | 140000 |
+| TimeCost(sec)    | 29.794 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.524  |
+| Pi_q_loss        | 8.913  |
+| Success/interval | 0.32   |
++------------------+--------+
+2020-01-13 00:55:00 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 16/20  |
+| Episodes         | 2850   |
+| Timesteps        | 142500 |
+| TimeCost(sec)    | 29.612 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.497  |
+| Pi_q_loss        | 8.905  |
+| Success/interval | 0.24   |
++------------------+--------+
+2020-01-13 00:55:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 17/20  |
+| Episodes         | 2900   |
+| Timesteps        | 145000 |
+| TimeCost(sec)    | 29.944 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.494  |
+| Pi_q_loss        | 8.908  |
+| Success/interval | 0.18   |
++------------------+--------+
+2020-01-13 00:55:59 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 18/20  |
+| Episodes         | 2950   |
+| Timesteps        | 147500 |
+| TimeCost(sec)    | 29.328 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.513  |
+| Pi_q_loss        | 9.005  |
+| Success/interval | 0.3    |
++------------------+--------+
+2020-01-13 00:56:29 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 2/20   |
+| Cycle            | 19/20  |
+| Episodes         | 3000   |
+| Timesteps        | 150000 |
+| TimeCost(sec)    | 29.781 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.468  |
+| Pi_q_loss        | 9.008  |
+| Success/interval | 0.53   |
++------------------+--------+
+2020-01-13 00:56:59 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 0/20   |
+| Episodes         | 3050   |
+| Timesteps        | 152500 |
+| TimeCost(sec)    | 29.6   |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.465  |
+| Pi_q_loss        | 9.007  |
+| Success/interval | 0.56   |
++------------------+--------+
+2020-01-13 00:57:28 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 1/20   |
+| Episodes         | 3100   |
+| Timesteps        | 155000 |
+| TimeCost(sec)    | 29.604 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.485  |
+| Pi_q_loss        | 8.992  |
+| Success/interval | 0.19   |
++------------------+--------+
+2020-01-13 00:57:58 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 2/20   |
+| Episodes         | 3150   |
+| Timesteps        | 157500 |
+| TimeCost(sec)    | 29.558 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.479  |
+| Pi_q_loss        | 9.036  |
+| Success/interval | 0.11   |
++------------------+--------+
+2020-01-13 00:58:27 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 3/20   |
+| Episodes         | 3200   |
+| Timesteps        | 160000 |
+| TimeCost(sec)    | 29.435 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.467  |
+| Pi_q_loss        | 8.976  |
+| Success/interval | 0.26   |
++------------------+--------+
+2020-01-13 00:58:57 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 4/20   |
+| Episodes         | 3250   |
+| Timesteps        | 162500 |
+| TimeCost(sec)    | 29.32  |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.461  |
+| Pi_q_loss        | 9.0    |
+| Success/interval | 0.17   |
++------------------+--------+
+2020-01-13 00:59:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 5/20   |
+| Episodes         | 3300   |
+| Timesteps        | 165000 |
+| TimeCost(sec)    | 29.334 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.47   |
+| Pi_q_loss        | 8.993  |
+| Success/interval | 0.39   |
++------------------+--------+
+2020-01-13 00:59:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 6/20   |
+| Episodes         | 3350   |
+| Timesteps        | 167500 |
+| TimeCost(sec)    | 29.263 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.451  |
+| Pi_q_loss        | 8.991  |
+| Success/interval | 0.02   |
++------------------+--------+
+2020-01-13 01:00:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 7/20   |
+| Episodes         | 3400   |
+| Timesteps        | 170000 |
+| TimeCost(sec)    | 29.193 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.446  |
+| Pi_q_loss        | 9.037  |
+| Success/interval | 0.34   |
++------------------+--------+
+2020-01-13 01:00:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 8/20   |
+| Episodes         | 3450   |
+| Timesteps        | 172500 |
+| TimeCost(sec)    | 29.435 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.457  |
+| Pi_q_loss        | 9.084  |
+| Success/interval | 0.28   |
++------------------+--------+
+2020-01-13 01:01:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 9/20   |
+| Episodes         | 3500   |
+| Timesteps        | 175000 |
+| TimeCost(sec)    | 29.238 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.479  |
+| Pi_q_loss        | 9.151  |
+| Success/interval | 0.12   |
++------------------+--------+
+2020-01-13 01:01:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 10/20  |
+| Episodes         | 3550   |
+| Timesteps        | 177500 |
+| TimeCost(sec)    | 29.596 |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.507  |
+| Pi_q_loss        | 9.277  |
+| Success/interval | 0.37   |
++------------------+--------+
+2020-01-13 01:02:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 11/20  |
+| Episodes         | 3600   |
+| Timesteps        | 180000 |
+| TimeCost(sec)    | 29.113 |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.504  |
+| Pi_q_loss        | 9.316  |
+| Success/interval | 0.41   |
++------------------+--------+
+2020-01-13 01:02:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 12/20  |
+| Episodes         | 3650   |
+| Timesteps        | 182500 |
+| TimeCost(sec)    | 29.188 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.504  |
+| Pi_q_loss        | 9.369  |
+| Success/interval | 0.22   |
++------------------+--------+
+2020-01-13 01:03:20 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 13/20  |
+| Episodes         | 3700   |
+| Timesteps        | 185000 |
+| TimeCost(sec)    | 29.391 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.533  |
+| Pi_q_loss        | 9.425  |
+| Success/interval | 0.25   |
++------------------+--------+
+2020-01-13 01:03:50 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 14/20  |
+| Episodes         | 3750   |
+| Timesteps        | 187500 |
+| TimeCost(sec)    | 29.406 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.527  |
+| Pi_q_loss        | 9.437  |
+| Success/interval | 0.42   |
++------------------+--------+
+2020-01-13 01:04:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 15/20  |
+| Episodes         | 3800   |
+| Timesteps        | 190000 |
+| TimeCost(sec)    | 29.024 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.53   |
+| Pi_q_loss        | 9.455  |
+| Success/interval | 0.16   |
++------------------+--------+
+2020-01-13 01:04:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 16/20  |
+| Episodes         | 3850   |
+| Timesteps        | 192500 |
+| TimeCost(sec)    | 29.051 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.531  |
+| Pi_q_loss        | 9.408  |
+| Success/interval | 0.39   |
++------------------+--------+
+2020-01-13 01:05:17 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 17/20  |
+| Episodes         | 3900   |
+| Timesteps        | 195000 |
+| TimeCost(sec)    | 28.814 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.549  |
+| Pi_q_loss        | 9.386  |
+| Success/interval | 0.33   |
++------------------+--------+
+2020-01-13 01:05:46 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 18/20  |
+| Episodes         | 3950   |
+| Timesteps        | 197500 |
+| TimeCost(sec)    | 28.907 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.556  |
+| Pi_q_loss        | 9.433  |
+| Success/interval | 0.42   |
++------------------+--------+
+2020-01-13 01:06:14 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 3/20   |
+| Cycle            | 19/20  |
+| Episodes         | 4000   |
+| Timesteps        | 200000 |
+| TimeCost(sec)    | 28.922 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.554  |
+| Pi_q_loss        | 9.495  |
+| Success/interval | 0.48   |
++------------------+--------+
+2020-01-13 01:06:44 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 0/20   |
+| Episodes         | 4050   |
+| Timesteps        | 202500 |
+| TimeCost(sec)    | 29.44  |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.542  |
+| Pi_q_loss        | 9.548  |
+| Success/interval | 0.35   |
++------------------+--------+
+2020-01-13 01:07:13 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 1/20   |
+| Episodes         | 4100   |
+| Timesteps        | 205000 |
+| TimeCost(sec)    | 29.423 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.556  |
+| Pi_q_loss        | 9.629  |
+| Success/interval | 0.47   |
++------------------+--------+
+2020-01-13 01:07:43 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 2/20   |
+| Episodes         | 4150   |
+| Timesteps        | 207500 |
+| TimeCost(sec)    | 29.845 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.56   |
+| Pi_q_loss        | 9.675  |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 01:08:13 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 3/20   |
+| Episodes         | 4200   |
+| Timesteps        | 210000 |
+| TimeCost(sec)    | 29.316 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.552  |
+| Pi_q_loss        | 9.763  |
+| Success/interval | 0.35   |
++------------------+--------+
+2020-01-13 01:08:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 4/20   |
+| Episodes         | 4250   |
+| Timesteps        | 212500 |
+| TimeCost(sec)    | 28.986 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.56   |
+| Pi_q_loss        | 9.885  |
+| Success/interval | 0.4    |
++------------------+--------+
+2020-01-13 01:09:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 5/20   |
+| Episodes         | 4300   |
+| Timesteps        | 215000 |
+| TimeCost(sec)    | 29.298 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.596  |
+| Pi_q_loss        | 9.925  |
+| Success/interval | 0.21   |
++------------------+--------+
+2020-01-13 01:09:40 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 6/20   |
+| Episodes         | 4350   |
+| Timesteps        | 217500 |
+| TimeCost(sec)    | 29.187 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.576  |
+| Pi_q_loss        | 9.997  |
+| Success/interval | 0.35   |
++------------------+--------+
+2020-01-13 01:10:09 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 7/20   |
+| Episodes         | 4400   |
+| Timesteps        | 220000 |
+| TimeCost(sec)    | 29.335 |
+| Pi_l2_loss       | 0.09   |
+| Q_loss           | 0.608  |
+| Pi_q_loss        | 10.058 |
+| Success/interval | 0.32   |
++------------------+--------+
+2020-01-13 01:10:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 8/20   |
+| Episodes         | 4450   |
+| Timesteps        | 222500 |
+| TimeCost(sec)    | 29.44  |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.57   |
+| Pi_q_loss        | 10.147 |
+| Success/interval | 0.27   |
++------------------+--------+
+2020-01-13 01:11:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 9/20   |
+| Episodes         | 4500   |
+| Timesteps        | 225000 |
+| TimeCost(sec)    | 29.484 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.608  |
+| Pi_q_loss        | 10.224 |
+| Success/interval | 0.35   |
++------------------+--------+
+2020-01-13 01:11:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 10/20  |
+| Episodes         | 4550   |
+| Timesteps        | 227500 |
+| TimeCost(sec)    | 29.366 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.655  |
+| Pi_q_loss        | 10.303 |
+| Success/interval | 0.38   |
++------------------+--------+
+2020-01-13 01:12:07 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 11/20  |
+| Episodes         | 4600   |
+| Timesteps        | 230000 |
+| TimeCost(sec)    | 29.561 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.642  |
+| Pi_q_loss        | 10.291 |
+| Success/interval | 0.29   |
++------------------+--------+
+2020-01-13 01:12:37 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 12/20  |
+| Episodes         | 4650   |
+| Timesteps        | 232500 |
+| TimeCost(sec)    | 29.823 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.666  |
+| Pi_q_loss        | 10.342 |
+| Success/interval | 0.37   |
++------------------+--------+
+2020-01-13 01:13:07 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 13/20  |
+| Episodes         | 4700   |
+| Timesteps        | 235000 |
+| TimeCost(sec)    | 30.439 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.68   |
+| Pi_q_loss        | 10.401 |
+| Success/interval | 0.32   |
++------------------+--------+
+2020-01-13 01:13:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 14/20  |
+| Episodes         | 4750   |
+| Timesteps        | 237500 |
+| TimeCost(sec)    | 30.47  |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.703  |
+| Pi_q_loss        | 10.37  |
+| Success/interval | 0.34   |
++------------------+--------+
+2020-01-13 01:14:10 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 15/20  |
+| Episodes         | 4800   |
+| Timesteps        | 240000 |
+| TimeCost(sec)    | 31.948 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.749  |
+| Pi_q_loss        | 10.348 |
+| Success/interval | 0.22   |
++------------------+--------+
+2020-01-13 01:14:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 16/20  |
+| Episodes         | 4850   |
+| Timesteps        | 242500 |
+| TimeCost(sec)    | 31.52  |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.739  |
+| Pi_q_loss        | 10.253 |
+| Success/interval | 0.41   |
++------------------+--------+
+2020-01-13 01:15:12 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 17/20  |
+| Episodes         | 4900   |
+| Timesteps        | 245000 |
+| TimeCost(sec)    | 30.901 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.736  |
+| Pi_q_loss        | 10.283 |
+| Success/interval | 0.56   |
++------------------+--------+
+2020-01-13 01:15:43 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 18/20  |
+| Episodes         | 4950   |
+| Timesteps        | 247500 |
+| TimeCost(sec)    | 31.063 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.691  |
+| Pi_q_loss        | 10.27  |
+| Success/interval | 0.4    |
++------------------+--------+
+2020-01-13 01:16:14 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 4/20   |
+| Cycle            | 19/20  |
+| Episodes         | 5000   |
+| Timesteps        | 250000 |
+| TimeCost(sec)    | 31.098 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.679  |
+| Pi_q_loss        | 10.29  |
+| Success/interval | 0.44   |
++------------------+--------+
+2020-01-13 01:16:45 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 0/20   |
+| Episodes         | 5050   |
+| Timesteps        | 252500 |
+| TimeCost(sec)    | 30.853 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.661  |
+| Pi_q_loss        | 10.285 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 01:17:17 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 1/20   |
+| Episodes         | 5100   |
+| Timesteps        | 255000 |
+| TimeCost(sec)    | 31.53  |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.649  |
+| Pi_q_loss        | 10.353 |
+| Success/interval | 0.6    |
++------------------+--------+
+2020-01-13 01:17:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 2/20   |
+| Episodes         | 5150   |
+| Timesteps        | 257500 |
+| TimeCost(sec)    | 30.789 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.641  |
+| Pi_q_loss        | 10.39  |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 01:18:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 3/20   |
+| Episodes         | 5200   |
+| Timesteps        | 260000 |
+| TimeCost(sec)    | 31.06  |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.62   |
+| Pi_q_loss        | 10.431 |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 01:18:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 4/20   |
+| Episodes         | 5250   |
+| Timesteps        | 262500 |
+| TimeCost(sec)    | 30.598 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.635  |
+| Pi_q_loss        | 10.457 |
+| Success/interval | 0.67   |
++------------------+--------+
+2020-01-13 01:19:21 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 5/20   |
+| Episodes         | 5300   |
+| Timesteps        | 265000 |
+| TimeCost(sec)    | 31.175 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.627  |
+| Pi_q_loss        | 10.491 |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 01:19:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 6/20   |
+| Episodes         | 5350   |
+| Timesteps        | 267500 |
+| TimeCost(sec)    | 30.668 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.673  |
+| Pi_q_loss        | 10.483 |
+| Success/interval | 0.46   |
++------------------+--------+
+2020-01-13 01:20:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 7/20   |
+| Episodes         | 5400   |
+| Timesteps        | 270000 |
+| TimeCost(sec)    | 31.386 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.665  |
+| Pi_q_loss        | 10.546 |
+| Success/interval | 0.52   |
++------------------+--------+
+2020-01-13 01:20:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 8/20   |
+| Episodes         | 5450   |
+| Timesteps        | 272500 |
+| TimeCost(sec)    | 31.392 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.687  |
+| Pi_q_loss        | 10.6   |
+| Success/interval | 0.62   |
++------------------+--------+
+2020-01-13 01:21:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 9/20   |
+| Episodes         | 5500   |
+| Timesteps        | 275000 |
+| TimeCost(sec)    | 31.309 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.647  |
+| Pi_q_loss        | 10.625 |
+| Success/interval | 0.66   |
++------------------+--------+
+2020-01-13 01:21:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 10/20  |
+| Episodes         | 5550   |
+| Timesteps        | 277500 |
+| TimeCost(sec)    | 30.958 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.701  |
+| Pi_q_loss        | 10.703 |
+| Success/interval | 0.73   |
++------------------+--------+
+2020-01-13 01:22:27 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 11/20  |
+| Episodes         | 5600   |
+| Timesteps        | 280000 |
+| TimeCost(sec)    | 31.015 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.698  |
+| Pi_q_loss        | 10.695 |
+| Success/interval | 0.65   |
++------------------+--------+
+2020-01-13 01:22:59 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 12/20  |
+| Episodes         | 5650   |
+| Timesteps        | 282500 |
+| TimeCost(sec)    | 31.734 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.739  |
+| Pi_q_loss        | 10.682 |
+| Success/interval | 0.4    |
++------------------+--------+
+2020-01-13 01:23:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 13/20  |
+| Episodes         | 5700   |
+| Timesteps        | 285000 |
+| TimeCost(sec)    | 31.035 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.72   |
+| Pi_q_loss        | 10.661 |
+| Success/interval | 0.88   |
++------------------+--------+
+2020-01-13 01:24:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 14/20  |
+| Episodes         | 5750   |
+| Timesteps        | 287500 |
+| TimeCost(sec)    | 30.77  |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.721  |
+| Pi_q_loss        | 10.561 |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 01:24:32 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 15/20  |
+| Episodes         | 5800   |
+| Timesteps        | 290000 |
+| TimeCost(sec)    | 30.894 |
+| Pi_l2_loss       | 0.114  |
+| Q_loss           | 0.675  |
+| Pi_q_loss        | 10.425 |
+| Success/interval | 0.65   |
++------------------+--------+
+2020-01-13 01:25:03 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 16/20  |
+| Episodes         | 5850   |
+| Timesteps        | 292500 |
+| TimeCost(sec)    | 30.942 |
+| Pi_l2_loss       | 0.117  |
+| Q_loss           | 0.69   |
+| Pi_q_loss        | 10.313 |
+| Success/interval | 0.57   |
++------------------+--------+
+2020-01-13 01:25:33 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 17/20  |
+| Episodes         | 5900   |
+| Timesteps        | 295000 |
+| TimeCost(sec)    | 30.679 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.695  |
+| Pi_q_loss        | 10.216 |
+| Success/interval | 0.41   |
++------------------+--------+
+2020-01-13 01:26:04 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 18/20  |
+| Episodes         | 5950   |
+| Timesteps        | 297500 |
+| TimeCost(sec)    | 30.71  |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.681  |
+| Pi_q_loss        | 10.133 |
+| Success/interval | 0.66   |
++------------------+--------+
+2020-01-13 01:26:35 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 5/20   |
+| Cycle            | 19/20  |
+| Episodes         | 6000   |
+| Timesteps        | 300000 |
+| TimeCost(sec)    | 30.903 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.654  |
+| Pi_q_loss        | 10.115 |
+| Success/interval | 0.42   |
++------------------+--------+
+2020-01-13 01:27:05 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 0/20   |
+| Episodes         | 6050   |
+| Timesteps        | 302500 |
+| TimeCost(sec)    | 30.367 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.679  |
+| Pi_q_loss        | 10.121 |
+| Success/interval | 0.69   |
++------------------+--------+
+2020-01-13 01:27:36 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 1/20   |
+| Episodes         | 6100   |
+| Timesteps        | 305000 |
+| TimeCost(sec)    | 30.782 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.651  |
+| Pi_q_loss        | 10.141 |
+| Success/interval | 0.46   |
++------------------+--------+
+2020-01-13 01:28:07 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 2/20   |
+| Episodes         | 6150   |
+| Timesteps        | 307500 |
+| TimeCost(sec)    | 30.434 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.634  |
+| Pi_q_loss        | 10.213 |
+| Success/interval | 0.38   |
++------------------+--------+
+2020-01-13 01:28:37 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 3/20   |
+| Episodes         | 6200   |
+| Timesteps        | 310000 |
+| TimeCost(sec)    | 30.933 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.593  |
+| Pi_q_loss        | 10.277 |
+| Success/interval | 0.36   |
++------------------+--------+
+2020-01-13 01:29:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 4/20   |
+| Episodes         | 6250   |
+| Timesteps        | 312500 |
+| TimeCost(sec)    | 30.563 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.658  |
+| Pi_q_loss        | 10.363 |
+| Success/interval | 0.54   |
++------------------+--------+
+2020-01-13 01:29:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 5/20   |
+| Episodes         | 6300   |
+| Timesteps        | 315000 |
+| TimeCost(sec)    | 30.5   |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.681  |
+| Pi_q_loss        | 10.428 |
+| Success/interval | 0.53   |
++------------------+--------+
+2020-01-13 01:30:10 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 6/20   |
+| Episodes         | 6350   |
+| Timesteps        | 317500 |
+| TimeCost(sec)    | 31.469 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.643  |
+| Pi_q_loss        | 10.504 |
+| Success/interval | 0.6    |
++------------------+--------+
+2020-01-13 01:30:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 7/20   |
+| Episodes         | 6400   |
+| Timesteps        | 320000 |
+| TimeCost(sec)    | 31.418 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.713  |
+| Pi_q_loss        | 10.509 |
+| Success/interval | 0.81   |
++------------------+--------+
+2020-01-13 01:31:13 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 8/20   |
+| Episodes         | 6450   |
+| Timesteps        | 322500 |
+| TimeCost(sec)    | 31.682 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.686  |
+| Pi_q_loss        | 10.491 |
+| Success/interval | 0.41   |
++------------------+--------+
+2020-01-13 01:31:44 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 9/20   |
+| Episodes         | 6500   |
+| Timesteps        | 325000 |
+| TimeCost(sec)    | 31.026 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.713  |
+| Pi_q_loss        | 10.417 |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 01:32:16 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 10/20  |
+| Episodes         | 6550   |
+| Timesteps        | 327500 |
+| TimeCost(sec)    | 31.692 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.696  |
+| Pi_q_loss        | 10.383 |
+| Success/interval | 0.7    |
++------------------+--------+
+2020-01-13 01:32:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 11/20  |
+| Episodes         | 6600   |
+| Timesteps        | 330000 |
+| TimeCost(sec)    | 32.215 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.698  |
+| Pi_q_loss        | 10.405 |
+| Success/interval | 0.39   |
++------------------+--------+
+2020-01-13 01:33:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 12/20  |
+| Episodes         | 6650   |
+| Timesteps        | 332500 |
+| TimeCost(sec)    | 30.993 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.661  |
+| Pi_q_loss        | 10.377 |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 01:33:50 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 13/20  |
+| Episodes         | 6700   |
+| Timesteps        | 335000 |
+| TimeCost(sec)    | 31.198 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.704  |
+| Pi_q_loss        | 10.359 |
+| Success/interval | 0.28   |
++------------------+--------+
+2020-01-13 01:34:21 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 14/20  |
+| Episodes         | 6750   |
+| Timesteps        | 337500 |
+| TimeCost(sec)    | 30.532 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.679  |
+| Pi_q_loss        | 10.408 |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 01:34:52 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 15/20  |
+| Episodes         | 6800   |
+| Timesteps        | 340000 |
+| TimeCost(sec)    | 30.769 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.697  |
+| Pi_q_loss        | 10.371 |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 01:35:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 16/20  |
+| Episodes         | 6850   |
+| Timesteps        | 342500 |
+| TimeCost(sec)    | 30.501 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.723  |
+| Pi_q_loss        | 10.402 |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 01:35:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 17/20  |
+| Episodes         | 6900   |
+| Timesteps        | 345000 |
+| TimeCost(sec)    | 30.427 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.689  |
+| Pi_q_loss        | 10.457 |
+| Success/interval | 0.58   |
++------------------+--------+
+2020-01-13 01:36:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 18/20  |
+| Episodes         | 6950   |
+| Timesteps        | 347500 |
+| TimeCost(sec)    | 30.825 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.701  |
+| Pi_q_loss        | 10.521 |
+| Success/interval | 0.44   |
++------------------+--------+
+2020-01-13 01:36:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 6/20   |
+| Cycle            | 19/20  |
+| Episodes         | 7000   |
+| Timesteps        | 350000 |
+| TimeCost(sec)    | 30.696 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.719  |
+| Pi_q_loss        | 10.601 |
+| Success/interval | 0.55   |
++------------------+--------+
+2020-01-13 01:37:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 0/20   |
+| Episodes         | 7050   |
+| Timesteps        | 352500 |
+| TimeCost(sec)    | 30.202 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.748  |
+| Pi_q_loss        | 10.624 |
+| Success/interval | 0.45   |
++------------------+--------+
+2020-01-13 01:37:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 1/20   |
+| Episodes         | 7100   |
+| Timesteps        | 355000 |
+| TimeCost(sec)    | 30.607 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.734  |
+| Pi_q_loss        | 10.77  |
+| Success/interval | 0.86   |
++------------------+--------+
+2020-01-13 01:38:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 2/20   |
+| Episodes         | 7150   |
+| Timesteps        | 357500 |
+| TimeCost(sec)    | 30.504 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.755  |
+| Pi_q_loss        | 10.845 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 01:38:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 3/20   |
+| Episodes         | 7200   |
+| Timesteps        | 360000 |
+| TimeCost(sec)    | 30.957 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.728  |
+| Pi_q_loss        | 10.959 |
+| Success/interval | 0.86   |
++------------------+--------+
+2020-01-13 01:39:27 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 4/20   |
+| Episodes         | 7250   |
+| Timesteps        | 362500 |
+| TimeCost(sec)    | 30.779 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.739  |
+| Pi_q_loss        | 11.079 |
+| Success/interval | 0.47   |
++------------------+--------+
+2020-01-13 01:39:59 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 5/20   |
+| Episodes         | 7300   |
+| Timesteps        | 365000 |
+| TimeCost(sec)    | 31.399 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.751  |
+| Pi_q_loss        | 11.121 |
+| Success/interval | 0.71   |
++------------------+--------+
+2020-01-13 01:40:30 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 6/20   |
+| Episodes         | 7350   |
+| Timesteps        | 367500 |
+| TimeCost(sec)    | 31.287 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.796  |
+| Pi_q_loss        | 11.14  |
+| Success/interval | 0.58   |
++------------------+--------+
+2020-01-13 01:41:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 7/20   |
+| Episodes         | 7400   |
+| Timesteps        | 370000 |
+| TimeCost(sec)    | 31.045 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.759  |
+| Pi_q_loss        | 11.214 |
+| Success/interval | 0.79   |
++------------------+--------+
+2020-01-13 01:41:32 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 8/20   |
+| Episodes         | 7450   |
+| Timesteps        | 372500 |
+| TimeCost(sec)    | 31.193 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.785  |
+| Pi_q_loss        | 11.348 |
+| Success/interval | 0.5    |
++------------------+--------+
+2020-01-13 01:42:03 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 9/20   |
+| Episodes         | 7500   |
+| Timesteps        | 375000 |
+| TimeCost(sec)    | 30.987 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.813  |
+| Pi_q_loss        | 11.414 |
+| Success/interval | 0.77   |
++------------------+--------+
+2020-01-13 01:42:34 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 10/20  |
+| Episodes         | 7550   |
+| Timesteps        | 377500 |
+| TimeCost(sec)    | 30.67  |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.852  |
+| Pi_q_loss        | 11.503 |
+| Success/interval | 0.87   |
++------------------+--------+
+2020-01-13 01:43:05 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 11/20  |
+| Episodes         | 7600   |
+| Timesteps        | 380000 |
+| TimeCost(sec)    | 31.228 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.86   |
+| Pi_q_loss        | 11.494 |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 01:43:36 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 12/20  |
+| Episodes         | 7650   |
+| Timesteps        | 382500 |
+| TimeCost(sec)    | 30.633 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.914  |
+| Pi_q_loss        | 11.534 |
+| Success/interval | 0.07   |
++------------------+--------+
+2020-01-13 01:44:07 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 13/20  |
+| Episodes         | 7700   |
+| Timesteps        | 385000 |
+| TimeCost(sec)    | 31.296 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.931  |
+| Pi_q_loss        | 11.47  |
+| Success/interval | 0.59   |
++------------------+--------+
+2020-01-13 01:44:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 14/20  |
+| Episodes         | 7750   |
+| Timesteps        | 387500 |
+| TimeCost(sec)    | 31.32  |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.937  |
+| Pi_q_loss        | 11.407 |
+| Success/interval | 0.65   |
++------------------+--------+
+2020-01-13 01:45:09 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 15/20  |
+| Episodes         | 7800   |
+| Timesteps        | 390000 |
+| TimeCost(sec)    | 31.27  |
+| Pi_l2_loss       | 0.114  |
+| Q_loss           | 0.937  |
+| Pi_q_loss        | 11.302 |
+| Success/interval | 0.55   |
++------------------+--------+
+2020-01-13 01:45:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 16/20  |
+| Episodes         | 7850   |
+| Timesteps        | 392500 |
+| TimeCost(sec)    | 31.189 |
+| Pi_l2_loss       | 0.117  |
+| Q_loss           | 0.94   |
+| Pi_q_loss        | 11.128 |
+| Success/interval | 0.2    |
++------------------+--------+
+2020-01-13 01:46:12 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 17/20  |
+| Episodes         | 7900   |
+| Timesteps        | 395000 |
+| TimeCost(sec)    | 31.516 |
+| Pi_l2_loss       | 0.121  |
+| Q_loss           | 0.994  |
+| Pi_q_loss        | 10.993 |
+| Success/interval | 0.35   |
++------------------+--------+
+2020-01-13 01:46:44 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 18/20  |
+| Episodes         | 7950   |
+| Timesteps        | 397500 |
+| TimeCost(sec)    | 31.401 |
+| Pi_l2_loss       | 0.123  |
+| Q_loss           | 0.938  |
+| Pi_q_loss        | 10.768 |
+| Success/interval | 0.42   |
++------------------+--------+
+2020-01-13 01:47:15 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 7/20   |
+| Cycle            | 19/20  |
+| Episodes         | 8000   |
+| Timesteps        | 400000 |
+| TimeCost(sec)    | 31.456 |
+| Pi_l2_loss       | 0.117  |
+| Q_loss           | 0.874  |
+| Pi_q_loss        | 10.556 |
+| Success/interval | 0.24   |
++------------------+--------+
+2020-01-13 01:47:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 0/20   |
+| Episodes         | 8050   |
+| Timesteps        | 402500 |
+| TimeCost(sec)    | 32.759 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.833  |
+| Pi_q_loss        | 10.501 |
+| Success/interval | 0.5    |
++------------------+--------+
+2020-01-13 01:48:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 1/20   |
+| Episodes         | 8100   |
+| Timesteps        | 405000 |
+| TimeCost(sec)    | 31.549 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.873  |
+| Pi_q_loss        | 10.432 |
+| Success/interval | 0.45   |
++------------------+--------+
+2020-01-13 01:48:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 2/20   |
+| Episodes         | 8150   |
+| Timesteps        | 407500 |
+| TimeCost(sec)    | 31.854 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.824  |
+| Pi_q_loss        | 10.42  |
+| Success/interval | 0.81   |
++------------------+--------+
+2020-01-13 01:49:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 3/20   |
+| Episodes         | 8200   |
+| Timesteps        | 410000 |
+| TimeCost(sec)    | 31.072 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.812  |
+| Pi_q_loss        | 10.444 |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 01:49:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 4/20   |
+| Episodes         | 8250   |
+| Timesteps        | 412500 |
+| TimeCost(sec)    | 31.267 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.784  |
+| Pi_q_loss        | 10.452 |
+| Success/interval | 0.91   |
++------------------+--------+
+2020-01-13 01:50:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 5/20   |
+| Episodes         | 8300   |
+| Timesteps        | 415000 |
+| TimeCost(sec)    | 31.684 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.777  |
+| Pi_q_loss        | 10.486 |
+| Success/interval | 0.9    |
++------------------+--------+
+2020-01-13 01:50:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 6/20   |
+| Episodes         | 8350   |
+| Timesteps        | 417500 |
+| TimeCost(sec)    | 30.622 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.765  |
+| Pi_q_loss        | 10.568 |
+| Success/interval | 0.57   |
++------------------+--------+
+2020-01-13 01:51:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 7/20   |
+| Episodes         | 8400   |
+| Timesteps        | 420000 |
+| TimeCost(sec)    | 30.289 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.769  |
+| Pi_q_loss        | 10.617 |
+| Success/interval | 0.58   |
++------------------+--------+
+2020-01-13 01:51:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 8/20   |
+| Episodes         | 8450   |
+| Timesteps        | 422500 |
+| TimeCost(sec)    | 29.732 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.83   |
+| Pi_q_loss        | 10.667 |
+| Success/interval | 0.65   |
++------------------+--------+
+2020-01-13 01:52:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 9/20   |
+| Episodes         | 8500   |
+| Timesteps        | 425000 |
+| TimeCost(sec)    | 29.713 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.789  |
+| Pi_q_loss        | 10.72  |
+| Success/interval | 0.66   |
++------------------+--------+
+2020-01-13 01:52:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 10/20  |
+| Episodes         | 8550   |
+| Timesteps        | 427500 |
+| TimeCost(sec)    | 29.124 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.741  |
+| Pi_q_loss        | 10.741 |
+| Success/interval | 0.21   |
++------------------+--------+
+2020-01-13 01:53:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 11/20  |
+| Episodes         | 8600   |
+| Timesteps        | 430000 |
+| TimeCost(sec)    | 29.849 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.766  |
+| Pi_q_loss        | 10.838 |
+| Success/interval | 0.73   |
++------------------+--------+
+2020-01-13 01:53:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 12/20  |
+| Episodes         | 8650   |
+| Timesteps        | 432500 |
+| TimeCost(sec)    | 29.333 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.717  |
+| Pi_q_loss        | 10.803 |
+| Success/interval | 0.39   |
++------------------+--------+
+2020-01-13 01:54:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 13/20  |
+| Episodes         | 8700   |
+| Timesteps        | 435000 |
+| TimeCost(sec)    | 29.589 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.698  |
+| Pi_q_loss        | 10.836 |
+| Success/interval | 0.74   |
++------------------+--------+
+2020-01-13 01:54:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 14/20  |
+| Episodes         | 8750   |
+| Timesteps        | 437500 |
+| TimeCost(sec)    | 29.821 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.717  |
+| Pi_q_loss        | 10.842 |
+| Success/interval | 0.43   |
++------------------+--------+
+2020-01-13 01:55:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 15/20  |
+| Episodes         | 8800   |
+| Timesteps        | 440000 |
+| TimeCost(sec)    | 29.706 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.704  |
+| Pi_q_loss        | 10.77  |
+| Success/interval | 0.88   |
++------------------+--------+
+2020-01-13 01:55:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 16/20  |
+| Episodes         | 8850   |
+| Timesteps        | 442500 |
+| TimeCost(sec)    | 30.192 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.709  |
+| Pi_q_loss        | 10.775 |
+| Success/interval | 0.37   |
++------------------+--------+
+2020-01-13 01:56:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 17/20  |
+| Episodes         | 8900   |
+| Timesteps        | 445000 |
+| TimeCost(sec)    | 29.442 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.728  |
+| Pi_q_loss        | 10.689 |
+| Success/interval | 0.31   |
++------------------+--------+
+2020-01-13 01:56:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 18/20  |
+| Episodes         | 8950   |
+| Timesteps        | 447500 |
+| TimeCost(sec)    | 30.057 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.722  |
+| Pi_q_loss        | 10.607 |
+| Success/interval | 0.54   |
++------------------+--------+
+2020-01-13 01:57:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 8/20   |
+| Cycle            | 19/20  |
+| Episodes         | 9000   |
+| Timesteps        | 450000 |
+| TimeCost(sec)    | 29.661 |
+| Pi_l2_loss       | 0.12   |
+| Q_loss           | 0.728  |
+| Pi_q_loss        | 10.567 |
+| Success/interval | 0.67   |
++------------------+--------+
+2020-01-13 01:57:52 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 0/20   |
+| Episodes         | 9050   |
+| Timesteps        | 452500 |
+| TimeCost(sec)    | 29.547 |
+| Pi_l2_loss       | 0.121  |
+| Q_loss           | 0.701  |
+| Pi_q_loss        | 10.388 |
+| Success/interval | 0.55   |
++------------------+--------+
+2020-01-13 01:58:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 1/20   |
+| Episodes         | 9100   |
+| Timesteps        | 455000 |
+| TimeCost(sec)    | 29.649 |
+| Pi_l2_loss       | 0.126  |
+| Q_loss           | 0.688  |
+| Pi_q_loss        | 10.26  |
+| Success/interval | 0.2    |
++------------------+--------+
+2020-01-13 01:58:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 2/20   |
+| Episodes         | 9150   |
+| Timesteps        | 457500 |
+| TimeCost(sec)    | 29.484 |
+| Pi_l2_loss       | 0.118  |
+| Q_loss           | 0.628  |
+| Pi_q_loss        | 10.131 |
+| Success/interval | 0.51   |
++------------------+--------+
+2020-01-13 01:59:20 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 3/20   |
+| Episodes         | 9200   |
+| Timesteps        | 460000 |
+| TimeCost(sec)    | 29.216 |
+| Pi_l2_loss       | 0.114  |
+| Q_loss           | 0.579  |
+| Pi_q_loss        | 10.021 |
+| Success/interval | 0.41   |
++------------------+--------+
+2020-01-13 01:59:50 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 4/20   |
+| Episodes         | 9250   |
+| Timesteps        | 462500 |
+| TimeCost(sec)    | 29.223 |
+| Pi_l2_loss       | 0.113  |
+| Q_loss           | 0.525  |
+| Pi_q_loss        | 10.061 |
+| Success/interval | 0.3    |
++------------------+--------+
+2020-01-13 02:00:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 5/20   |
+| Episodes         | 9300   |
+| Timesteps        | 465000 |
+| TimeCost(sec)    | 28.996 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.527  |
+| Pi_q_loss        | 10.097 |
+| Success/interval | 0.14   |
++------------------+--------+
+2020-01-13 02:00:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 6/20   |
+| Episodes         | 9350   |
+| Timesteps        | 467500 |
+| TimeCost(sec)    | 29.558 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.532  |
+| Pi_q_loss        | 10.14  |
+| Success/interval | 0.55   |
++------------------+--------+
+2020-01-13 02:01:17 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 7/20   |
+| Episodes         | 9400   |
+| Timesteps        | 470000 |
+| TimeCost(sec)    | 29.295 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.514  |
+| Pi_q_loss        | 10.19  |
+| Success/interval | 0.34   |
++------------------+--------+
+2020-01-13 02:01:47 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 8/20   |
+| Episodes         | 9450   |
+| Timesteps        | 472500 |
+| TimeCost(sec)    | 29.675 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.55   |
+| Pi_q_loss        | 10.275 |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 02:02:17 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 9/20   |
+| Episodes         | 9500   |
+| Timesteps        | 475000 |
+| TimeCost(sec)    | 29.377 |
+| Pi_l2_loss       | 0.09   |
+| Q_loss           | 0.54   |
+| Pi_q_loss        | 10.396 |
+| Success/interval | 0.8    |
++------------------+--------+
+2020-01-13 02:02:46 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 10/20  |
+| Episodes         | 9550   |
+| Timesteps        | 477500 |
+| TimeCost(sec)    | 29.374 |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.548  |
+| Pi_q_loss        | 10.55  |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 02:03:15 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 11/20  |
+| Episodes         | 9600   |
+| Timesteps        | 480000 |
+| TimeCost(sec)    | 29.539 |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.597  |
+| Pi_q_loss        | 10.602 |
+| Success/interval | 0.78   |
++------------------+--------+
+2020-01-13 02:03:45 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 12/20  |
+| Episodes         | 9650   |
+| Timesteps        | 482500 |
+| TimeCost(sec)    | 29.56  |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.606  |
+| Pi_q_loss        | 10.705 |
+| Success/interval | 0.56   |
++------------------+--------+
+2020-01-13 02:04:15 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 13/20  |
+| Episodes         | 9700   |
+| Timesteps        | 485000 |
+| TimeCost(sec)    | 30.127 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.608  |
+| Pi_q_loss        | 10.713 |
+| Success/interval | 0.73   |
++------------------+--------+
+2020-01-13 02:04:46 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 14/20  |
+| Episodes         | 9750   |
+| Timesteps        | 487500 |
+| TimeCost(sec)    | 30.751 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.645  |
+| Pi_q_loss        | 10.813 |
+| Success/interval | 0.85   |
++------------------+--------+
+2020-01-13 02:05:17 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 15/20  |
+| Episodes         | 9800   |
+| Timesteps        | 490000 |
+| TimeCost(sec)    | 31.306 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.677  |
+| Pi_q_loss        | 10.822 |
+| Success/interval | 0.64   |
++------------------+--------+
+2020-01-13 02:05:47 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 16/20  |
+| Episodes         | 9850   |
+| Timesteps        | 492500 |
+| TimeCost(sec)    | 30.069 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.655  |
+| Pi_q_loss        | 10.817 |
+| Success/interval | 0.45   |
++------------------+--------+
+2020-01-13 02:06:18 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 17/20  |
+| Episodes         | 9900   |
+| Timesteps        | 495000 |
+| TimeCost(sec)    | 30.252 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.671  |
+| Pi_q_loss        | 10.857 |
+| Success/interval | 0.89   |
++------------------+--------+
+2020-01-13 02:06:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 18/20  |
+| Episodes         | 9950   |
+| Timesteps        | 497500 |
+| TimeCost(sec)    | 30.147 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.708  |
+| Pi_q_loss        | 10.728 |
+| Success/interval | 0.65   |
++------------------+--------+
+2020-01-13 02:07:18 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 9/20   |
+| Cycle            | 19/20  |
+| Episodes         | 10000  |
+| Timesteps        | 500000 |
+| TimeCost(sec)    | 30.329 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.655  |
+| Pi_q_loss        | 10.619 |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 02:07:48 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 0/20   |
+| Episodes         | 10050  |
+| Timesteps        | 502500 |
+| TimeCost(sec)    | 29.98  |
+| Pi_l2_loss       | 0.117  |
+| Q_loss           | 0.671  |
+| Pi_q_loss        | 10.449 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 02:08:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 1/20   |
+| Episodes         | 10100  |
+| Timesteps        | 505000 |
+| TimeCost(sec)    | 30.604 |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.635  |
+| Pi_q_loss        | 10.315 |
+| Success/interval | 0.24   |
++------------------+--------+
+2020-01-13 02:08:50 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 2/20   |
+| Episodes         | 10150  |
+| Timesteps        | 507500 |
+| TimeCost(sec)    | 31.199 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.661  |
+| Pi_q_loss        | 10.223 |
+| Success/interval | 0.36   |
++------------------+--------+
+2020-01-13 02:09:20 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 3/20   |
+| Episodes         | 10200  |
+| Timesteps        | 510000 |
+| TimeCost(sec)    | 30.194 |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.613  |
+| Pi_q_loss        | 10.126 |
+| Success/interval | 0.6    |
++------------------+--------+
+2020-01-13 02:09:50 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 4/20   |
+| Episodes         | 10250  |
+| Timesteps        | 512500 |
+| TimeCost(sec)    | 30.029 |
+| Pi_l2_loss       | 0.113  |
+| Q_loss           | 0.598  |
+| Pi_q_loss        | 10.049 |
+| Success/interval | 0.32   |
++------------------+--------+
+2020-01-13 02:10:20 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 5/20   |
+| Episodes         | 10300  |
+| Timesteps        | 515000 |
+| TimeCost(sec)    | 29.529 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.593  |
+| Pi_q_loss        | 9.981  |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 02:10:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 6/20   |
+| Episodes         | 10350  |
+| Timesteps        | 517500 |
+| TimeCost(sec)    | 29.846 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.559  |
+| Pi_q_loss        | 9.897  |
+| Success/interval | 0.48   |
++------------------+--------+
+2020-01-13 02:11:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 7/20   |
+| Episodes         | 10400  |
+| Timesteps        | 520000 |
+| TimeCost(sec)    | 29.667 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.545  |
+| Pi_q_loss        | 9.876  |
+| Success/interval | 0.67   |
++------------------+--------+
+2020-01-13 02:11:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 8/20   |
+| Episodes         | 10450  |
+| Timesteps        | 522500 |
+| TimeCost(sec)    | 29.663 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.543  |
+| Pi_q_loss        | 9.839  |
+| Success/interval | 0.31   |
++------------------+--------+
+2020-01-13 02:12:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 9/20   |
+| Episodes         | 10500  |
+| Timesteps        | 525000 |
+| TimeCost(sec)    | 30.074 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.543  |
+| Pi_q_loss        | 9.724  |
+| Success/interval | 0.87   |
++------------------+--------+
+2020-01-13 02:12:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 10/20  |
+| Episodes         | 10550  |
+| Timesteps        | 527500 |
+| TimeCost(sec)    | 30.519 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.587  |
+| Pi_q_loss        | 9.785  |
+| Success/interval | 0.47   |
++------------------+--------+
+2020-01-13 02:13:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 11/20  |
+| Episodes         | 10600  |
+| Timesteps        | 530000 |
+| TimeCost(sec)    | 29.813 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.543  |
+| Pi_q_loss        | 9.787  |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 02:13:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 12/20  |
+| Episodes         | 10650  |
+| Timesteps        | 532500 |
+| TimeCost(sec)    | 29.592 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.583  |
+| Pi_q_loss        | 9.742  |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 02:14:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 13/20  |
+| Episodes         | 10700  |
+| Timesteps        | 535000 |
+| TimeCost(sec)    | 29.738 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.526  |
+| Pi_q_loss        | 9.709  |
+| Success/interval | 0.69   |
++------------------+--------+
+2020-01-13 02:14:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 14/20  |
+| Episodes         | 10750  |
+| Timesteps        | 537500 |
+| TimeCost(sec)    | 30.64  |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.545  |
+| Pi_q_loss        | 9.688  |
+| Success/interval | 0.11   |
++------------------+--------+
+2020-01-13 02:15:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 15/20  |
+| Episodes         | 10800  |
+| Timesteps        | 540000 |
+| TimeCost(sec)    | 29.929 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.514  |
+| Pi_q_loss        | 9.734  |
+| Success/interval | 0.74   |
++------------------+--------+
+2020-01-13 02:15:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 16/20  |
+| Episodes         | 10850  |
+| Timesteps        | 542500 |
+| TimeCost(sec)    | 29.91  |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.505  |
+| Pi_q_loss        | 9.849  |
+| Success/interval | 0.67   |
++------------------+--------+
+2020-01-13 02:16:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 17/20  |
+| Episodes         | 10900  |
+| Timesteps        | 545000 |
+| TimeCost(sec)    | 29.782 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.536  |
+| Pi_q_loss        | 9.933  |
+| Success/interval | 0.58   |
++------------------+--------+
+2020-01-13 02:16:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 18/20  |
+| Episodes         | 10950  |
+| Timesteps        | 547500 |
+| TimeCost(sec)    | 30.335 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.527  |
+| Pi_q_loss        | 10.041 |
+| Success/interval | 0.34   |
++------------------+--------+
+2020-01-13 02:17:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 10/20  |
+| Cycle            | 19/20  |
+| Episodes         | 11000  |
+| Timesteps        | 550000 |
+| TimeCost(sec)    | 30.272 |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.552  |
+| Pi_q_loss        | 10.099 |
+| Success/interval | 0.71   |
++------------------+--------+
+2020-01-13 02:17:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 0/20   |
+| Episodes         | 11050  |
+| Timesteps        | 552500 |
+| TimeCost(sec)    | 31.668 |
+| Pi_l2_loss       | 0.087  |
+| Q_loss           | 0.548  |
+| Pi_q_loss        | 10.208 |
+| Success/interval | 0.49   |
++------------------+--------+
+2020-01-13 02:18:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 1/20   |
+| Episodes         | 11100  |
+| Timesteps        | 555000 |
+| TimeCost(sec)    | 31.406 |
+| Pi_l2_loss       | 0.089  |
+| Q_loss           | 0.537  |
+| Pi_q_loss        | 10.286 |
+| Success/interval | 0.62   |
++------------------+--------+
+2020-01-13 02:18:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 2/20   |
+| Episodes         | 11150  |
+| Timesteps        | 557500 |
+| TimeCost(sec)    | 31.015 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.564  |
+| Pi_q_loss        | 10.37  |
+| Success/interval | 0.59   |
++------------------+--------+
+2020-01-13 02:19:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 3/20   |
+| Episodes         | 11200  |
+| Timesteps        | 560000 |
+| TimeCost(sec)    | 32.115 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.549  |
+| Pi_q_loss        | 10.411 |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 02:19:57 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 4/20   |
+| Episodes         | 11250  |
+| Timesteps        | 562500 |
+| TimeCost(sec)    | 31.253 |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.542  |
+| Pi_q_loss        | 10.51  |
+| Success/interval | 0.8    |
++------------------+--------+
+2020-01-13 02:20:28 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 5/20   |
+| Episodes         | 11300  |
+| Timesteps        | 565000 |
+| TimeCost(sec)    | 31.159 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.56   |
+| Pi_q_loss        | 10.582 |
+| Success/interval | 0.58   |
++------------------+--------+
+2020-01-13 02:21:00 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 6/20   |
+| Episodes         | 11350  |
+| Timesteps        | 567500 |
+| TimeCost(sec)    | 31.689 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.559  |
+| Pi_q_loss        | 10.679 |
+| Success/interval | 0.66   |
++------------------+--------+
+2020-01-13 02:21:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 7/20   |
+| Episodes         | 11400  |
+| Timesteps        | 570000 |
+| TimeCost(sec)    | 30.884 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.584  |
+| Pi_q_loss        | 10.72  |
+| Success/interval | 0.71   |
++------------------+--------+
+2020-01-13 02:22:02 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 8/20   |
+| Episodes         | 11450  |
+| Timesteps        | 572500 |
+| TimeCost(sec)    | 31.072 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.599  |
+| Pi_q_loss        | 10.742 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 02:22:33 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 9/20   |
+| Episodes         | 11500  |
+| Timesteps        | 575000 |
+| TimeCost(sec)    | 30.98  |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.581  |
+| Pi_q_loss        | 10.712 |
+| Success/interval | 0.7    |
++------------------+--------+
+2020-01-13 02:23:04 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 10/20  |
+| Episodes         | 11550  |
+| Timesteps        | 577500 |
+| TimeCost(sec)    | 31.247 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.625  |
+| Pi_q_loss        | 10.646 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 02:23:35 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 11/20  |
+| Episodes         | 11600  |
+| Timesteps        | 580000 |
+| TimeCost(sec)    | 30.914 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.609  |
+| Pi_q_loss        | 10.649 |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 02:24:07 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 12/20  |
+| Episodes         | 11650  |
+| Timesteps        | 582500 |
+| TimeCost(sec)    | 31.696 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.601  |
+| Pi_q_loss        | 10.525 |
+| Success/interval | 0.34   |
++------------------+--------+
+2020-01-13 02:24:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 13/20  |
+| Episodes         | 11700  |
+| Timesteps        | 585000 |
+| TimeCost(sec)    | 31.181 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.617  |
+| Pi_q_loss        | 10.458 |
+| Success/interval | 0.87   |
++------------------+--------+
+2020-01-13 02:25:09 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 14/20  |
+| Episodes         | 11750  |
+| Timesteps        | 587500 |
+| TimeCost(sec)    | 31.185 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.621  |
+| Pi_q_loss        | 10.355 |
+| Success/interval | 0.79   |
++------------------+--------+
+2020-01-13 02:25:40 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 15/20  |
+| Episodes         | 11800  |
+| Timesteps        | 590000 |
+| TimeCost(sec)    | 31.009 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.601  |
+| Pi_q_loss        | 10.292 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 02:26:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 16/20  |
+| Episodes         | 11850  |
+| Timesteps        | 592500 |
+| TimeCost(sec)    | 30.898 |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.578  |
+| Pi_q_loss        | 10.193 |
+| Success/interval | 0.81   |
++------------------+--------+
+2020-01-13 02:26:42 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 17/20  |
+| Episodes         | 11900  |
+| Timesteps        | 595000 |
+| TimeCost(sec)    | 31.156 |
+| Pi_l2_loss       | 0.114  |
+| Q_loss           | 0.567  |
+| Pi_q_loss        | 10.171 |
+| Success/interval | 0.82   |
++------------------+--------+
+2020-01-13 02:27:13 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 18/20  |
+| Episodes         | 11950  |
+| Timesteps        | 597500 |
+| TimeCost(sec)    | 31.44  |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.561  |
+| Pi_q_loss        | 10.146 |
+| Success/interval | 0.77   |
++------------------+--------+
+2020-01-13 02:27:45 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 11/20  |
+| Cycle            | 19/20  |
+| Episodes         | 12000  |
+| Timesteps        | 600000 |
+| TimeCost(sec)    | 31.289 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.566  |
+| Pi_q_loss        | 10.142 |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 02:28:16 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 0/20   |
+| Episodes         | 12050  |
+| Timesteps        | 602500 |
+| TimeCost(sec)    | 31.334 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.556  |
+| Pi_q_loss        | 10.149 |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 02:28:47 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 1/20   |
+| Episodes         | 12100  |
+| Timesteps        | 605000 |
+| TimeCost(sec)    | 31.096 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.586  |
+| Pi_q_loss        | 10.137 |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 02:29:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 2/20   |
+| Episodes         | 12150  |
+| Timesteps        | 607500 |
+| TimeCost(sec)    | 31.36  |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.609  |
+| Pi_q_loss        | 10.103 |
+| Success/interval | 0.62   |
++------------------+--------+
+2020-01-13 02:29:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 3/20   |
+| Episodes         | 12200  |
+| Timesteps        | 610000 |
+| TimeCost(sec)    | 32.056 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.599  |
+| Pi_q_loss        | 10.054 |
+| Success/interval | 0.49   |
++------------------+--------+
+2020-01-13 02:30:22 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 4/20   |
+| Episodes         | 12250  |
+| Timesteps        | 612500 |
+| TimeCost(sec)    | 31.636 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.634  |
+| Pi_q_loss        | 10.073 |
+| Success/interval | 0.42   |
++------------------+--------+
+2020-01-13 02:30:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 5/20   |
+| Episodes         | 12300  |
+| Timesteps        | 615000 |
+| TimeCost(sec)    | 30.342 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.625  |
+| Pi_q_loss        | 10.105 |
+| Success/interval | 0.7    |
++------------------+--------+
+2020-01-13 02:31:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 6/20   |
+| Episodes         | 12350  |
+| Timesteps        | 617500 |
+| TimeCost(sec)    | 30.318 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.665  |
+| Pi_q_loss        | 10.087 |
+| Success/interval | 0.89   |
++------------------+--------+
+2020-01-13 02:31:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 7/20   |
+| Episodes         | 12400  |
+| Timesteps        | 620000 |
+| TimeCost(sec)    | 30.204 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.622  |
+| Pi_q_loss        | 10.207 |
+| Success/interval | 0.56   |
++------------------+--------+
+2020-01-13 02:32:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 8/20   |
+| Episodes         | 12450  |
+| Timesteps        | 622500 |
+| TimeCost(sec)    | 29.975 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.63   |
+| Pi_q_loss        | 10.219 |
+| Success/interval | 0.56   |
++------------------+--------+
+2020-01-13 02:32:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 9/20   |
+| Episodes         | 12500  |
+| Timesteps        | 625000 |
+| TimeCost(sec)    | 30.18  |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.63   |
+| Pi_q_loss        | 10.335 |
+| Success/interval | 0.43   |
++------------------+--------+
+2020-01-13 02:33:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 10/20  |
+| Episodes         | 12550  |
+| Timesteps        | 627500 |
+| TimeCost(sec)    | 29.895 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.621  |
+| Pi_q_loss        | 10.34  |
+| Success/interval | 0.45   |
++------------------+--------+
+2020-01-13 02:33:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 11/20  |
+| Episodes         | 12600  |
+| Timesteps        | 630000 |
+| TimeCost(sec)    | 29.831 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.627  |
+| Pi_q_loss        | 10.301 |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 02:34:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 12/20  |
+| Episodes         | 12650  |
+| Timesteps        | 632500 |
+| TimeCost(sec)    | 30.13  |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.648  |
+| Pi_q_loss        | 10.336 |
+| Success/interval | 0.82   |
++------------------+--------+
+2020-01-13 02:34:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 13/20  |
+| Episodes         | 12700  |
+| Timesteps        | 635000 |
+| TimeCost(sec)    | 30.271 |
+| Pi_l2_loss       | 0.118  |
+| Q_loss           | 0.596  |
+| Pi_q_loss        | 10.201 |
+| Success/interval | 0.7    |
++------------------+--------+
+2020-01-13 02:35:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 14/20  |
+| Episodes         | 12750  |
+| Timesteps        | 637500 |
+| TimeCost(sec)    | 30.003 |
+| Pi_l2_loss       | 0.117  |
+| Q_loss           | 0.629  |
+| Pi_q_loss        | 10.207 |
+| Success/interval | 0.85   |
++------------------+--------+
+2020-01-13 02:35:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 15/20  |
+| Episodes         | 12800  |
+| Timesteps        | 640000 |
+| TimeCost(sec)    | 30.342 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.583  |
+| Pi_q_loss        | 10.157 |
+| Success/interval | 0.67   |
++------------------+--------+
+2020-01-13 02:36:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 16/20  |
+| Episodes         | 12850  |
+| Timesteps        | 642500 |
+| TimeCost(sec)    | 29.865 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.596  |
+| Pi_q_loss        | 10.143 |
+| Success/interval | 0.98   |
++------------------+--------+
+2020-01-13 02:36:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 17/20  |
+| Episodes         | 12900  |
+| Timesteps        | 645000 |
+| TimeCost(sec)    | 30.122 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.586  |
+| Pi_q_loss        | 10.109 |
+| Success/interval | 0.66   |
++------------------+--------+
+2020-01-13 02:37:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 18/20  |
+| Episodes         | 12950  |
+| Timesteps        | 647500 |
+| TimeCost(sec)    | 29.587 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.594  |
+| Pi_q_loss        | 10.197 |
+| Success/interval | 0.91   |
++------------------+--------+
+2020-01-13 02:37:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 12/20  |
+| Cycle            | 19/20  |
+| Episodes         | 13000  |
+| Timesteps        | 650000 |
+| TimeCost(sec)    | 29.822 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.614  |
+| Pi_q_loss        | 10.153 |
+| Success/interval | 0.93   |
++------------------+--------+
+2020-01-13 02:38:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 0/20   |
+| Episodes         | 13050  |
+| Timesteps        | 652500 |
+| TimeCost(sec)    | 30.21  |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.582  |
+| Pi_q_loss        | 10.231 |
+| Success/interval | 0.78   |
++------------------+--------+
+2020-01-13 02:38:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 1/20   |
+| Episodes         | 13100  |
+| Timesteps        | 655000 |
+| TimeCost(sec)    | 30.63  |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.594  |
+| Pi_q_loss        | 10.235 |
+| Success/interval | 0.56   |
++------------------+--------+
+2020-01-13 02:39:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 2/20   |
+| Episodes         | 13150  |
+| Timesteps        | 657500 |
+| TimeCost(sec)    | 30.285 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.581  |
+| Pi_q_loss        | 10.272 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 02:39:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 3/20   |
+| Episodes         | 13200  |
+| Timesteps        | 660000 |
+| TimeCost(sec)    | 30.109 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.572  |
+| Pi_q_loss        | 10.336 |
+| Success/interval | 0.79   |
++------------------+--------+
+2020-01-13 02:40:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 4/20   |
+| Episodes         | 13250  |
+| Timesteps        | 662500 |
+| TimeCost(sec)    | 29.448 |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.601  |
+| Pi_q_loss        | 10.401 |
+| Success/interval | 0.89   |
++------------------+--------+
+2020-01-13 02:40:54 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 5/20   |
+| Episodes         | 13300  |
+| Timesteps        | 665000 |
+| TimeCost(sec)    | 30.47  |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.611  |
+| Pi_q_loss        | 10.455 |
+| Success/interval | 0.52   |
++------------------+--------+
+2020-01-13 02:41:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 6/20   |
+| Episodes         | 13350  |
+| Timesteps        | 667500 |
+| TimeCost(sec)    | 30.617 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.61   |
+| Pi_q_loss        | 10.474 |
+| Success/interval | 0.87   |
++------------------+--------+
+2020-01-13 02:41:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 7/20   |
+| Episodes         | 13400  |
+| Timesteps        | 670000 |
+| TimeCost(sec)    | 29.824 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.594  |
+| Pi_q_loss        | 10.465 |
+| Success/interval | 0.64   |
++------------------+--------+
+2020-01-13 02:42:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 8/20   |
+| Episodes         | 13450  |
+| Timesteps        | 672500 |
+| TimeCost(sec)    | 30.185 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.593  |
+| Pi_q_loss        | 10.52  |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 02:42:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 9/20   |
+| Episodes         | 13500  |
+| Timesteps        | 675000 |
+| TimeCost(sec)    | 30.039 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.57   |
+| Pi_q_loss        | 10.571 |
+| Success/interval | 0.7    |
++------------------+--------+
+2020-01-13 02:43:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 10/20  |
+| Episodes         | 13550  |
+| Timesteps        | 677500 |
+| TimeCost(sec)    | 30.693 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.594  |
+| Pi_q_loss        | 10.494 |
+| Success/interval | 0.49   |
++------------------+--------+
+2020-01-13 02:43:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 11/20  |
+| Episodes         | 13600  |
+| Timesteps        | 680000 |
+| TimeCost(sec)    | 30.401 |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.558  |
+| Pi_q_loss        | 10.413 |
+| Success/interval | 0.67   |
++------------------+--------+
+2020-01-13 02:44:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 12/20  |
+| Episodes         | 13650  |
+| Timesteps        | 682500 |
+| TimeCost(sec)    | 29.635 |
+| Pi_l2_loss       | 0.114  |
+| Q_loss           | 0.532  |
+| Pi_q_loss        | 10.337 |
+| Success/interval | 0.59   |
++------------------+--------+
+2020-01-13 02:44:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 13/20  |
+| Episodes         | 13700  |
+| Timesteps        | 685000 |
+| TimeCost(sec)    | 30.195 |
+| Pi_l2_loss       | 0.114  |
+| Q_loss           | 0.533  |
+| Pi_q_loss        | 10.168 |
+| Success/interval | 0.49   |
++------------------+--------+
+2020-01-13 02:45:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 14/20  |
+| Episodes         | 13750  |
+| Timesteps        | 687500 |
+| TimeCost(sec)    | 29.743 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.52   |
+| Pi_q_loss        | 10.12  |
+| Success/interval | 0.73   |
++------------------+--------+
+2020-01-13 02:45:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 15/20  |
+| Episodes         | 13800  |
+| Timesteps        | 690000 |
+| TimeCost(sec)    | 29.502 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.48   |
+| Pi_q_loss        | 10.046 |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 02:46:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 16/20  |
+| Episodes         | 13850  |
+| Timesteps        | 692500 |
+| TimeCost(sec)    | 29.6   |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.494  |
+| Pi_q_loss        | 10.013 |
+| Success/interval | 0.69   |
++------------------+--------+
+2020-01-13 02:46:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 17/20  |
+| Episodes         | 13900  |
+| Timesteps        | 695000 |
+| TimeCost(sec)    | 29.727 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.497  |
+| Pi_q_loss        | 9.941  |
+| Success/interval | 0.48   |
++------------------+--------+
+2020-01-13 02:47:24 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 18/20  |
+| Episodes         | 13950  |
+| Timesteps        | 697500 |
+| TimeCost(sec)    | 29.837 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.469  |
+| Pi_q_loss        | 9.926  |
+| Success/interval | 0.51   |
++------------------+--------+
+2020-01-13 02:47:55 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 13/20  |
+| Cycle            | 19/20  |
+| Episodes         | 14000  |
+| Timesteps        | 700000 |
+| TimeCost(sec)    | 30.322 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.472  |
+| Pi_q_loss        | 9.888  |
+| Success/interval | 0.27   |
++------------------+--------+
+2020-01-13 02:48:26 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 0/20   |
+| Episodes         | 14050  |
+| Timesteps        | 702500 |
+| TimeCost(sec)    | 30.951 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.447  |
+| Pi_q_loss        | 9.937  |
+| Success/interval | 0.22   |
++------------------+--------+
+2020-01-13 02:48:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 1/20   |
+| Episodes         | 14100  |
+| Timesteps        | 705000 |
+| TimeCost(sec)    | 30.717 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.481  |
+| Pi_q_loss        | 10.004 |
+| Success/interval | 0.29   |
++------------------+--------+
+2020-01-13 02:49:28 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 2/20   |
+| Episodes         | 14150  |
+| Timesteps        | 707500 |
+| TimeCost(sec)    | 31.316 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.49   |
+| Pi_q_loss        | 10.059 |
+| Success/interval | 0.06   |
++------------------+--------+
+2020-01-13 02:49:59 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 3/20   |
+| Episodes         | 14200  |
+| Timesteps        | 710000 |
+| TimeCost(sec)    | 31.375 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.507  |
+| Pi_q_loss        | 10.073 |
+| Success/interval | 0.27   |
++------------------+--------+
+2020-01-13 02:50:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 4/20   |
+| Episodes         | 14250  |
+| Timesteps        | 712500 |
+| TimeCost(sec)    | 32.361 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.514  |
+| Pi_q_loss        | 10.158 |
+| Success/interval | 0.23   |
++------------------+--------+
+2020-01-13 02:51:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 5/20   |
+| Episodes         | 14300  |
+| Timesteps        | 715000 |
+| TimeCost(sec)    | 29.903 |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.502  |
+| Pi_q_loss        | 10.319 |
+| Success/interval | 0.54   |
++------------------+--------+
+2020-01-13 02:51:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 6/20   |
+| Episodes         | 14350  |
+| Timesteps        | 717500 |
+| TimeCost(sec)    | 29.955 |
+| Pi_l2_loss       | 0.087  |
+| Q_loss           | 0.527  |
+| Pi_q_loss        | 10.383 |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 02:52:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 7/20   |
+| Episodes         | 14400  |
+| Timesteps        | 720000 |
+| TimeCost(sec)    | 29.595 |
+| Pi_l2_loss       | 0.086  |
+| Q_loss           | 0.566  |
+| Pi_q_loss        | 10.464 |
+| Success/interval | 0.65   |
++------------------+--------+
+2020-01-13 02:52:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 8/20   |
+| Episodes         | 14450  |
+| Timesteps        | 722500 |
+| TimeCost(sec)    | 30.406 |
+| Pi_l2_loss       | 0.09   |
+| Q_loss           | 0.526  |
+| Pi_q_loss        | 10.614 |
+| Success/interval | 0.45   |
++------------------+--------+
+2020-01-13 02:53:02 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 9/20   |
+| Episodes         | 14500  |
+| Timesteps        | 725000 |
+| TimeCost(sec)    | 30.662 |
+| Pi_l2_loss       | 0.09   |
+| Q_loss           | 0.54   |
+| Pi_q_loss        | 10.596 |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 02:53:32 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 10/20  |
+| Episodes         | 14550  |
+| Timesteps        | 727500 |
+| TimeCost(sec)    | 30.171 |
+| Pi_l2_loss       | 0.09   |
+| Q_loss           | 0.545  |
+| Pi_q_loss        | 10.702 |
+| Success/interval | 0.6    |
++------------------+--------+
+2020-01-13 02:54:03 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 11/20  |
+| Episodes         | 14600  |
+| Timesteps        | 730000 |
+| TimeCost(sec)    | 30.4   |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.564  |
+| Pi_q_loss        | 10.706 |
+| Success/interval | 0.74   |
++------------------+--------+
+2020-01-13 02:54:33 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 12/20  |
+| Episodes         | 14650  |
+| Timesteps        | 732500 |
+| TimeCost(sec)    | 30.214 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.609  |
+| Pi_q_loss        | 10.74  |
+| Success/interval | 0.28   |
++------------------+--------+
+2020-01-13 02:55:03 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 13/20  |
+| Episodes         | 14700  |
+| Timesteps        | 735000 |
+| TimeCost(sec)    | 30.102 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.617  |
+| Pi_q_loss        | 10.712 |
+| Success/interval | 0.47   |
++------------------+--------+
+2020-01-13 02:55:33 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 14/20  |
+| Episodes         | 14750  |
+| Timesteps        | 737500 |
+| TimeCost(sec)    | 29.822 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.626  |
+| Pi_q_loss        | 10.643 |
+| Success/interval | 0.81   |
++------------------+--------+
+2020-01-13 02:56:02 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 15/20  |
+| Episodes         | 14800  |
+| Timesteps        | 740000 |
+| TimeCost(sec)    | 29.485 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.614  |
+| Pi_q_loss        | 10.465 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 02:56:32 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 16/20  |
+| Episodes         | 14850  |
+| Timesteps        | 742500 |
+| TimeCost(sec)    | 29.471 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.607  |
+| Pi_q_loss        | 10.389 |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 02:57:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 17/20  |
+| Episodes         | 14900  |
+| Timesteps        | 745000 |
+| TimeCost(sec)    | 29.57  |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.573  |
+| Pi_q_loss        | 10.361 |
+| Success/interval | 0.73   |
++------------------+--------+
+2020-01-13 02:57:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 18/20  |
+| Episodes         | 14950  |
+| Timesteps        | 747500 |
+| TimeCost(sec)    | 29.997 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.572  |
+| Pi_q_loss        | 10.349 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 02:58:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 14/20  |
+| Cycle            | 19/20  |
+| Episodes         | 15000  |
+| Timesteps        | 750000 |
+| TimeCost(sec)    | 29.431 |
+| Pi_l2_loss       | 0.09   |
+| Q_loss           | 0.553  |
+| Pi_q_loss        | 10.378 |
+| Success/interval | 0.44   |
++------------------+--------+
+2020-01-13 02:58:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 0/20   |
+| Episodes         | 15050  |
+| Timesteps        | 752500 |
+| TimeCost(sec)    | 30.291 |
+| Pi_l2_loss       | 0.089  |
+| Q_loss           | 0.572  |
+| Pi_q_loss        | 10.401 |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 02:59:01 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 1/20   |
+| Episodes         | 15100  |
+| Timesteps        | 755000 |
+| TimeCost(sec)    | 29.847 |
+| Pi_l2_loss       | 0.086  |
+| Q_loss           | 0.552  |
+| Pi_q_loss        | 10.496 |
+| Success/interval | 0.88   |
++------------------+--------+
+2020-01-13 02:59:34 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 2/20   |
+| Episodes         | 15150  |
+| Timesteps        | 757500 |
+| TimeCost(sec)    | 32.875 |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.56   |
+| Pi_q_loss        | 10.557 |
+| Success/interval | 0.96   |
++------------------+--------+
+2020-01-13 03:00:04 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 3/20   |
+| Episodes         | 15200  |
+| Timesteps        | 760000 |
+| TimeCost(sec)    | 30.347 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.565  |
+| Pi_q_loss        | 10.64  |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 03:00:35 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 4/20   |
+| Episodes         | 15250  |
+| Timesteps        | 762500 |
+| TimeCost(sec)    | 31.181 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.594  |
+| Pi_q_loss        | 10.663 |
+| Success/interval | 0.93   |
++------------------+--------+
+2020-01-13 03:01:06 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 5/20   |
+| Episodes         | 15300  |
+| Timesteps        | 765000 |
+| TimeCost(sec)    | 30.386 |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.579  |
+| Pi_q_loss        | 10.733 |
+| Success/interval | 0.9    |
++------------------+--------+
+2020-01-13 03:01:36 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 6/20   |
+| Episodes         | 15350  |
+| Timesteps        | 767500 |
+| TimeCost(sec)    | 30.012 |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.596  |
+| Pi_q_loss        | 10.9   |
+| Success/interval | 0.99   |
++------------------+--------+
+2020-01-13 03:02:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 7/20   |
+| Episodes         | 15400  |
+| Timesteps        | 770000 |
+| TimeCost(sec)    | 32.351 |
+| Pi_l2_loss       | 0.091  |
+| Q_loss           | 0.639  |
+| Pi_q_loss        | 10.978 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 03:02:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 8/20   |
+| Episodes         | 15450  |
+| Timesteps        | 772500 |
+| TimeCost(sec)    | 31.031 |
+| Pi_l2_loss       | 0.089  |
+| Q_loss           | 0.635  |
+| Pi_q_loss        | 11.046 |
+| Success/interval | 0.94   |
++------------------+--------+
+2020-01-13 03:03:10 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 9/20   |
+| Episodes         | 15500  |
+| Timesteps        | 775000 |
+| TimeCost(sec)    | 30.554 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.659  |
+| Pi_q_loss        | 11.164 |
+| Success/interval | 0.95   |
++------------------+--------+
+2020-01-13 03:03:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 10/20  |
+| Episodes         | 15550  |
+| Timesteps        | 777500 |
+| TimeCost(sec)    | 29.636 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.69   |
+| Pi_q_loss        | 11.237 |
+| Success/interval | 0.98   |
++------------------+--------+
+2020-01-13 03:04:10 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 11/20  |
+| Episodes         | 15600  |
+| Timesteps        | 780000 |
+| TimeCost(sec)    | 30.848 |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.657  |
+| Pi_q_loss        | 11.329 |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 03:04:43 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 12/20  |
+| Episodes         | 15650  |
+| Timesteps        | 782500 |
+| TimeCost(sec)    | 32.57  |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.704  |
+| Pi_q_loss        | 11.434 |
+| Success/interval | 0.79   |
++------------------+--------+
+2020-01-13 03:05:14 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 13/20  |
+| Episodes         | 15700  |
+| Timesteps        | 785000 |
+| TimeCost(sec)    | 31.404 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.702  |
+| Pi_q_loss        | 11.416 |
+| Success/interval | 0.99   |
++------------------+--------+
+2020-01-13 03:05:46 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 14/20  |
+| Episodes         | 15750  |
+| Timesteps        | 787500 |
+| TimeCost(sec)    | 32.33  |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.703  |
+| Pi_q_loss        | 11.406 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 03:06:18 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 15/20  |
+| Episodes         | 15800  |
+| Timesteps        | 790000 |
+| TimeCost(sec)    | 32.041 |
+| Pi_l2_loss       | 0.117  |
+| Q_loss           | 0.707  |
+| Pi_q_loss        | 11.35  |
+| Success/interval | 0.51   |
++------------------+--------+
+2020-01-13 03:06:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 16/20  |
+| Episodes         | 15850  |
+| Timesteps        | 792500 |
+| TimeCost(sec)    | 32.393 |
+| Pi_l2_loss       | 0.125  |
+| Q_loss           | 0.738  |
+| Pi_q_loss        | 11.188 |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 03:07:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 17/20  |
+| Episodes         | 15900  |
+| Timesteps        | 795000 |
+| TimeCost(sec)    | 31.985 |
+| Pi_l2_loss       | 0.127  |
+| Q_loss           | 0.714  |
+| Pi_q_loss        | 11.023 |
+| Success/interval | 0.37   |
++------------------+--------+
+2020-01-13 03:07:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 18/20  |
+| Episodes         | 15950  |
+| Timesteps        | 797500 |
+| TimeCost(sec)    | 32.788 |
+| Pi_l2_loss       | 0.123  |
+| Q_loss           | 0.673  |
+| Pi_q_loss        | 10.949 |
+| Success/interval | 0.53   |
++------------------+--------+
+2020-01-13 03:08:28 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 15/20  |
+| Cycle            | 19/20  |
+| Episodes         | 16000  |
+| Timesteps        | 800000 |
+| TimeCost(sec)    | 31.908 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.649  |
+| Pi_q_loss        | 10.9   |
+| Success/interval | 0.34   |
++------------------+--------+
+2020-01-13 03:08:59 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 0/20   |
+| Episodes         | 16050  |
+| Timesteps        | 802500 |
+| TimeCost(sec)    | 31.672 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.612  |
+| Pi_q_loss        | 10.891 |
+| Success/interval | 0.46   |
++------------------+--------+
+2020-01-13 03:09:31 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 1/20   |
+| Episodes         | 16100  |
+| Timesteps        | 805000 |
+| TimeCost(sec)    | 31.476 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.66   |
+| Pi_q_loss        | 10.879 |
+| Success/interval | 0.85   |
++------------------+--------+
+2020-01-13 03:10:02 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 2/20   |
+| Episodes         | 16150  |
+| Timesteps        | 807500 |
+| TimeCost(sec)    | 31.299 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.615  |
+| Pi_q_loss        | 10.902 |
+| Success/interval | 0.93   |
++------------------+--------+
+2020-01-13 03:10:33 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 3/20   |
+| Episodes         | 16200  |
+| Timesteps        | 810000 |
+| TimeCost(sec)    | 31.465 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.642  |
+| Pi_q_loss        | 10.945 |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 03:11:05 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 4/20   |
+| Episodes         | 16250  |
+| Timesteps        | 812500 |
+| TimeCost(sec)    | 31.794 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.622  |
+| Pi_q_loss        | 10.938 |
+| Success/interval | 0.74   |
++------------------+--------+
+2020-01-13 03:11:36 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 5/20   |
+| Episodes         | 16300  |
+| Timesteps        | 815000 |
+| TimeCost(sec)    | 31.035 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.634  |
+| Pi_q_loss        | 10.917 |
+| Success/interval | 0.95   |
++------------------+--------+
+2020-01-13 03:12:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 6/20   |
+| Episodes         | 16350  |
+| Timesteps        | 817500 |
+| TimeCost(sec)    | 31.326 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.657  |
+| Pi_q_loss        | 11.013 |
+| Success/interval | 0.87   |
++------------------+--------+
+2020-01-13 03:12:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 7/20   |
+| Episodes         | 16400  |
+| Timesteps        | 820000 |
+| TimeCost(sec)    | 31.757 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.638  |
+| Pi_q_loss        | 11.037 |
+| Success/interval | 0.75   |
++------------------+--------+
+2020-01-13 03:13:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 8/20   |
+| Episodes         | 16450  |
+| Timesteps        | 822500 |
+| TimeCost(sec)    | 31.414 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.625  |
+| Pi_q_loss        | 11.071 |
+| Success/interval | 0.71   |
++------------------+--------+
+2020-01-13 03:13:42 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 9/20   |
+| Episodes         | 16500  |
+| Timesteps        | 825000 |
+| TimeCost(sec)    | 31.677 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.626  |
+| Pi_q_loss        | 11.123 |
+| Success/interval | 0.69   |
++------------------+--------+
+2020-01-13 03:14:14 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 10/20  |
+| Episodes         | 16550  |
+| Timesteps        | 827500 |
+| TimeCost(sec)    | 31.723 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.61   |
+| Pi_q_loss        | 11.176 |
+| Success/interval | 0.85   |
++------------------+--------+
+2020-01-13 03:14:46 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 11/20  |
+| Episodes         | 16600  |
+| Timesteps        | 830000 |
+| TimeCost(sec)    | 32.107 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.642  |
+| Pi_q_loss        | 11.296 |
+| Success/interval | 0.7    |
++------------------+--------+
+2020-01-13 03:15:18 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 12/20  |
+| Episodes         | 16650  |
+| Timesteps        | 832500 |
+| TimeCost(sec)    | 31.253 |
+| Pi_l2_loss       | 0.094  |
+| Q_loss           | 0.632  |
+| Pi_q_loss        | 11.3   |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 03:15:49 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 13/20  |
+| Episodes         | 16700  |
+| Timesteps        | 835000 |
+| TimeCost(sec)    | 31.459 |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.631  |
+| Pi_q_loss        | 11.47  |
+| Success/interval | 0.94   |
++------------------+--------+
+2020-01-13 03:16:21 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 14/20  |
+| Episodes         | 16750  |
+| Timesteps        | 837500 |
+| TimeCost(sec)    | 32.42  |
+| Pi_l2_loss       | 0.093  |
+| Q_loss           | 0.666  |
+| Pi_q_loss        | 11.438 |
+| Success/interval | 0.96   |
++------------------+--------+
+2020-01-13 03:16:53 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 15/20  |
+| Episodes         | 16800  |
+| Timesteps        | 840000 |
+| TimeCost(sec)    | 31.958 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.683  |
+| Pi_q_loss        | 11.419 |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 03:17:25 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 16/20  |
+| Episodes         | 16850  |
+| Timesteps        | 842500 |
+| TimeCost(sec)    | 31.744 |
+| Pi_l2_loss       | 0.092  |
+| Q_loss           | 0.635  |
+| Pi_q_loss        | 11.51  |
+| Success/interval | 0.9    |
++------------------+--------+
+2020-01-13 03:17:57 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 17/20  |
+| Episodes         | 16900  |
+| Timesteps        | 845000 |
+| TimeCost(sec)    | 31.697 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.664  |
+| Pi_q_loss        | 11.52  |
+| Success/interval | 0.77   |
++------------------+--------+
+2020-01-13 03:18:29 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 18/20  |
+| Episodes         | 16950  |
+| Timesteps        | 847500 |
+| TimeCost(sec)    | 32.417 |
+| Pi_l2_loss       | 0.095  |
+| Q_loss           | 0.683  |
+| Pi_q_loss        | 11.621 |
+| Success/interval | 0.4    |
++------------------+--------+
+2020-01-13 03:19:02 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 16/20  |
+| Cycle            | 19/20  |
+| Episodes         | 17000  |
+| Timesteps        | 850000 |
+| TimeCost(sec)    | 32.327 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.695  |
+| Pi_q_loss        | 11.532 |
+| Success/interval | 0.95   |
++------------------+--------+
+2020-01-13 03:19:34 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 0/20   |
+| Episodes         | 17050  |
+| Timesteps        | 852500 |
+| TimeCost(sec)    | 32.183 |
+| Pi_l2_loss       | 0.096  |
+| Q_loss           | 0.724  |
+| Pi_q_loss        | 11.583 |
+| Success/interval | 0.87   |
++------------------+--------+
+2020-01-13 03:20:06 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 1/20   |
+| Episodes         | 17100  |
+| Timesteps        | 855000 |
+| TimeCost(sec)    | 32.112 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.7    |
+| Pi_q_loss        | 11.469 |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 03:20:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 2/20   |
+| Episodes         | 17150  |
+| Timesteps        | 857500 |
+| TimeCost(sec)    | 31.651 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.702  |
+| Pi_q_loss        | 11.414 |
+| Success/interval | 0.73   |
++------------------+--------+
+2020-01-13 03:21:10 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 3/20   |
+| Episodes         | 17200  |
+| Timesteps        | 860000 |
+| TimeCost(sec)    | 32.185 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.725  |
+| Pi_q_loss        | 11.422 |
+| Success/interval | 0.66   |
++------------------+--------+
+2020-01-13 03:21:42 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 4/20   |
+| Episodes         | 17250  |
+| Timesteps        | 862500 |
+| TimeCost(sec)    | 32.172 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.7    |
+| Pi_q_loss        | 11.389 |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 03:22:14 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 5/20   |
+| Episodes         | 17300  |
+| Timesteps        | 865000 |
+| TimeCost(sec)    | 32.092 |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.701  |
+| Pi_q_loss        | 11.276 |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 03:22:46 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 6/20   |
+| Episodes         | 17350  |
+| Timesteps        | 867500 |
+| TimeCost(sec)    | 31.51  |
+| Pi_l2_loss       | 0.117  |
+| Q_loss           | 0.664  |
+| Pi_q_loss        | 11.19  |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 03:23:19 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 7/20   |
+| Episodes         | 17400  |
+| Timesteps        | 870000 |
+| TimeCost(sec)    | 33.138 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.687  |
+| Pi_q_loss        | 11.054 |
+| Success/interval | 0.67   |
++------------------+--------+
+2020-01-13 03:23:51 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 8/20   |
+| Episodes         | 17450  |
+| Timesteps        | 872500 |
+| TimeCost(sec)    | 32.119 |
+| Pi_l2_loss       | 0.113  |
+| Q_loss           | 0.655  |
+| Pi_q_loss        | 11.052 |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 03:24:23 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 9/20   |
+| Episodes         | 17500  |
+| Timesteps        | 875000 |
+| TimeCost(sec)    | 31.692 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.667  |
+| Pi_q_loss        | 10.95  |
+| Success/interval | 0.76   |
++------------------+--------+
+2020-01-13 03:24:56 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 10/20  |
+| Episodes         | 17550  |
+| Timesteps        | 877500 |
+| TimeCost(sec)    | 33.127 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.64   |
+| Pi_q_loss        | 10.89  |
+| Success/interval | 0.78   |
++------------------+--------+
+2020-01-13 03:25:28 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 11/20  |
+| Episodes         | 17600  |
+| Timesteps        | 880000 |
+| TimeCost(sec)    | 32.161 |
+| Pi_l2_loss       | 0.111  |
+| Q_loss           | 0.648  |
+| Pi_q_loss        | 10.783 |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 03:25:59 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 12/20  |
+| Episodes         | 17650  |
+| Timesteps        | 882500 |
+| TimeCost(sec)    | 30.905 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.618  |
+| Pi_q_loss        | 10.689 |
+| Success/interval | 0.75   |
++------------------+--------+
+2020-01-13 03:26:32 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 13/20  |
+| Episodes         | 17700  |
+| Timesteps        | 885000 |
+| TimeCost(sec)    | 32.975 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.602  |
+| Pi_q_loss        | 10.647 |
+| Success/interval | 0.89   |
++------------------+--------+
+2020-01-13 03:27:02 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 14/20  |
+| Episodes         | 17750  |
+| Timesteps        | 887500 |
+| TimeCost(sec)    | 30.39  |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.59   |
+| Pi_q_loss        | 10.706 |
+| Success/interval | 0.8    |
++------------------+--------+
+2020-01-13 03:27:33 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 15/20  |
+| Episodes         | 17800  |
+| Timesteps        | 890000 |
+| TimeCost(sec)    | 31.073 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.602  |
+| Pi_q_loss        | 10.643 |
+| Success/interval | 0.96   |
++------------------+--------+
+2020-01-13 03:28:04 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 16/20  |
+| Episodes         | 17850  |
+| Timesteps        | 892500 |
+| TimeCost(sec)    | 30.649 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.596  |
+| Pi_q_loss        | 10.633 |
+| Success/interval | 1.0    |
++------------------+--------+
+2020-01-13 03:28:34 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 17/20  |
+| Episodes         | 17900  |
+| Timesteps        | 895000 |
+| TimeCost(sec)    | 30.571 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.588  |
+| Pi_q_loss        | 10.704 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 03:29:05 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 18/20  |
+| Episodes         | 17950  |
+| Timesteps        | 897500 |
+| TimeCost(sec)    | 31.014 |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.548  |
+| Pi_q_loss        | 10.582 |
+| Success/interval | 0.9    |
++------------------+--------+
+2020-01-13 03:29:36 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 17/20  |
+| Cycle            | 19/20  |
+| Episodes         | 18000  |
+| Timesteps        | 900000 |
+| TimeCost(sec)    | 30.922 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.564  |
+| Pi_q_loss        | 10.592 |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 03:30:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 0/20   |
+| Episodes         | 18050  |
+| Timesteps        | 902500 |
+| TimeCost(sec)    | 31.258 |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.573  |
+| Pi_q_loss        | 10.535 |
+| Success/interval | 0.9    |
++------------------+--------+
+2020-01-13 03:30:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 1/20   |
+| Episodes         | 18100  |
+| Timesteps        | 905000 |
+| TimeCost(sec)    | 30.917 |
+| Pi_l2_loss       | 0.121  |
+| Q_loss           | 0.525  |
+| Pi_q_loss        | 10.407 |
+| Success/interval | 0.96   |
++------------------+--------+
+2020-01-13 03:31:10 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 2/20   |
+| Episodes         | 18150  |
+| Timesteps        | 907500 |
+| TimeCost(sec)    | 31.157 |
+| Pi_l2_loss       | 0.118  |
+| Q_loss           | 0.526  |
+| Pi_q_loss        | 10.292 |
+| Success/interval | 0.44   |
++------------------+--------+
+2020-01-13 03:31:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 3/20   |
+| Episodes         | 18200  |
+| Timesteps        | 910000 |
+| TimeCost(sec)    | 31.51  |
+| Pi_l2_loss       | 0.115  |
+| Q_loss           | 0.515  |
+| Pi_q_loss        | 10.236 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 03:32:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 4/20   |
+| Episodes         | 18250  |
+| Timesteps        | 912500 |
+| TimeCost(sec)    | 30.008 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.507  |
+| Pi_q_loss        | 10.187 |
+| Success/interval | 0.77   |
++------------------+--------+
+2020-01-13 03:32:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 5/20   |
+| Episodes         | 18300  |
+| Timesteps        | 915000 |
+| TimeCost(sec)    | 30.205 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.492  |
+| Pi_q_loss        | 10.315 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 03:33:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 6/20   |
+| Episodes         | 18350  |
+| Timesteps        | 917500 |
+| TimeCost(sec)    | 29.395 |
+| Pi_l2_loss       | 0.102  |
+| Q_loss           | 0.491  |
+| Pi_q_loss        | 10.334 |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 03:33:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 7/20   |
+| Episodes         | 18400  |
+| Timesteps        | 920000 |
+| TimeCost(sec)    | 30.079 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.496  |
+| Pi_q_loss        | 10.335 |
+| Success/interval | 0.88   |
++------------------+--------+
+2020-01-13 03:34:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 8/20   |
+| Episodes         | 18450  |
+| Timesteps        | 922500 |
+| TimeCost(sec)    | 30.511 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.486  |
+| Pi_q_loss        | 10.299 |
+| Success/interval | 0.94   |
++------------------+--------+
+2020-01-13 03:34:41 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 9/20   |
+| Episodes         | 18500  |
+| Timesteps        | 925000 |
+| TimeCost(sec)    | 29.59  |
+| Pi_l2_loss       | 0.107  |
+| Q_loss           | 0.52   |
+| Pi_q_loss        | 10.295 |
+| Success/interval | 0.85   |
++------------------+--------+
+2020-01-13 03:35:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 10/20  |
+| Episodes         | 18550  |
+| Timesteps        | 927500 |
+| TimeCost(sec)    | 29.807 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.512  |
+| Pi_q_loss        | 10.288 |
+| Success/interval | 0.69   |
++------------------+--------+
+2020-01-13 03:35:40 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 11/20  |
+| Episodes         | 18600  |
+| Timesteps        | 930000 |
+| TimeCost(sec)    | 29.55  |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.52   |
+| Pi_q_loss        | 10.24  |
+| Success/interval | 0.75   |
++------------------+--------+
+2020-01-13 03:36:11 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 12/20  |
+| Episodes         | 18650  |
+| Timesteps        | 932500 |
+| TimeCost(sec)    | 30.21  |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.532  |
+| Pi_q_loss        | 10.279 |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 03:36:40 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 13/20  |
+| Episodes         | 18700  |
+| Timesteps        | 935000 |
+| TimeCost(sec)    | 29.768 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.53   |
+| Pi_q_loss        | 10.23  |
+| Success/interval | 0.91   |
++------------------+--------+
+2020-01-13 03:37:10 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 14/20  |
+| Episodes         | 18750  |
+| Timesteps        | 937500 |
+| TimeCost(sec)    | 29.601 |
+| Pi_l2_loss       | 0.109  |
+| Q_loss           | 0.509  |
+| Pi_q_loss        | 10.194 |
+| Success/interval | 0.55   |
++------------------+--------+
+2020-01-13 03:37:40 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 15/20  |
+| Episodes         | 18800  |
+| Timesteps        | 940000 |
+| TimeCost(sec)    | 29.844 |
+| Pi_l2_loss       | 0.108  |
+| Q_loss           | 0.533  |
+| Pi_q_loss        | 10.181 |
+| Success/interval | 0.72   |
++------------------+--------+
+2020-01-13 03:38:09 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 16/20  |
+| Episodes         | 18850  |
+| Timesteps        | 942500 |
+| TimeCost(sec)    | 29.664 |
+| Pi_l2_loss       | 0.112  |
+| Q_loss           | 0.532  |
+| Pi_q_loss        | 10.324 |
+| Success/interval | 0.82   |
++------------------+--------+
+2020-01-13 03:38:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 17/20  |
+| Episodes         | 18900  |
+| Timesteps        | 945000 |
+| TimeCost(sec)    | 29.637 |
+| Pi_l2_loss       | 0.103  |
+| Q_loss           | 0.542  |
+| Pi_q_loss        | 10.327 |
+| Success/interval | 0.71   |
++------------------+--------+
+2020-01-13 03:39:09 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 18/20  |
+| Episodes         | 18950  |
+| Timesteps        | 947500 |
+| TimeCost(sec)    | 29.903 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.541  |
+| Pi_q_loss        | 10.515 |
+| Success/interval | 0.74   |
++------------------+--------+
+2020-01-13 03:39:39 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 18/20  |
+| Cycle            | 19/20  |
+| Episodes         | 19000  |
+| Timesteps        | 950000 |
+| TimeCost(sec)    | 29.686 |
+| Pi_l2_loss       | 0.101  |
+| Q_loss           | 0.573  |
+| Pi_q_loss        | 10.552 |
+| Success/interval | 0.81   |
++------------------+--------+
+2020-01-13 03:40:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 0/20   |
+| Episodes         | 19050  |
+| Timesteps        | 952500 |
+| TimeCost(sec)    | 29.535 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.564  |
+| Pi_q_loss        | 10.584 |
+| Success/interval | 0.59   |
++------------------+--------+
+2020-01-13 03:40:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 1/20   |
+| Episodes         | 19100  |
+| Timesteps        | 955000 |
+| TimeCost(sec)    | 29.816 |
+| Pi_l2_loss       | 0.097  |
+| Q_loss           | 0.583  |
+| Pi_q_loss        | 10.658 |
+| Success/interval | 0.89   |
++------------------+--------+
+2020-01-13 03:41:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 2/20   |
+| Episodes         | 19150  |
+| Timesteps        | 957500 |
+| TimeCost(sec)    | 29.685 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.615  |
+| Pi_q_loss        | 10.714 |
+| Success/interval | 0.99   |
++------------------+--------+
+2020-01-13 03:41:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 3/20   |
+| Episodes         | 19200  |
+| Timesteps        | 960000 |
+| TimeCost(sec)    | 30.394 |
+| Pi_l2_loss       | 0.099  |
+| Q_loss           | 0.618  |
+| Pi_q_loss        | 10.792 |
+| Success/interval | 0.96   |
++------------------+--------+
+2020-01-13 03:42:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 4/20   |
+| Episodes         | 19250  |
+| Timesteps        | 962500 |
+| TimeCost(sec)    | 29.934 |
+| Pi_l2_loss       | 0.104  |
+| Q_loss           | 0.626  |
+| Pi_q_loss        | 10.791 |
+| Success/interval | 0.68   |
++------------------+--------+
+2020-01-13 03:42:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 5/20   |
+| Episodes         | 19300  |
+| Timesteps        | 965000 |
+| TimeCost(sec)    | 29.505 |
+| Pi_l2_loss       | 0.11   |
+| Q_loss           | 0.625  |
+| Pi_q_loss        | 10.773 |
+| Success/interval | 0.88   |
++------------------+--------+
+2020-01-13 03:43:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 6/20   |
+| Episodes         | 19350  |
+| Timesteps        | 967500 |
+| TimeCost(sec)    | 29.933 |
+| Pi_l2_loss       | 0.114  |
+| Q_loss           | 0.644  |
+| Pi_q_loss        | 10.647 |
+| Success/interval | 0.92   |
++------------------+--------+
+2020-01-13 03:43:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 7/20   |
+| Episodes         | 19400  |
+| Timesteps        | 970000 |
+| TimeCost(sec)    | 30.508 |
+| Pi_l2_loss       | 0.119  |
+| Q_loss           | 0.627  |
+| Pi_q_loss        | 10.538 |
+| Success/interval | 0.93   |
++------------------+--------+
+2020-01-13 03:44:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 8/20   |
+| Episodes         | 19450  |
+| Timesteps        | 972500 |
+| TimeCost(sec)    | 29.737 |
+| Pi_l2_loss       | 0.121  |
+| Q_loss           | 0.591  |
+| Pi_q_loss        | 10.418 |
+| Success/interval | 0.61   |
++------------------+--------+
+2020-01-13 03:44:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 9/20   |
+| Episodes         | 19500  |
+| Timesteps        | 975000 |
+| TimeCost(sec)    | 29.919 |
+| Pi_l2_loss       | 0.121  |
+| Q_loss           | 0.625  |
+| Pi_q_loss        | 10.225 |
+| Success/interval | 0.51   |
++------------------+--------+
+2020-01-13 03:45:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 10/20  |
+| Episodes         | 19550  |
+| Timesteps        | 977500 |
+| TimeCost(sec)    | 29.968 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.622  |
+| Pi_q_loss        | 10.211 |
+| Success/interval | 0.59   |
++------------------+--------+
+2020-01-13 03:45:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 11/20  |
+| Episodes         | 19600  |
+| Timesteps        | 980000 |
+| TimeCost(sec)    | 29.956 |
+| Pi_l2_loss       | 0.116  |
+| Q_loss           | 0.586  |
+| Pi_q_loss        | 10.143 |
+| Success/interval | 0.63   |
++------------------+--------+
+2020-01-13 03:46:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 12/20  |
+| Episodes         | 19650  |
+| Timesteps        | 982500 |
+| TimeCost(sec)    | 29.994 |
+| Pi_l2_loss       | 0.118  |
+| Q_loss           | 0.559  |
+| Pi_q_loss        | 10.169 |
+| Success/interval | 0.86   |
++------------------+--------+
+2020-01-13 03:46:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 13/20  |
+| Episodes         | 19700  |
+| Timesteps        | 985000 |
+| TimeCost(sec)    | 30.055 |
+| Pi_l2_loss       | 0.12   |
+| Q_loss           | 0.552  |
+| Pi_q_loss        | 10.068 |
+| Success/interval | 0.74   |
++------------------+--------+
+2020-01-13 03:47:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 14/20  |
+| Episodes         | 19750  |
+| Timesteps        | 987500 |
+| TimeCost(sec)    | 29.8   |
+| Pi_l2_loss       | 0.113  |
+| Q_loss           | 0.54   |
+| Pi_q_loss        | 10.081 |
+| Success/interval | 0.74   |
++------------------+--------+
+2020-01-13 03:47:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 15/20  |
+| Episodes         | 19800  |
+| Timesteps        | 990000 |
+| TimeCost(sec)    | 30.217 |
+| Pi_l2_loss       | 0.106  |
+| Q_loss           | 0.526  |
+| Pi_q_loss        | 10.127 |
+| Success/interval | 0.84   |
++------------------+--------+
+2020-01-13 03:48:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 16/20  |
+| Episodes         | 19850  |
+| Timesteps        | 992500 |
+| TimeCost(sec)    | 29.988 |
+| Pi_l2_loss       | 0.105  |
+| Q_loss           | 0.533  |
+| Pi_q_loss        | 10.171 |
+| Success/interval | 0.83   |
++------------------+--------+
+2020-01-13 03:48:38 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 17/20  |
+| Episodes         | 19900  |
+| Timesteps        | 995000 |
+| TimeCost(sec)    | 29.972 |
+| Pi_l2_loss       | 0.098  |
+| Q_loss           | 0.507  |
+| Pi_q_loss        | 10.227 |
+| Success/interval | 0.47   |
++------------------+--------+
+2020-01-13 03:49:08 HGG_fetch_slideball-v2
++------------------+--------+
+| Epoch            | 19/20  |
+| Cycle            | 18/20  |
+| Episodes         | 19950  |
+| Timesteps        | 997500 |
+| TimeCost(sec)    | 29.863 |
+| Pi_l2_loss       | 0.1    |
+| Q_loss           | 0.497  |
+| Pi_q_loss        | 10.37  |
+| Success/interval | 0.79   |
++------------------+--------+
+2020-01-13 03:49:38 HGG_fetch_slideball-v2
++------------------+---------+
+| Epoch            | 19/20   |
+| Cycle            | 19/20   |
+| Episodes         | 20000   |
+| Timesteps        | 1000000 |
+| TimeCost(sec)    | 30.535  |
+| Pi_l2_loss       | 0.1     |
+| Q_loss           | 0.511   |
+| Pi_q_loss        | 10.439  |
+| Success/interval | 0.93    |
++------------------+---------+
