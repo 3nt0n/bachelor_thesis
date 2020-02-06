@@ -1,6 +1,20 @@
 \chapter{Experiments}
-
 %Basic Environments, PickPlace is harder than reach etc., Plappert et. al., HER paper..
+
+This chapter describes the experiments made and the observations made. This chapter is divided into 3 subchapters.
+%change number of chapters if it changes
+\newline
+First the four robotics environments FetchReach, FetchPush, FetchSlide and FetchPickAndPlace, that are already integrated in OpenAI Gym, will be used as benchmarks.
+%ref Plappert et al.
+Then two self created environments, FetchSlideball and FetchToss will be described.
+\newline 
+FetchSlideball is an extension of FetchSlide. We changed the object from a cylinder to a ball and increased the distance to the goal. This will be compared with the FetchSlide environment of the benchmarks. It is planned to improve this environment to an environment that simulates a golf course in the future.
+\newline 
+FetchToss requires the agent to toss an object to a goal that is outside of the agents reach. It requires the agent to grab the object and then find the right trajectory to move the object and release it to toss it. The first part of the task is comparable to FetchPickAndPlace that requires the fetch robot to fetch the object. It was planned to improve this environment to make it toss a ball into a basket like in basketball.
+\newline
+In each chapter, the tasks and environment will be described. The action space, observation space and rewards to control the agent are also described. Then the results are discussed and compared to other tasks.   
+
+
 
 %We want to have golf/basketball , so we use a ball instead
 
@@ -29,6 +43,7 @@
 
 %try putting box closer
 
+\section{Benchmarks}
 
 \section{FetchGolf}
 
@@ -69,7 +84,7 @@
 
 
 
-\subsection{Environment}
+\subsection{Environment/Controller ?}
 
 
 
