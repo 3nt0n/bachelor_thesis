@@ -152,10 +152,29 @@ To find the optimal policy, simply gradient ascent can be used to find the maxim
 
 \section{Hindsight Experience Replay}
 
-%read paper, use it
-
-
-
-\section{Hindsight Goal Generation}
+%subsection curriculum learning ?
 
 %read paper, use it
+
+Sparse rewards are a big issue in Reinforcement Learning, especially in tasks for robotic arms often the rewards are sparse. Having sparse rewards means that most of the samples used for training will not successful and therefore will not bring any useful reward. For example, the task to move an object to a certain point would have a sparse reward for a robotic arm because very precise movements are needed which the robotic arm has to learn first.
+ 
+Andrychowicz et al. have shown that Hindsight Experience Replay can be used to deal with this issue for robotic arms. 
+%TODO \herpaper
+Hindsight Experience Replay can learn efficiently from sparse rewards and can also be combined with any off-policy Reinforcement Learning algorithm.
+%TODO explain off-policy in rl chapter
+This technique is inspired by the ability of humans to learn from failures as least as much as from successes.
+
+Hindsight Experience Replay works as follows. After an episode of gaining experiences, all transitions between the states in each training sample is stored in a replay buffer, but the goal that was not achieved is extended to a set with a goal that is reached. This can also be further extended to a set of more goals that can be achieved in the terminating state of the training sample. If the goal was to move an object to point x, but it was pushed to point y, the replay buffer would use the same transitions but change the the goal we wanted to achieve to y. So when replaying the same experience, the agent would be successful and earn an useful reward. This does not help the agent learn how to reach the goal it wanted to reach initially, but it learns to reach other goals. Reaching those other achieved goals might be beneficial in learning how to reach the goal it actually wanted to achieve. Hindsight Experience Replay is mainly used for tasks with multiple goals, but it was shown that it also improves the training of tasks with only a single goal. 
+%TODO ref herpaper 
+Interestingly, they have shown Hindsight Experience Replay performs has problems when using shaped rewards
+%add binary rewards at start of section ?. binary != shaped ?
+ 
+ %add pseudocode ?
+
+
+
+\section{Hindsight Goal Generation*}
+
+%read paper, use it
+
+%delete ?

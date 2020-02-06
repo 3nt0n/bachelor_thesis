@@ -7,7 +7,7 @@
 \BOOKMARK [1][-]{section.2.2}{Artificial Neural Networks}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.3}{Deep Deterministic Policy Gradients}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.4}{Hindsight Experience Replay}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.5}{Hindsight Goal Generation}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{Hindsight Goal Generation*}{chapter.2}% 10
 \BOOKMARK [0][-]{chapter.3}{Methodology}{}% 11
 \BOOKMARK [0][-]{chapter.4}{Simulation Environment}{}% 12
 \BOOKMARK [1][-]{section.4.1}{MuJoCo}{chapter.4}% 13
