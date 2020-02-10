@@ -4,11 +4,19 @@ This section describes the environment and tools used for the experiments.
 
 MuJoCo is a physics engine used to simulate the physical models of the environment. MuJoCo is currently still in development and is improved, so there are many different versions. For this thesis, MuJoCo 2.0 for Linux (Ubuntu 16.04) is used. 
 
+\vspace{0.5cm}
+
 Mujoco-py is used as an interface to allow the usage of MuJoCo in python scripts. Mujoco-py is required for OpenAI Gym to work.
+
+\vspace{0.5cm}
 
 OpenAI developed OpenAI Gym, a toolkit to create and use environments, and use these environments to test and compare algorithms for reinforcement learning. OpenAI Gym only provides the environment part of reinforcement learning, the agent has to be written by the user or by using OpenAI baselines. The robotic environments require MuJoCo. In our case, we will create our own environments and compare them to the existing ones.
 
+\vspace{0.5cm}
+
 OpenAI baselines is a toolkit with high-quality implementations of reinforcement learning algorithms. It supplements the OpenAI Gym toolkit. For each of the environments by OpenAI Gym, any OpenAI baselines reinforcement learning algorithm can be used. In our case, we will focus mainly on Hindsight Experience Replay.
+
+\vspace{0.5cm}
 
 All the experiments will were done on a 12 core machine using 10 cores. The machine is running on the operating system Linux Ubuntu 16.04. The parameters used will be stated in the Model section. If not otherwise specified, each experiment will be run for 50 episodes. which takes about 2 hours training time each.
 
@@ -19,9 +27,15 @@ All the experiments will were done on a 12 core machine using 10 cores. The mach
 %mujco is free (no costs) for non-profit research ?
 MuJoCo stands for "Multi-Joint dynamics with Contact". It is a physics engine for model based control and was developed by Emanuel Todorov.
 %ref Mujoco paper
-MuJoCo was developed for research in areas with fast and accurate simulation, like robotics. As its name suggests, multi-joint dynamics and contact responses and contact responses are a main focus of the engine. They represented multi-joint dynamics in generalized coordinates and computed them with recursive algorithms. For the contact responses, they wrote algorihhms based on a modern velocity-stepping approach. MuJoCo was developed to be fast and accurate, especially for computationally intensive processes, which are common in simulation of physics. They compared MuJoCo to SD/FAST, another tool to simulate physics of mechanical systems. Even though SD/FAST uses model-specific code, which was expected to be much fast, MuJoCo was quite comparable. Their tests with a 12-core machine showed 400.000 dynamics evaluations per second for a 3D humanoid with 18 Degrees of Freedom and 6 active contacts. 
+MuJoCo was developed for research in areas with fast and accurate simulation, like robotics. As its name suggests, multi-joint dynamics and contact responses and contact responses are a main focus of the engine. They represented multi-joint dynamics in generalized coordinates and computed them with recursive algorithms. For the contact responses, they wrote algorihhms based on a modern velocity-stepping approach. MuJoCo was developed to be fast and accurate, especially for computationally intensive processes, which are common in simulation of physics. 
+
+\vspace{0.5cm}
+
+They compared MuJoCo to SD/FAST, another tool to simulate physics of mechanical systems. Even though SD/FAST uses model-specific code, which was expected to be much fast, MuJoCo was quite comparable. Their tests with a 12-core machine showed 400.000 dynamics evaluations per second for a 3D humanoid with 18 Degrees of Freedom and 6 active contacts. 
 Creating models for MuJoCo is quite simple. For MuJoCo, XML files can be used, which are simple to understand and provide transparency. 
 %explain more how to do xml for mujoco ?
+
+\vspace{0.5cm}
 
 To use MuJoCo with Python, mujoco-py was created by OpenAI. Mujoco-py currently supports compatibility of MuJoCo with Python 3.
 
@@ -48,10 +62,10 @@ OpenAI Baselines also requires Tensorflow to work.
 \section{Model}
 %Explain general things like action space etc. of the robot. sucess rate etc.
 
-\begin{figure}
+\begin{figure} [h]
 	
 	\centering
-	\includegraphics[width=1\textwidth]{figures/PickAndPlace.jpg}
+	\includegraphics[width=1\textwidth]{figures/FetchPickAndPlace-v1.png}
 	\caption{FetchPickAndPlace-v1 Environment by OpenAI Gym run with Mujoco-py
 	}
 \end{figure}
@@ -59,8 +73,13 @@ OpenAI Baselines also requires Tensorflow to work.
 The environment model used is quite simple. The environments are the basic models in the robotics environment package of OpenAI gym, for the extended harder experiments, only positions of the objects and goal, and properties like size and friction are changed. 
 %ref https://openai.com/blog/ingredients-for-robotics-research/
 
+\vspace{0.5cm}
+
 In figure 4.1. the environment for the FetchPickAndPlace task of OpenAI is shown. A Fetch Robotic arm with 7 Degrees of Freedom is used. Its end effector is a two-fingered parallel gripper. Even though it is simulated in MuJoCo, Andrychowicz et al. have shown in their paper on Hindsight Experience Replay, that the robotic arm also performed well in real life without any finetuning. 
 %ref herpaper
+
+\vspace{0.5cm}
+
 All the tasks require an object (either a cube or a ball) to be moved to a goal that is presented by a red point. Also a table is used to increase the height of the object and goal, so the fetch robot can grab the object.
 Some parameters except from position parameters that might differ depending on the robotics environment are listed here.
 
@@ -88,8 +107,9 @@ In Reinforcement Learning, the agent chooses an action and receives a reward and
 
 
 
-If not stated otherwise, each environment sample will be run for 50 steps. With number of substeps being usually fixed to 20, each sample will run for 1000 timesteps.
-%%use this stuff, parameters (PickPlace)
+If not stated otherwise, each environment sample will be run for 50 steps. With number of substeps being usually fixed to 20, each sample will run for 1000 timesteps. The hyperparameters are as follows for each of the following environments:
+%TODO
+%%use this stuff if it fits, parameters (PickPlace)
 
 %T: 50
 %_Q_lr: 0.001
@@ -127,10 +147,3 @@ If not stated otherwise, each environment sample will be run for 50 steps. With 
 %rollout_batch_size: 2
 %test_with_polyak: False
 %Creating a DDPG agent with action space 4 x 1.0...
-
-
-\subsection{FetchGolf*}
-
-
-
-\subsection{FetchToss*}

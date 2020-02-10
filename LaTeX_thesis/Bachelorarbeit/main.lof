@@ -22,4 +22,30 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces FetchReach-v1\relax }}{18}{figure.caption.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces FetchPush-v1\relax }}{19}{figure.caption.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces FetchSlide-v1\relax }}{20}{figure.caption.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces FetchPickAndPlace-v1\relax }}{21}{figure.caption.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Success Rate of each task after 50 episodes of training\relax }}{22}{figure.caption.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces FetchSlideball-v3\relax }}{23}{figure.caption.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces FetchSlide with a cylinder (left) and with a ball (right)\relax }}{24}{figure.caption.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces FetchSlideball with the same friction and timestep as in FetchSlide\relax }}{25}{figure.caption.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces FetchSlideball with 50\% friction and more steps per episode\relax }}{26}{figure.caption.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces FetchSlideball with 10\% friction)\relax }}{27}{figure.caption.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces FetchToss\relax }}{29}{figure.caption.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces FetchPickAndPlace with a cube(left) and a ball (right)\relax }}{31}{figure.caption.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces FetchToss\relax }}{32}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
