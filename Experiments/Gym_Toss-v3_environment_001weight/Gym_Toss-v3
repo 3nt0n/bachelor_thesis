@@ -1,0 +1,13 @@
+**Own files I put in gym**
+0,01 weight of ball
+
+
+edit gym/gym/envs/__init__.py: add the environment to register it
+edit gym/gym/envs/robotics/__init__.py: import needed fetch environments
+
+insert gym/gym/envs/robotics/assets/fetch/toss3.xml: same as pickplace, but with ball, better box wall
+insert gym/gym/envs/robotics/fetch/toss3.py: same as pickplace
+
+edit baselines/baselines/run.py: add environment to let baselines know that it is used with the robotics environment
+
+

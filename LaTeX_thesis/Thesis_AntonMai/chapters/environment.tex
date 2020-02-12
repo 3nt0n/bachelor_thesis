@@ -1,0 +1,149 @@
+\chapter{Simulation Environment}
+
+This section describes the environment and tools used for the experiments.
+
+MuJoCo is a physics engine used to simulate the physical models of the environment. MuJoCo is currently still in development and is improved, so there are many different versions. For this thesis, MuJoCo 2.0 for Linux (Ubuntu 16.04) is used. 
+
+\vspace{0.5cm}
+
+Mujoco-py is used as an interface to allow the usage of MuJoCo in python scripts. Mujoco-py is required for OpenAI Gym to work.
+
+\vspace{0.5cm}
+
+OpenAI developed OpenAI Gym, a toolkit to create and use environments, and use these environments to test and compare algorithms for reinforcement learning. OpenAI Gym only provides the environment part of reinforcement learning, the agent has to be written by the user or by using OpenAI baselines. The robotic environments require MuJoCo. In our case, we will create our own environments and compare them to the existing ones.
+
+\vspace{0.5cm}
+
+OpenAI baselines is a toolkit with high-quality implementations of reinforcement learning algorithms. It supplements the OpenAI Gym toolkit. For each of the environments by OpenAI Gym, any OpenAI baselines reinforcement learning algorithm can be used. In our case, we will focus mainly on Hindsight Experience Replay.
+
+\vspace{0.5cm}
+
+All the experiments will were done on a 12 core machine using 10 cores. The machine is running on the operating system Linux Ubuntu 16.04. The parameters used will be stated in the Model section. If not otherwise specified, each experiment will be run for 50 episodes. which takes about 2 hours training time each.
+
+
+\section{MuJoCo}
+%physic engine, modeling, mujoco-py for python interface
+
+%mujco is free (no costs) for non-profit research ?
+MuJoCo stands for "Multi-Joint dynamics with Contact". It is a physics engine for model based control and was developed by Emanuel Todorov.
+%ref Mujoco paper
+MuJoCo was developed for research in areas with fast and accurate simulation, like robotics. As its name suggests, multi-joint dynamics and contact responses and contact responses are a main focus of the engine. They represented multi-joint dynamics in generalized coordinates and computed them with recursive algorithms. For the contact responses, they wrote algorihhms based on a modern velocity-stepping approach. MuJoCo was developed to be fast and accurate, especially for computationally intensive processes, which are common in simulation of physics. 
+
+\vspace{0.5cm}
+
+They compared MuJoCo to SD/FAST, another tool to simulate physics of mechanical systems. Even though SD/FAST uses model-specific code, which was expected to be much fast, MuJoCo was quite comparable. Their tests with a 12-core machine showed 400.000 dynamics evaluations per second for a 3D humanoid with 18 Degrees of Freedom and 6 active contacts. 
+Creating models for MuJoCo is quite simple. For MuJoCo, XML files can be used, which are simple to understand and provide transparency. 
+%explain more how to do xml for mujoco ?
+
+\vspace{0.5cm}
+
+To use MuJoCo with Python, mujoco-py was created by OpenAI. Mujoco-py currently supports compatibility of MuJoCo with Python 3.
+
+
+
+\section{OpenAI}
+
+OpenAI developed OpenAI Gym and OpenAI Baselines. Both are freely accessible on Github.
+
+
+\subsection{OpenAI Gym}
+%environments
+
+OpenAI Gym provides an environment to test a reinforcement learning algorithm with. OpenAI Gym already contains many environments to use, like Atari games, classic control problems and robotics. In this thesis, the robotics environment will be used, as it provides four environments with Fetch robots that use a robotic arm. But OpenAI also allows the user to create his own environments. For the experiments, a few more robotics environments will be created. For the robotics environments, MuJoCo is required. 
+The agent and the reinforcement learning algorithms it uses that are required for reinforcement learning to interact with the environment has to be either written by the user or provided by OpenAI Baselines.
+
+\subsection{OpenAI Baselines}
+%algorithms
+
+OpenAI Baselines provides a set of high-quality implementations of reinforcement learning algorithms. It can be used together with OpenAI Gym. Provided algorithms contain Advantage Actor Critic, Actor critic with experience replay, Actor Critic using Kronecker-Factored Trust Region,  Deep Deterministic Policy Gradient, Deep Q-Networks, Generative Adversarial Imitation Learning, Proximal Policy Optimization, Trust Region Policy Optimization and Hindsight Experience Replay.
+For our purposes, Hindsight Experience Replay in conjunction with Deep Deterministic Policy Gradients will be used. 
+OpenAI Baselines also requires Tensorflow to work.
+
+\section{Model}
+%Explain general things like action space etc. of the robot. sucess rate etc.
+
+\begin{figure} [h]
+	
+	\centering
+	\includegraphics[width=1\textwidth]{figures/FetchPickAndPlace-v1.png}
+	\caption{FetchPickAndPlace-v1 Environment by OpenAI Gym run with Mujoco-py
+	}
+\end{figure}
+
+The environment model used is quite simple. The environments are the basic models in the robotics environment package of OpenAI gym, for the extended harder experiments, only positions of the objects and goal, and properties like size and friction are changed. 
+%ref https://openai.com/blog/ingredients-for-robotics-research/
+
+\vspace{0.5cm}
+
+In figure 4.1. the environment for the FetchPickAndPlace task of OpenAI is shown. A Fetch Robotic arm with 7 Degrees of Freedom is used. Its end effector is a two-fingered parallel gripper. Even though it is simulated in MuJoCo, Andrychowicz et al. have shown in their paper on Hindsight Experience Replay, that the robotic arm also performed well in real life without any finetuning. 
+%ref herpaper
+
+\vspace{0.5cm}
+
+All the tasks require an object (either a cube or a ball) to be moved to a goal that is presented by a red point. Also a table is used to increase the height of the object and goal, so the fetch robot can grab the object.
+Some parameters except from position parameters that might differ depending on the robotics environment are listed here.
+
+\begin{itemize}
+	\item has\_object (boolean): describes whether the environment contains an object or not
+	\item block\_gripper (boolean): if True, the fetch robot can not open or close its gripper
+	\item n\_substeps (integer): number of timesteps before the next action is chosen
+	\item target\_in\_the\_air (boolean): if True, the target is is not on the ground or table 
+	\item object\_range (float): defines a range in which the object will be randomly and uniformly placed
+	\item target\_range (float): defines the range in which the goal will be randomly and uniformly placed
+	\item distance\_threshold (float): the distance the object can be to the goal for the goal to be still successful 
+\end{itemize}
+
+In Reinforcement Learning, the agent chooses an action and receives a reward and an observation after each step. Actions, Rewards and Observations are handled in OpenAI Gym as follows.
+
+\begin{itemize}
+	\item Action: The action space is defined as a 4-dimensional Box space, which is an array of 4 floats, which are continuous and between -1 and 1. The 4 floats define how to change the x-position, y-position and z-position of the gripper and how much to open/close the gripper (if the parameter block\_gripper is False)
+	\item Reward: The reward defined as a float. In the robotics environments, the agent receives a reward of -1.0 in each timestep, in which the goal is not reached.
+	\item Observation: The observation space contains 3 parts:
+	the achieved\_goal, defined by a 3-dimensional Box space, which is useful for Hindsight Experience Replay. 
+	the desired\_goal, also defined by a 3-dimensional Box space.
+	the observation: defined by a 25-dimnsional Box space
+\end{itemize}
+
+
+
+
+If not stated otherwise, each environment sample will be run for 50 steps. With number of substeps being usually fixed to 20, each sample will run for 1000 timesteps. The hyperparameters are as follows for each of the following environments:
+%TODO
+%%use this stuff if it fits, parameters (PickPlace)
+
+%T: 50
+%_Q_lr: 0.001
+%_action_l2: 1.0
+%_batch_size: 256
+%_buffer_size: 1000000
+%_clip_obs: 200.0
+%_hidden: 256
+%_layers: 3
+%_max_u: 1.0
+%_network_class: %baselines.her.actor_critic:ActorCritic
+%_norm_clip: 5
+%_norm_eps: 0.01
+%_pi_lr: 0.001
+%_polyak: 0.95
+%_relative_goals: False
+%_scope: ddpg
+%aux_loss_weight: 0.0078
+%bc_loss: 0
+%ddpg_params: {'layers': 3, 'polyak': 0.95, 'Q_lr': 0.001, 'hidden': 256, 'norm_eps': 0.01, 'batch_size': 256, 'pi_lr': 0.001, 'buffer_size': 1000000, 'norm_clip': 5, 'clip_obs': 200.0, 'max_u': 1.0, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'relative_goals': False, 'action_l2': 1.0, 'scope': 'ddpg'}
+%demo_batch_size: 128
+%env_name: FetchPickAndPlace-v1
+%gamma: 0.98
+%make_env: <function %prepare_params.<locals>.make_env at 0x7f67a97242f0>
+%n_batches: 40
+%n_cycles: 50
+%n_test_rollouts: 10
+%noise_eps: 0.2
+%num_demo: 100
+%prm_loss_weight: 0.001
+%q_filter: 0
+%random_eps: 0.3
+%replay_k: 4
+%replay_strategy: future
+%rollout_batch_size: 2
+%test_with_polyak: False
+%Creating a DDPG agent with action space 4 x 1.0...
