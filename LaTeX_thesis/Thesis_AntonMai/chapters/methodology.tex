@@ -20,7 +20,7 @@ All the experiments will run on a 12 core machine using 10 cores. The machine is
 %physic engine, modeling, mujoco-py for python interface
 
 %mujco is free (no costs) for non-profit research ?
-MuJoCo stands for "Multi-Joint dynamics with Contact". It is a physics engine for model based control and was developed by Todorov et al. \ref{mujoco}.
+MuJoCo stands for "Multi-Joint dynamics with Contact". It is a physics engine for model based control and was developed by Todorov et al. \cite{mujoco}.
 MuJoCo was developed for research in areas with fast and accurate simulation, like robotics. As its name suggests, multi-joint dynamics and contact responses and contact responses are a main focus of the engine. They represented multi-joint dynamics in generalized coordinates and computed them with recursive algorithms. For the contact responses, they wrote algorithms based on a modern velocity-stepping approach. MuJoCo was developed to be fast and accurate, especially for computationally intensive processes, which are common in simulations of physics. 
 \newline
 Todorov et al. compared MuJoCo to SD/FAST, another tool to simulate physics of mechanical systems. Even though SD/FAST uses model-specific code, which was expected to be much fast, MuJoCo was quite comparable. Their tests with a 12-core machine showed 400.000 dynamics evaluations per second for a 3D humanoid with 18 DOF and 6 active contacts. 
@@ -30,7 +30,7 @@ Creating models for MuJoCo is quite simple. For MuJoCo, XML files can be used, w
 To use MuJoCo with Python, mujoco-py was created by OpenAI. Mujoco-py currently supports compatibility of MuJoCo with Python 3.
 
 \subsection{OpenAI}
-OpenAI developed OpenAI Gym and OpenAI Baselines. Both are freely accessible on Github.
+Brockman et al. developed OpenAI Gym \cite{gym} and Dhariwal et al. developed OpenAI Baselines \cite{baselines}. Both are freely accessible on Github.
 
 \subsubsection{OpenAI Gym}
 %environments
@@ -57,7 +57,7 @@ The environment model used is quite simple. The environments are the basic fetch
 
 \vspace{0.5cm}
 
-In figure \ref{pickplace1} the environment for the task "FetchPickAndPlace" by OpenAI is shown. A fetch robotic arm with 7 DOF is used. Its end effector is a two-fingered parallel gripper. Even though it is simulated in MuJoCo, Andrychowicz et al. have shown in their paper on HER, that the robotic arm also performed well in real life without any finetuning \ref{herpaper}. 
+In figure \ref{pickplace1} the environment for the task "FetchPickAndPlace" by OpenAI is shown. A fetch robotic arm with 7 DOF is used. Its end effector is a two-fingered parallel gripper. Even though it is simulated in MuJoCo, Andrychowicz et al. have shown in their paper on HER, that the robotic arm also performed well in real life without any finetuning. \cite{herpaper}
 
 \vspace{0.5cm}
 

@@ -1,6 +1,6 @@
 \chapter{Theoretical Background}
 
-This chapter explains the concepts needed to understand this thesis. The theory behind RL, DDPG and HER.
+This chapter explains the concepts needed to understand this thesis. The theory behind RL, ANN, DDPG and HER is explained.
 
 \section{Reinforcement Learning}
 %% In context of machine learning (supervised,unsupervised)
@@ -8,16 +8,16 @@ This chapter explains the concepts needed to understand this thesis. The theory 
 
 RL is one of the main learning concepts of Machine Learning next to Supervised Learning and Unsupervised Learning \cite{machinelearning}.
 \newline
-In Supervised Learning some input data is given to the learning agent. The agent is expected to come up with some output which is then compared with the expected output. If the output given by the agent and the expected output matches, then the agent was correct. The agent is trained by calculating the error between expected output and actual output. An use case for Supervised Learning is sorting mails into regular mail and spam mail. The agent is given a mail and it should decide whether the mail is regular or spam based on the content. Supervised Learning is used for classification and regression problems. It is mainly useful when the expected output is already known, so the learning agent can learn to do recognize these. 
+In Supervised Learning some input data is given to the learning agent. The agent is expected to come up with some output which is then compared with the expected output. If the output given by the agent and the expected output matches, then the agent was correct. The agent is trained by calculating the error between expected output and actual output. An use case for Supervised Learning is sorting mails into regular mail and spam mail. The agent is given a mail and it should decide whether the mail is regular or spam based on the content. Supervised Learning is used for classification and regression problems \cite{machinelearning}. It is mainly useful when the expected output is already known, so the learning agent can learn to do recognize these. 
 \newline
-In Unsupervised Learning there is no expected output. The learning agent is fed with data so it can figure out interesting features and similarities between different data. Unsupervised Learning is often used to cluster data, often pictures, based on similarities.
+In Unsupervised Learning there is no expected output. The learning agent is fed with data so it can figure out interesting features and similarities between different data. Unsupervised Learning is often used to cluster data, often pictures, based on similarities \cite{machinelearning}.
 \newline
-In RL the agent is learning through rewards that are given through interaction with an environment. The goal of a task is clear, but the path of actions to reach the goal is not trivial. RL is used to find the best action in each situation. It is often used for games because they are already set up to have a clear task and goal, but the optimal way to reach it is not clear. Games usually provide full information on the environment in contrast to the real world, therefore setting up the learning environment is simple. Also Supervised Learning is limited in performance because the agent can only learn to become as good the expected output that we set. So in games like chess, with Supervised Learning the agent can only become as good as the best players it learns from, but not better. However, RL is not restricted by these limitations. The agent can improve on its own only by exploring his options. In games like Go and Chess, engines that use RL have already far surpassed the best human players \cite{alphazero}. 
+In RL the agent is learning through rewards that are given through interaction with an environment. The goal of a task is clear, but the path of actions to reach the goal is not trivial. RL is used to find the best action in each situation. It is often used for games because they are already set up to have a clear task and goal, but the optimal way to reach it is not clear. Games usually provide full information on the environment in contrast to the real world, therefore setting up the learning environment is simple. Also Supervised Learning is limited in performance because the agent can only learn to become as good the expected output that we set. So in games like chess, with Supervised Learning the agent can only become as good as the best players it learns from, but not better. It is limited by the skills of the best humans \cite{nolimit}. However, RL is not restricted by these limitations. The agent can improve on its own only by exploring his options. In games like Go and Chess, engines that use RL have already far surpassed the best human players \cite{alphazero}. 
 
 \vspace{0.5cm}
 
 %%general idea
-This section will explain the theory behind RL. RL is usually modeled as a Markov Decision Process. The Markov Decision Process for RL consists of following elements \ref{rlwiki}:
+This section will explain the theory behind RL. The post by Lilian Weng is recommended as a resource on more precise explanations on RL \cite{rllilianweng}. RL is usually modeled as a Markov Decision Process. The Markov Decision Process for RL consists of following elements \cite{rlwiki}:
 
 \begin{itemize}
 	\item A set of states S
@@ -133,9 +133,10 @@ When the ANN outputs a value, a process called Backpropagation is used to improv
 
 \section{Deep Deterministic Policy Gradients}
 
+The paper by Silver et al. is a recommended resource for more detailed explanations \cite{ddpg}. This chapter will give a short summary of DDPG.
 The algorithm DDPG learns concurrently a Q-function (the action-value function) and a policy. \cite{ddpg}
 Q*(s,a) is used to find the the optimal action in each state.
-To compute the Q-values for a discrete action space, the Q-values of each action could be calculated and compared to find the biggest value. But in a continuous action space it is not possible to calculate the Q-value for each action. DDPG uses the fact that the action space is continuous and so Q*(s,a) is expected to be differentiable in respect to the action argument. \cite{(ddpg)}
+To compute the Q-values for a discrete action space, the Q-values of each action could be calculated and compared to find the biggest value. But in a continuous action space it is not possible to calculate the Q-value for each action. DDPG uses the fact that the action space is continuous and so Q*(s,a) is expected to be differentiable in respect to the action argument. \cite{ddpg}
 This way it is possible to approximate the Q-values and policy.
 
 \vspace{0.5cm}
@@ -164,7 +165,6 @@ To find the optimal policy, simply gradient ascent can be used to find the maxim
 %subsection curriculum learning ?
 
 %read paper, use it
-
 Sparse rewards are a big issue in RL, especially in tasks for robotic arms often the rewards are sparse. Having sparse rewards means that most of the samples used for training will not successful and therefore will not bring any useful reward. For example, the task to move an object to a certain point would have a sparse reward for a robotic arm because very precise movements are needed which the robotic arm has to learn first.
  
 \vspace{0.5cm}

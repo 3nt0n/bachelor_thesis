@@ -1,5 +1,13 @@
 \begin{thebibliography}{10}
 
+\bibitem{roboarmuk}
+Everything you need to know about robotic arms.
+\newblock accessed 27.01.2020".
+
+\bibitem{leesedol}
+Software schlägt go-genie mit 4 zu 1, 2016.
+\newblock accessed 27.01.2020.
+
 \bibitem{herpaper}
 Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong,
   Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, and Wojciech Zaremba.
@@ -15,10 +23,10 @@ Shweta Bhatt.
 \newblock 5 things you need to know about reinforcement learning, 2018.
 \newblock accessed 27.01.2020.
 
-\bibitem{leesedol}
-cis.
-\newblock Software schlägt go-genie mit 4 zu 1, 2016.
-\newblock accessed 27.01.2020.
+\bibitem{gym}
+Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman,
+  Jie Tang, and Wojciech Zaremba.
+\newblock Openai gym, 2016.
 
 \bibitem{rlwiki}
 Wikipedia contributors.
@@ -26,12 +34,12 @@ Wikipedia contributors.
   2020.
 \newblock accessed 29.01.2020".
 
-\bibitem{alphazero}
-Julian Schrittwieser Ioannis Antonoglou Matthew Lai Arthur Guez Marc Lanctot
-  Laurent Sifre Dharshan Kumaran Thore Graepel Timothy Lillicrap Karen Simonyan
-  Demis~Hassabis David~Silver, Thomas~Hubert.
-\newblock Alphazero: Shedding new light on chess, shogi, and go, 2018.
-\newblock accessed 12.02.2020.
+\bibitem{baselines}
+Prafulla Dhariwal, Christopher Hesse, Oleg Klimov, Alex Nichol, Matthias
+  Plappert, Alec Radford, John Schulman, Szymon Sidor, Yuhuai Wu, and Peter
+  Zhokhov.
+\newblock Openai baselines.
+\newblock \url{https://github.com/openai/baselines}, 2017.
 
 \bibitem{curricher}
 Meng Fang, Tianyi Zhou, Yali Du, Lei Han, and Zhengyou Zhang.
@@ -53,7 +61,7 @@ Stefan Klanke, Dmitry Lebedev, Robert Haschke, Jochen Steil, and Helge Ritter.
 
 \bibitem{egreedy}
 Rajendra Koppula.
-\newblock Exploration vs. exploitation in reinforcement learning, 9999.
+\newblock Exploration vs. exploitation in reinforcement learning.
 \newblock accessed 12.02.2020.
 
 \bibitem{archer}
@@ -74,13 +82,7 @@ Megan~Ray Nichols.
 
 \bibitem{neuralnetpath}
 Chris Nicholson.
-\newblock A beginner's guide to deep reinforcement learning.
-\newblock 2019.
-\newblock accessed 29.01.2020".
-
-\bibitem{ddpg}
-OpenAI.
-\newblock Deep deterministic policy gradient, 2018.
+\newblock A beginner's guide to deep reinforcement learning, 2019.
 \newblock accessed 29.01.2020".
 
 \bibitem{plappert}
@@ -107,15 +109,35 @@ Isha Salian.
   unsupervised, semi-supervised and reinforcement learning?, 2018.
 \newblock accessed 27.01.2020.
 
-\bibitem{roboarmuk}
-temp.
-\newblock Everything you need to know about robotic arms, 9999.
-\newblock accessed 27.01.2020".
+\bibitem{nolimit}
+David Silver and Demis Hassabis.
+\newblock Alphago zero: Starting from scratch, 2017.
+\newblock accessed 13.02.2020.
+
+\bibitem{alphazero}
+David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew
+  Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore
+  Graepel, Timothy Lillicrap, Karen Simonyan, and Demis Hassabis.
+\newblock Alphazero: Shedding new light on chess, shogi, and go, 2018.
+\newblock accessed 12.02.2020.
+
+\bibitem{ddpg}
+David Silver, Guy Lever, Nicolas Heess, Thomas Degris, Daan Wierstra, and
+  Martin Riedmiller.
+\newblock Deterministic policy gradient algorithms.
+\newblock In {\em Proceedings of the 31st International Conference on
+  International Conference on Machine Learning - Volume 32}, ICML’14, page
+  I–387–I–395. JMLR.org, 2014.
+
+\bibitem{mujoco}
+E.~{Todorov}, T.~{Erez}, and Y.~{Tassa}.
+\newblock Mujoco: A physics engine for model-based control.
+\newblock In {\em 2012 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}, pages 5026--5033, Oct 2012.
 
 \bibitem{rllilianweng}
 Lilian Weng.
-\newblock A (long) peek into reinforcement learning.
-\newblock 2018.
+\newblock A (long) peek into reinforcement learning, 2018.
 \newblock accessed 29.01.2020.
 
 \bibitem{energyher}

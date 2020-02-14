@@ -35,8 +35,6 @@ setting them up. For path planning of a robotic arm, a sequence of actions has t
 A robotic arm needs 6 DOF to be able to move its end effector in every direction and orientation. This also means that robotic arms with more DOF do not have a unique path to solve the tasks. There are different paths which can vary in length and energy consumption.
 To improve the quality of the path and to do path planning without a human, using RL for robotic arms is a logical approach. 
 
-%%reinforcement learning in robotics
-%TODO cite papers with rl robotics
 \vspace{0.5cm}
 %%problems with reinforcement learning because of sparse rewards
 
@@ -53,7 +51,7 @@ HER allows a high learning rate even with sparse rewards by making the training 
 \vspace{0.5cm}
 %%her introduces
 
-HER is inspired by the human ability of not only learning from successes, but also learning from failures. After each episode of training, the actions taken and the states that the agent was in are saved to a Replay Buffer. In case of a failure, the terminating state and the goal state are different, so the earned reward is negative. When replaying the episodes in the Replay Buffer, the goal will be replaced by the terminating state or a state that is close to it. Therefore, when replaying that episode, the agent will be successful and learn how to reach that state. By doing this, the agent will not learn how to reach the goal that was desired, but it will learn another goal which might be helpful in learning how to reach the desired goal. Andrychowicz et al. \cite{herpaper} researched that HER is especially usable for tasks with multiple possible goals, but also for tasks with a single goal they showed that the learning performance improved.
+HER is inspired by the human ability of not only learning from successes, but also learning from failures \cite{herpaper}. After each episode of training, the actions taken and the states that the agent was in are saved to a Replay Buffer. In case of a failure, the terminating state and the goal state are different, so the earned reward is negative. When replaying the episodes in the Replay Buffer, the goal will be replaced by the terminating state or a state that is close to it. Therefore, when replaying that episode, the agent will be successful and learn how to reach that state. By doing this, the agent will not learn how to reach the goal that was desired, but it will learn another goal which might be helpful in learning how to reach the desired goal. Andrychowicz et al. \cite{herpaper} researched that HER is especially usable for tasks with multiple possible goals, but also for tasks with a single goal they showed that the learning performance improved.
 
 \vspace{0.5cm}
 %%many endeavors to use and improve her
@@ -67,10 +65,10 @@ Fang et al. propose a similar approach with their "Curriculum-guided HER". At ea
 \newline
 Zhao and Tresp also propose an energy-based Prioritization of Hindsight Experiences. They hypothesized that episodes with higher trajectory energy are more useful for learning than those with lower energy. Their experiments have shown that this approach improves performance and sample-efficiency over state-of-the-art approaches. \cite{energyher}
 \newline
-Ren et al. introduce Hindsight Goal Generation, an approach that modifies the replay buffer to generate goals that are easy to achieve but still valuable to guide the agent to learn the actual goal. \ref{hgg}
+Ren et al. introduce Hindsight Goal Generation, an approach that modifies the replay buffer to generate goals that are easy to achieve but still valuable to guide the agent to learn the actual goal. \cite{hgg}
 \newline
 Lank and Wu propose ARCHER, a modification to HER. They explain that replaying an experience is biased, because the modified new goal would influence the actions of the agent and by forcing the agent to take the same actions, these actions are biased. So there would be a difference between replaying a hindsight experience and a real experience, because in the real experience, the agent might choose a different action because it is not forced. To counter this bias, they use aggressive/high rewards for hindsight experiences so that the agent is more likely to do the same action in the same situation in a real experience. \cite{archer}
-
+Most of the research on HER revolves around improving the performance of HER using simple environments.
 %% some robotic arm tasks , eg. stacking stones
 %%mostly work on improving her
 \vspace{0.5cm}

@@ -3,89 +3,56 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: bibliography/literature.bib
-Warning--I didn't find a database entry for "(ddpg)"
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
-Too many commas in name 1 of "David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore Graepel, Timothy Lillicrap, Karen Simonyan, Demis Hassabis" for entry alphazero
-while executing---line 1090 of file plain.bst
+Repeated entry---line 320 of file bibliography/literature.bib
+ : @misc{gym
+ :          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 327 of file bibliography/literature.bib
+ : @misc{baselines
+ :                ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in leesedol
+Warning--to sort, need author or key in roboarmuk
 Warning--empty booktitle in dynpath
-Warning--empty journal in neuralnetpath
-Warning--empty journal in rllilianweng
-You've used 23 entries,
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            593 strings with 6903 characters,
-and the built_in function-call counts, 6569 in all, are:
-= -- 599
-> -- 364
-< -- 2
-+ -- 149
-- -- 122
-* -- 355
-:= -- 1121
-add.period$ -- 71
-call.type$ -- 23
-change.case$ -- 127
+            614 strings with 7864 characters,
+and the built_in function-call counts, 9038 in all, are:
+= -- 822
+> -- 561
+< -- 4
++ -- 227
+- -- 196
+* -- 543
+:= -- 1470
+add.period$ -- 79
+call.type$ -- 27
+change.case$ -- 176
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 222
-empty$ -- 521
-format.name$ -- 122
-if$ -- 1369
+cite$ -- 30
+duplicate$ -- 304
+empty$ -- 667
+format.name$ -- 196
+if$ -- 1914
 int.to.chr$ -- 0
-int.to.str$ -- 23
+int.to.str$ -- 27
 missing$ -- 9
-newline$ -- 119
-num.names$ -- 48
-pop$ -- 196
+newline$ -- 134
+num.names$ -- 52
+pop$ -- 272
 preamble$ -- 1
-purify$ -- 104
+purify$ -- 149
 quote$ -- 0
-skip$ -- 205
+skip$ -- 300
 stack$ -- 0
-substring$ -- 211
-swap$ -- 47
-text.length$ -- 2
+substring$ -- 301
+swap$ -- 101
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 92
+type$ -- 108
 warning$ -- 3
-while$ -- 52
-width$ -- 25
-write$ -- 239
-(There were 20 error messages)
+while$ -- 59
+width$ -- 29
+write$ -- 273
+(There were 2 error messages)
