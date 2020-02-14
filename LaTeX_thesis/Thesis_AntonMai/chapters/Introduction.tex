@@ -3,97 +3,87 @@
 
 %%recent advances in machine learning
 %% alphago, more examples. 
-%TODO use alphago zero, it is stronger
 
-Lee Sedol, one of the best Go players in the world, was beaten by the Go engine AlphaGo in a match. The engine was clearly stronger \cite{leesedol}.  
-%TODO /cite{leesedol}
-AlphaGo only knew the rules at the beginning and got stronger only by playing with itself. 
-Artificial Intelligence is quite popular nowadays because of its many use cases: Self-Driving cars, playing atari games, robotics and more. 
-But how do these engines learn how to get so good at their areas ? The answer is reinforcement learning, an area of machine learning. 
+Lee Sedol, one of the best Go players in the world, was beaten by the Go engine AlphaGo in a match with a score of 4 to 1. The engine was clearly stronger \cite{leesedol}.  
+AlphaGo learned from a big dataset of games and got stronger only by playing with itself. 
+Artificial Intelligence is quite popular nowadays because of its many use cases: self-driving cars, playing Atari games, robotics and more. 
+But how do these engines learn how to get so good at their areas? The answer lies in reinforcement learning (RL), an area of machine learning. 
 
 \vspace{0.5cm}
 
-The idea of reinforcement learning is to have a state and actions that an agent can choose from. Each action results in different rewards and states. Rewards are used by agent to measure how good an action was. This process is repeated which results in the agent learning which actions in each state are better.
-%TODO maybe find a better example with better reward
-Imagine you are a soccer player. You are standing in front of the goal (which is the state you are in). You can either shoot or pass the ball (which are your available actions). You choose to shoot, but the ball is blocked by the goalkeeper (you got a low reward). So the next time you are in front of the goal again, you will more probably try to pass the ball. This time your teammate scored a goal (you got a high reward). From this experience you learn that it is probably better to pass the ball if you are standing in front of the goal.
-The concept of reinforcement learning can be used in a variety of environments, for example robotic arms.
+The idea of RL is to have a state that an agent is in and actions that it can choose from. Each action results in different states and amounts of earned values that are called rewards. Rewards are used by agent to measure how good an action was. This process is repeated which results in the agent learning which actions in each state are better.
+Imagine you are a soccer player. You are standing in front of the goal (which is the state you are in). You can either shoot or pass the ball (which are your available actions). You choose to shoot, but the ball is blocked by the goalkeeper (you get a low reward). So the next time you are in front of the goal again, you are more likely to try to pass the ball to a teammate. This time your teammate scored a goal (you got a high reward). From these experiences you learn that it is probably better to pass the ball if you are standing in front of the goal.
+The concept of RL can be used in a variety of environments, for example robotic arms.
 
 \vspace{0.5cm}
-
 %%robotic arms uses
 
-Already in the 14th century, Leonardo da Vinci made blueprints of robotic arms.
-%TODO \cite{roboarmhistory} 
-
-A robotic arm resembles a human arm. It consists of segments which are connected by joints. 
-%TODO \cite{howroboarmworks}
-The number of joints correspond to what is called Degrees of Freedom. A robotic arm with 5 joints would have 5 Degrees of Freedom because it can pivot in 5 ways. Each joint is connected to a step motor. Step motors make the robot move very precisely.
-The equivalent to a human hand is the end effector. The end effector can vary depending on the tasks.  
+Already in the 14th century, Leonardo da Vinci made blueprints of robotic arms \cite{roboarmhistory}.
+A robotic arm resembles a human arm. It consists of segments which are connected by joints \cite{howroboarmworks}.
+The number of joints correspond to what is called Degrees of Freedom (DOF). A robotic arm with 5 joints would have 5 DOF because it can pivot in 5 ways. Each joint is connected to a step motor. Step motors supply energy needed to the robotic arm and make the robot move very precisely.
+The equivalent to a human hand is the end effector. The end effector can vary depending on the task that the robotic arm has to solve.  
 
 \vspace{0.5cm}
 
-Robotic arms have many advantages. They are very accurate and consistent which is why they are mostly used for repetitive tasks or tasks that require high accuracy which are hard for humans. 
-%TODO \cite{roboarmuk} 
-This is the main reason why they are used in laboratories and hospitals for surgeries. They can also be used automatically without any human which is why they are used for manufacturing and assembly lines. 
+Robotic arms have many advantages. They are very accurate and consistent which is why they are mostly used for repetitive tasks or tasks that require high accuracy which are hard for humans \cite{roboarmuk}. 
+This is the main reason why they are used in laboratories and hospitals for surgeries. Being able to work automatically without any human makes robotic arms useful in manufacturing and assembly lines. 
 
 \vspace{0.5cm}
 
 Humans still have to teach the robotic arms how to move when 
-setting them up. For path planning of the robotic arm, a sequence of actions has to be found that solves the task. This sequence is saved and repetitively executed by the robotic arm. Finding the path still requires human labor. Either by testing or by using linear algebra a path can be found. 
-%TODO find good cite 
-A robotic arm needs 6 Degrees of Freedom to be able to move its end effector in every direction and orientation. This also means that robotic arms with more degrees of freedom do not have a unique path to solve the tasks. There are different paths which can vary in length and energy consumption.
-To improve the quality of the path and to do path planning without a human, using reinforcement learning for robotic arms is a logical approach. 
-
-\vspace{0.5cm}
-
+setting them up. For path planning of a robotic arm, a sequence of actions has to be found that solves the task. This sequence is saved and repetitively executed by the robotic arm. Finding the path still requires human labor. To improve path planning, many complicated algorithms have been developed. For example, Klanke et. al \cite{dynpath} developed a dynamic path planning algorithm for a 7 DOF Robotic Arm. They solved it by reducing the task to a 6 DOF problem, which is easier to solve.
+A robotic arm needs 6 DOF to be able to move its end effector in every direction and orientation. This also means that robotic arms with more DOF do not have a unique path to solve the tasks. There are different paths which can vary in length and energy consumption.
+To improve the quality of the path and to do path planning without a human, using RL for robotic arms is a logical approach. 
 
 %%reinforcement learning in robotics
 %TODO cite papers with rl robotics
-...
-
 \vspace{0.5cm}
-
 %%problems with reinforcement learning because of sparse rewards
 
-There is an issue that prevents robotic arms to learn with reinforcement learning. It is hard to construct a suitable reward function for tasks where robotic arms are used. For example ... 
-%TODO read HER paper, cite
-So either a suitable reward function has to be constructed by hand, or the simplest reward function, a binary sparse reward function has to be used. 
-Both approaches have some issues. 
-Constructing a reward function can be quite complicated. Also, for each task an individual reward function has to be made. So someone has to do this work which defeats the purpose of using reinforcement learning for robotic arms over path planning by hand. Depending on the case it might be easier to just plan the path without reinforcement learning.
-Using only a sparse reward for robotic arms is as follows. a reward is given, when the goal is reached, no reward is given when the goal is not reached. Robotic arms have usually many Degrees of Freedom, so there are many actions that can be taken by the robotic arm. It is quite unlikely for robotic arms to fulfill the task by doing random movements. Tasks like moving an object are near impossible to solve with random actions. 
-%TODO Find prove-> at timestep 0 for fetchplace 
+There is an issue that prevents robotic arms to learn with RL. It is hard to construct a suitable reward function for tasks where robotic arms are used. 
+So either a suitable reward function has to be constructed which is time and cost consuming, or the simplest reward function, a binary and sparse reward function has to be used. Both approaches have some issues. 
+\newline
+Constructing a reward function can be quite complicated. Also, for each task an individual reward function has to be made. So someone has to do this work which defeats the purpose of using RL for robotic arms over path planning by hand. Depending on the case it might be easier to just plan the path without RL.
+\newline
+Using only a sparse reward for robotic arms works as follows. A reward is given if the goal is reached, and no reward is given if the goal is not reached. Robotic arms usually have many DOF, so there is a huge action space for the robotic arm. It is quite unlikely for robotic arms to fulfill the task by doing random movements. Tasks like moving an object are near impossible to solve with random actions. 
 So it is very unlikely for the robotic arm to earn a reward and learn. It takes a very long time to train a robotic arm with sparse rewards.
-But recently hindsight experience replay has been introduced. 
-%TODO \cite HERPAPER]
-Hindsight experience replay allows a high learning rate even with sparse rewards. 
-
+But recently hindsight experience replay (HER) has been introduced by Andrychowicz et al. \cite{herpaper}.
+HER allows a high learning rate even with sparse rewards by making the training samples more efficient. 
 
 \vspace{0.5cm}
-
 %%her introduces
 
-Hindsight experience replay works as follows.
-
+HER is inspired by the human ability of not only learning from successes, but also learning from failures. After each episode of training, the actions taken and the states that the agent was in are saved to a Replay Buffer. In case of a failure, the terminating state and the goal state are different, so the earned reward is negative. When replaying the episodes in the Replay Buffer, the goal will be replaced by the terminating state or a state that is close to it. Therefore, when replaying that episode, the agent will be successful and learn how to reach that state. By doing this, the agent will not learn how to reach the goal that was desired, but it will learn another goal which might be helpful in learning how to reach the desired goal. Andrychowicz et al. \cite{herpaper} researched that HER is especially usable for tasks with multiple possible goals, but also for tasks with a single goal they showed that the learning performance improved.
 
 \vspace{0.5cm}
-
 %%many endeavors to use and improve her
 
+There are many endeavors to improve HER. 
+Most of the improvements are based on the selection of experiences that should be replayed. This is based on the idea that some experiences are more valuable to learning the task than other.
+\newline
+Zhao and Tresp propose a curiosity-driven experience prioritization approach in which rarer experiences are rated more valuable and are therefore prioritized for hindsight replay. \cite{curiousher}
+\newline
+Fang et al. propose a similar approach with their "Curriculum-guided HER". At earlier stages of training, curiosity-driven experience prioritization is used to enforce exploration of the potential approaches to solve the task. At latter stages experiences with higher proximity to the actual goals are prioritized to reinforce actually finding paths to solve the task. \cite{curricher}
+\newline
+Zhao and Tresp also propose an energy-based Prioritization of Hindsight Experiences. They hypothesized that episodes with higher trajectory energy are more useful for learning than those with lower energy. Their experiments have shown that this approach improves performance and sample-efficiency over state-of-the-art approaches. \cite{energyher}
+\newline
+Ren et al. introduce Hindsight Goal Generation, an approach that modifies the replay buffer to generate goals that are easy to achieve but still valuable to guide the agent to learn the actual goal. \ref{hgg}
+\newline
+Lank and Wu propose ARCHER, a modification to HER. They explain that replaying an experience is biased, because the modified new goal would influence the actions of the agent and by forcing the agent to take the same actions, these actions are biased. So there would be a difference between replaying a hindsight experience and a real experience, because in the real experience, the agent might choose a different action because it is not forced. To counter this bias, they use aggressive/high rewards for hindsight experiences so that the agent is more likely to do the same action in the same situation in a real experience. \cite{archer}
 
 %% some robotic arm tasks , eg. stacking stones
 %%mostly work on improving her
+\vspace{0.5cm}
+%%using harder environments for her in this thesis to see if it also works.
+
+In this thesis the performance of HER is examined for harder environments. Two environments which are prototypes of golf and basketball, will be used to experiment with. In the first environment, the task is for a robotic arm to roll a ball to a point that is far outside of its reach. In the second environment the robotic arm has to toss a ball into a box.  
 
 \vspace{0.5cm}
 
-%%using harder environments for her in this thesis to see if it also works.
-
-
-
 This thesis is structured as follows: 
-Chapter 2 describes the theoretical background on robotic arms, reinforcement learning and algorithms like deep deterministic policy gradients and hindsight experience replay. 
-Chapter 3 explains the methodology used for this thesis.
-Chapter 4 gives an overview of the simulation environment.
-In chapter 5, the experiments are presented and the results are discussed.
+Chapter 2 describes the theoretical background on RL in general, artificial neural networks (ANN) the RL algorithm deep deterministic policy gradients (DDPG) and HER. 
+Chapter 3 explains the methodology used for this thesis. The simulation environment is showcased.
+In chapter 4, the experiments are presented and the results are discussed.
 In the last chapter, the results are summarized and suggestions for further work is provided.
 
 

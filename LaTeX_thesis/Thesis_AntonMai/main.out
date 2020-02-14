@@ -7,31 +7,27 @@
 \BOOKMARK [1][-]{section.2.3}{Deep Deterministic Policy Gradients}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.4}{Hindsight Experience Replay}{chapter.2}% 8
 \BOOKMARK [0][-]{chapter.3}{Methodology}{}% 9
-\BOOKMARK [0][-]{chapter.4}{Simulation Environment}{}% 10
-\BOOKMARK [1][-]{section.4.1}{MuJoCo}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.2}{OpenAI}{chapter.4}% 12
-\BOOKMARK [2][-]{subsection.4.2.1}{OpenAI Gym}{section.4.2}% 13
-\BOOKMARK [2][-]{subsection.4.2.2}{OpenAI Baselines}{section.4.2}% 14
-\BOOKMARK [1][-]{section.4.3}{Model}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Experiments}{}% 16
-\BOOKMARK [1][-]{section.5.1}{OpenAI robotics package}{chapter.5}% 17
-\BOOKMARK [2][-]{subsection.5.1.1}{FetchReach}{section.5.1}% 18
-\BOOKMARK [2][-]{subsection.5.1.2}{FetchPush}{section.5.1}% 19
-\BOOKMARK [2][-]{subsection.5.1.3}{FetchSlide}{section.5.1}% 20
-\BOOKMARK [2][-]{subsection.5.1.4}{FetchPickAndPlace}{section.5.1}% 21
-\BOOKMARK [2][-]{subsection.5.1.5}{Comparison \(maybe some different section name\)}{section.5.1}% 22
-\BOOKMARK [1][-]{section.5.2}{FetchSlideball}{chapter.5}% 23
-\BOOKMARK [2][-]{subsection.5.2.1}{Task Description}{section.5.2}% 24
-\BOOKMARK [2][-]{subsection.5.2.2}{Environment}{section.5.2}% 25
-\BOOKMARK [2][-]{subsection.5.2.3}{Results}{section.5.2}% 26
-\BOOKMARK [2][-]{subsection.5.2.4}{Discussion}{section.5.2}% 27
-\BOOKMARK [1][-]{section.5.3}{FetchToss}{chapter.5}% 28
-\BOOKMARK [2][-]{subsection.5.3.1}{Task Description}{section.5.3}% 29
-\BOOKMARK [2][-]{subsection.5.3.2}{Environment}{section.5.3}% 30
-\BOOKMARK [2][-]{subsection.5.3.3}{Results}{section.5.3}% 31
-\BOOKMARK [2][-]{subsection.5.3.4}{Discussion}{section.5.3}% 32
-\BOOKMARK [0][-]{chapter.6}{Conclusion and Future Works}{}% 33
-\BOOKMARK [-1][]{part*.24}{Appendix}{}% 34
-\BOOKMARK [0][-]{appendix.A}{Example RDMA application}{part*.24}% 35
-\BOOKMARK [0][-]{appendix.B}{Setup Instructions}{part*.24}% 36
-\BOOKMARK [0][-]{chapter*.26}{Bibliography}{part*.24}% 37
+\BOOKMARK [1][-]{section.3.1}{Simulation Environment}{chapter.3}% 10
+\BOOKMARK [2][-]{subsection.3.1.1}{MuJoCo}{section.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.1.2}{OpenAI}{section.3.1}% 12
+\BOOKMARK [1][-]{section.3.2}{Model}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Experiments}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Fetch environments by OpenAI}{chapter.4}% 15
+\BOOKMARK [2][-]{subsection.4.1.1}{FetchReach}{section.4.1}% 16
+\BOOKMARK [2][-]{subsection.4.1.2}{FetchPush}{section.4.1}% 17
+\BOOKMARK [2][-]{subsection.4.1.3}{FetchSlide}{section.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.1.4}{FetchPickAndPlace}{section.4.1}% 19
+\BOOKMARK [2][-]{subsection.4.1.5}{Discussion of Results}{section.4.1}% 20
+\BOOKMARK [1][-]{section.4.2}{FetchSlideball}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.2.1}{Task Description}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.2}{Environment}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.3}{Results}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.4}{Discussion}{section.4.2}% 25
+\BOOKMARK [1][-]{section.4.3}{FetchToss}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{Task Description}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.2}{Environment}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.3}{Results}{section.4.3}% 29
+\BOOKMARK [2][-]{subsection.4.3.4}{Discussion}{section.4.3}% 30
+\BOOKMARK [0][-]{chapter.5}{Conclusion and Future Works}{}% 31
+\BOOKMARK [0][-]{appendix.A}{Simulation Parameters}{}% 32
+\BOOKMARK [0][-]{chapter*.27}{Bibliography}{}% 33

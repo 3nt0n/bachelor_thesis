@@ -4,27 +4,34 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Reinforcement Learning. An agent chooses an action to interact with the environment and gets a reward and an observation of his new state back. \relax }}{7}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A neural network. \relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces A neuron. \relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Reinforcement Learning. An agent chooses an action to interact with the environment and gets a reward and an observation of his new state back. \cite {rl_general.jpg} \relax }}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A neural network. \cite {neural_networkpng}\relax }}{9}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A neuron and how its value is composed \cite {neuron.jpeg}\relax }}{10}{figure.caption.8}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces the FetchPickAndPlace-v1 environment by OpenAI Gym run with mujoco-py\relax }}{15}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces FetchPickAndPlace-v1 Environment by OpenAI Gym run with Mujoco-py \relax }}{15}{figure.caption.9}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces FetchReach-v1\relax }}{18}{figure.caption.10}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces FetchPush-v1\relax }}{19}{figure.caption.11}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces FetchSlide-v1\relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces FetchPickAndPlace-v1\relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Success Rate of each task after 50 episodes of training\relax }}{22}{figure.caption.14}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces FetchSlideball-v3\relax }}{23}{figure.caption.15}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces FetchSlide with a cylinder (left) and with a ball (right)\relax }}{23}{figure.caption.16}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces FetchSlideball with the same friction and timestep as in FetchSlide\relax }}{24}{figure.caption.17}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces FetchSlideball with 50\% friction and more steps per episode\relax }}{25}{figure.caption.18}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces FetchSlideball with 10\% friction)\relax }}{26}{figure.caption.19}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces FetchToss\relax }}{27}{figure.caption.20}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces FetchPickAndPlace with a cube(left) and a ball (right)\relax }}{29}{figure.caption.21}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces FetchToss\relax }}{30}{figure.caption.22}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces FetchReach-v1\relax }}{18}{figure.caption.12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces FetchPush-v1\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces FetchSlide-v1\relax }}{20}{figure.caption.14}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces FetchPickAndPlace-v1\relax }}{21}{figure.caption.15}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Success Rate of each task after 50 episodes of training\relax }}{22}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {FetchReach-v1}}}{22}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {FetchPush-v1}}}{22}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {FetchSlide-v1}}}{22}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {FetchPickAndPlace-v1}}}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces FetchSlideball-v3\relax }}{24}{figure.caption.17}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces FetchSlide with a cylinder (left) and with a ball (right)\relax }}{24}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {FetchSlide-v1}}}{24}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {FetchSlideball-v1}}}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces FetchSlideball with the same friction and timestep as in FetchSlide\relax }}{25}{figure.caption.19}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces FetchSlideball with 50\% friction and more steps per episode\relax }}{26}{figure.caption.20}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces FetchSlideball with 10\% friction)\relax }}{27}{figure.caption.21}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces FetchToss\relax }}{29}{figure.caption.22}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces FetchPickAndPlace with a cube(left) and a ball (right)\relax }}{30}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {FetchPickAndPlace-v1}}}{30}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {FetchPickAndPlaceball-v1}}}{30}{figure.caption.23}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces FetchToss\relax }}{31}{figure.caption.24}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces FetchToss, with lighter ball and more time steps\relax }}{32}{figure.caption.25}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

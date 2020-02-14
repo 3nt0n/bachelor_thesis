@@ -1,0 +1,49 @@
+
+
+Introduction: "The key advantage of deep RL
+lies in its capacity to learn generalized policy representa-
+tions in comparison to specialized domain and task specific
+hand-engineered policies." But high amount of training data and time necessary, in robotics not feasible. Deep RL methods used with binary rewards. For algorithms DPG, NAF, DQN,  HER improves sample-efficiency.
+There is a hindsight bias in HER.
+
+Related Work:
+
+ER is a crucial component to staiblize convergence in off-policy deep RL networks (Mnih 2015). Allows single eperience to be sampled multiple times.
+PER achieves higher sample efficiency by selecting experience according to frequency distirbution. CER helps with large replay buffer. HERaugments replay buffer by replacing failed episodes with successful ones.
+Hinsight is used in Psychology (since 1975).
+"Parallel methods to improve sample-efficiency of deep
+RL include learning hierarchical abstractions (Kulkarni
+et al. 2016; Riedmiller et al. 2018), reducing variance
+in policy gradients (Gu et al. 2016a), model-based algo-
+rithms (Deisenroth and Rasmussen 2011) and effective ex-
+ploration (Hester and Stone 2013; Pathak et al. 2017)."
+
+
+
+ARCHER: Aggressive Rewards to Counter
+bias in HER
+
+ -Background on DDPG+HER: *Good long Explanation*
+
+ -The Proposed Method: ARCHER: when changing goal, the action might in reality probably also change -> bias to that action.
+-> do aggressive hindsight rewards to counter it.
+("To do so, we nudge the current policy to be more consistent
+with the hindsight data in the replay buffer. Hence, to meet
+the overestimated hindsight likelihood of a t for s t ||g h , we
+utilize more aggressive hindsight rewards, so that a large
+positive reward given to a successful hindsight transition
+greatly increases the Q-value of the hindsight state-action
+pair, which indirectly drives an aggressive policy update to-
+wards choosing this maximizing action for the given hind-
+sight state.")
+
+
+Conclusion/Discussion:
+
+ARCHER outperforms vanilla HER overall.
+
+
+
+
+
+

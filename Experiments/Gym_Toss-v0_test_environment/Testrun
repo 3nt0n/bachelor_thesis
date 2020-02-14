@@ -1,15 +1,11 @@
 import gym
 
-env = gym.make("FetchToss-v4")
+env = gym.make("FetchToss-v0")
 
 for i in range(10):
 
  env.reset()
 
- env.render()
- env.step([1,0,0,0])
- env.render()
- env.step([1,0,0,0])
  env.render()
  env.step([0,0,-1,1])
  env.render()
