@@ -1,0 +1,638 @@
+Logging to ./Bachelor_Thesis/policies/her/logs/fetchslide-v1-10c-250k2env-fromzero
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+aux_loss_weight: 0.0078
+bc_loss: 0
+ddpg_params: {'batch_size': 256, 'relative_goals': False, 'norm_eps': 0.01, 'norm_clip': 5, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'layers': 3, 'buffer_size': 1000000, 'clip_obs': 200.0, 'Q_lr': 0.001, 'max_u': 1.0, 'pi_lr': 0.001, 'hidden': 256, 'action_l2': 1.0, 'polyak': 0.95, 'scope': 'ddpg'}
+demo_batch_size: 128
+env_name: FetchSlide-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7ff9d5299510>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+num_demo: 100
+prm_loss_weight: 0.001
+q_filter: 0
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+---------------------------------
+| epoch              | 0        |
+| stats_g/mean       | 0.746    |
+| stats_g/std        | 0.119    |
+| stats_o/mean       | 0.164    |
+| stats_o/std        | 0.062    |
+| test/episode       | 20       |
+| test/mean_Q        | -3.12    |
+| test/success_rate  | 0.005    |
+| train/episode      | 100      |
+| train/success_rate | 0.001    |
+---------------------------------
+---------------------------------
+| epoch              | 1        |
+| stats_g/mean       | 0.743    |
+| stats_g/std        | 0.117    |
+| stats_o/mean       | 0.165    |
+| stats_o/std        | 0.0593   |
+| test/episode       | 40       |
+| test/mean_Q        | -5.19    |
+| test/success_rate  | 0        |
+| train/episode      | 200      |
+| train/success_rate | 0.001    |
+---------------------------------
+---------------------------------
+| epoch              | 2        |
+| stats_g/mean       | 0.743    |
+| stats_g/std        | 0.12     |
+| stats_o/mean       | 0.165    |
+| stats_o/std        | 0.0611   |
+| test/episode       | 60       |
+| test/mean_Q        | -7.17    |
+| test/success_rate  | 0.01     |
+| train/episode      | 300      |
+| train/success_rate | 0.001    |
+---------------------------------
+---------------------------------
+| epoch              | 3        |
+| stats_g/mean       | 0.743    |
+| stats_g/std        | 0.122    |
+| stats_o/mean       | 0.165    |
+| stats_o/std        | 0.0624   |
+| test/episode       | 80       |
+| test/mean_Q        | -9.06    |
+| test/success_rate  | 0.01     |
+| train/episode      | 400      |
+| train/success_rate | 0.005    |
+---------------------------------
+---------------------------------
+| epoch              | 4        |
+| stats_g/mean       | 0.744    |
+| stats_g/std        | 0.126    |
+| stats_o/mean       | 0.166    |
+| stats_o/std        | 0.064    |
+| test/episode       | 100      |
+| test/mean_Q        | -11      |
+| test/success_rate  | 0        |
+| train/episode      | 500      |
+| train/success_rate | 0.005    |
+---------------------------------
+---------------------------------
+| epoch              | 5        |
+| stats_g/mean       | 0.745    |
+| stats_g/std        | 0.131    |
+| stats_o/mean       | 0.166    |
+| stats_o/std        | 0.0668   |
+| test/episode       | 120      |
+| test/mean_Q        | -12.3    |
+| test/success_rate  | 0.02     |
+| train/episode      | 600      |
+| train/success_rate | 0.01     |
+---------------------------------
+---------------------------------
+| epoch              | 6        |
+| stats_g/mean       | 0.748    |
+| stats_g/std        | 0.139    |
+| stats_o/mean       | 0.167    |
+| stats_o/std        | 0.0706   |
+| test/episode       | 140      |
+| test/mean_Q        | -13.4    |
+| test/success_rate  | 0.045    |
+| train/episode      | 700      |
+| train/success_rate | 0.009    |
+---------------------------------
+---------------------------------
+| epoch              | 7        |
+| stats_g/mean       | 0.751    |
+| stats_g/std        | 0.145    |
+| stats_o/mean       | 0.168    |
+| stats_o/std        | 0.0738   |
+| test/episode       | 160      |
+| test/mean_Q        | -14.2    |
+| test/success_rate  | 0.05     |
+| train/episode      | 800      |
+| train/success_rate | 0.019    |
+---------------------------------
+---------------------------------
+| epoch              | 8        |
+| stats_g/mean       | 0.754    |
+| stats_g/std        | 0.151    |
+| stats_o/mean       | 0.168    |
+| stats_o/std        | 0.0779   |
+| test/episode       | 180      |
+| test/mean_Q        | -13.8    |
+| test/success_rate  | 0.11     |
+| train/episode      | 900      |
+| train/success_rate | 0.039    |
+---------------------------------
+---------------------------------
+| epoch              | 9        |
+| stats_g/mean       | 0.757    |
+| stats_g/std        | 0.156    |
+| stats_o/mean       | 0.169    |
+| stats_o/std        | 0.0807   |
+| test/episode       | 200      |
+| test/mean_Q        | -14.4    |
+| test/success_rate  | 0.095    |
+| train/episode      | 1e+03    |
+| train/success_rate | 0.049    |
+---------------------------------
+---------------------------------
+| epoch              | 10       |
+| stats_g/mean       | 0.759    |
+| stats_g/std        | 0.16     |
+| stats_o/mean       | 0.17     |
+| stats_o/std        | 0.0835   |
+| test/episode       | 220      |
+| test/mean_Q        | -13      |
+| test/success_rate  | 0.11     |
+| train/episode      | 1.1e+03  |
+| train/success_rate | 0.07     |
+---------------------------------
+---------------------------------
+| epoch              | 11       |
+| stats_g/mean       | 0.762    |
+| stats_g/std        | 0.164    |
+| stats_o/mean       | 0.171    |
+| stats_o/std        | 0.0859   |
+| test/episode       | 240      |
+| test/mean_Q        | -13.7    |
+| test/success_rate  | 0.11     |
+| train/episode      | 1.2e+03  |
+| train/success_rate | 0.057    |
+---------------------------------
+---------------------------------
+| epoch              | 12       |
+| stats_g/mean       | 0.766    |
+| stats_g/std        | 0.167    |
+| stats_o/mean       | 0.171    |
+| stats_o/std        | 0.0875   |
+| test/episode       | 260      |
+| test/mean_Q        | -13.9    |
+| test/success_rate  | 0.185    |
+| train/episode      | 1.3e+03  |
+| train/success_rate | 0.085    |
+---------------------------------
+---------------------------------
+| epoch              | 13       |
+| stats_g/mean       | 0.769    |
+| stats_g/std        | 0.168    |
+| stats_o/mean       | 0.172    |
+| stats_o/std        | 0.0885   |
+| test/episode       | 280      |
+| test/mean_Q        | -13.5    |
+| test/success_rate  | 0.19     |
+| train/episode      | 1.4e+03  |
+| train/success_rate | 0.094    |
+---------------------------------
+---------------------------------
+| epoch              | 14       |
+| stats_g/mean       | 0.771    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.172    |
+| stats_o/std        | 0.0887   |
+| test/episode       | 300      |
+| test/mean_Q        | -13      |
+| test/success_rate  | 0.25     |
+| train/episode      | 1.5e+03  |
+| train/success_rate | 0.096    |
+---------------------------------
+---------------------------------
+| epoch              | 15       |
+| stats_g/mean       | 0.773    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.173    |
+| stats_o/std        | 0.0887   |
+| test/episode       | 320      |
+| test/mean_Q        | -13.1    |
+| test/success_rate  | 0.315    |
+| train/episode      | 1.6e+03  |
+| train/success_rate | 0.105    |
+---------------------------------
+---------------------------------
+| epoch              | 16       |
+| stats_g/mean       | 0.775    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.173    |
+| stats_o/std        | 0.0887   |
+| test/episode       | 340      |
+| test/mean_Q        | -15.3    |
+| test/success_rate  | 0.25     |
+| train/episode      | 1.7e+03  |
+| train/success_rate | 0.086    |
+---------------------------------
+---------------------------------
+| epoch              | 17       |
+| stats_g/mean       | 0.777    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.174    |
+| stats_o/std        | 0.089    |
+| test/episode       | 360      |
+| test/mean_Q        | -13.4    |
+| test/success_rate  | 0.315    |
+| train/episode      | 1.8e+03  |
+| train/success_rate | 0.116    |
+---------------------------------
+---------------------------------
+| epoch              | 18       |
+| stats_g/mean       | 0.78     |
+| stats_g/std        | 0.17     |
+| stats_o/mean       | 0.175    |
+| stats_o/std        | 0.0896   |
+| test/episode       | 380      |
+| test/mean_Q        | -13.5    |
+| test/success_rate  | 0.37     |
+| train/episode      | 1.9e+03  |
+| train/success_rate | 0.118    |
+---------------------------------
+---------------------------------
+| epoch              | 19       |
+| stats_g/mean       | 0.781    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.175    |
+| stats_o/std        | 0.0897   |
+| test/episode       | 400      |
+| test/mean_Q        | -13.5    |
+| test/success_rate  | 0.35     |
+| train/episode      | 2e+03    |
+| train/success_rate | 0.135    |
+---------------------------------
+---------------------------------
+| epoch              | 20       |
+| stats_g/mean       | 0.783    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.176    |
+| stats_o/std        | 0.0898   |
+| test/episode       | 420      |
+| test/mean_Q        | -12.1    |
+| test/success_rate  | 0.485    |
+| train/episode      | 2.1e+03  |
+| train/success_rate | 0.148    |
+---------------------------------
+---------------------------------
+| epoch              | 21       |
+| stats_g/mean       | 0.785    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.176    |
+| stats_o/std        | 0.0902   |
+| test/episode       | 440      |
+| test/mean_Q        | -11.7    |
+| test/success_rate  | 0.54     |
+| train/episode      | 2.2e+03  |
+| train/success_rate | 0.173    |
+---------------------------------
+---------------------------------
+| epoch              | 22       |
+| stats_g/mean       | 0.787    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.177    |
+| stats_o/std        | 0.0904   |
+| test/episode       | 460      |
+| test/mean_Q        | -11.8    |
+| test/success_rate  | 0.425    |
+| train/episode      | 2.3e+03  |
+| train/success_rate | 0.176    |
+---------------------------------
+---------------------------------
+| epoch              | 23       |
+| stats_g/mean       | 0.789    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.177    |
+| stats_o/std        | 0.0906   |
+| test/episode       | 480      |
+| test/mean_Q        | -12.9    |
+| test/success_rate  | 0.415    |
+| train/episode      | 2.4e+03  |
+| train/success_rate | 0.149    |
+---------------------------------
+---------------------------------
+| epoch              | 24       |
+| stats_g/mean       | 0.791    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.178    |
+| stats_o/std        | 0.0907   |
+| test/episode       | 500      |
+| test/mean_Q        | -11.9    |
+| test/success_rate  | 0.475    |
+| train/episode      | 2.5e+03  |
+| train/success_rate | 0.175    |
+---------------------------------
+---------------------------------
+| epoch              | 25       |
+| stats_g/mean       | 0.792    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.178    |
+| stats_o/std        | 0.0907   |
+| test/episode       | 520      |
+| test/mean_Q        | -11.5    |
+| test/success_rate  | 0.51     |
+| train/episode      | 2.6e+03  |
+| train/success_rate | 0.161    |
+---------------------------------
+---------------------------------
+| epoch              | 26       |
+| stats_g/mean       | 0.794    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.179    |
+| stats_o/std        | 0.0909   |
+| test/episode       | 540      |
+| test/mean_Q        | -12.7    |
+| test/success_rate  | 0.445    |
+| train/episode      | 2.7e+03  |
+| train/success_rate | 0.167    |
+---------------------------------
+---------------------------------
+| epoch              | 27       |
+| stats_g/mean       | 0.795    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.179    |
+| stats_o/std        | 0.091    |
+| test/episode       | 560      |
+| test/mean_Q        | -11.5    |
+| test/success_rate  | 0.52     |
+| train/episode      | 2.8e+03  |
+| train/success_rate | 0.163    |
+---------------------------------
+---------------------------------
+| epoch              | 28       |
+| stats_g/mean       | 0.796    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.179    |
+| stats_o/std        | 0.0911   |
+| test/episode       | 580      |
+| test/mean_Q        | -11.4    |
+| test/success_rate  | 0.565    |
+| train/episode      | 2.9e+03  |
+| train/success_rate | 0.161    |
+---------------------------------
+---------------------------------
+| epoch              | 29       |
+| stats_g/mean       | 0.798    |
+| stats_g/std        | 0.171    |
+| stats_o/mean       | 0.18     |
+| stats_o/std        | 0.0912   |
+| test/episode       | 600      |
+| test/mean_Q        | -11.4    |
+| test/success_rate  | 0.575    |
+| train/episode      | 3e+03    |
+| train/success_rate | 0.141    |
+---------------------------------
+---------------------------------
+| epoch              | 30       |
+| stats_g/mean       | 0.799    |
+| stats_g/std        | 0.17     |
+| stats_o/mean       | 0.18     |
+| stats_o/std        | 0.0912   |
+| test/episode       | 620      |
+| test/mean_Q        | -10.5    |
+| test/success_rate  | 0.625    |
+| train/episode      | 3.1e+03  |
+| train/success_rate | 0.175    |
+---------------------------------
+---------------------------------
+| epoch              | 31       |
+| stats_g/mean       | 0.8      |
+| stats_g/std        | 0.17     |
+| stats_o/mean       | 0.18     |
+| stats_o/std        | 0.0913   |
+| test/episode       | 640      |
+| test/mean_Q        | -11.3    |
+| test/success_rate  | 0.6      |
+| train/episode      | 3.2e+03  |
+| train/success_rate | 0.166    |
+---------------------------------
+---------------------------------
+| epoch              | 32       |
+| stats_g/mean       | 0.801    |
+| stats_g/std        | 0.17     |
+| stats_o/mean       | 0.181    |
+| stats_o/std        | 0.0913   |
+| test/episode       | 660      |
+| test/mean_Q        | -10.9    |
+| test/success_rate  | 0.6      |
+| train/episode      | 3.3e+03  |
+| train/success_rate | 0.195    |
+---------------------------------
+---------------------------------
+| epoch              | 33       |
+| stats_g/mean       | 0.802    |
+| stats_g/std        | 0.17     |
+| stats_o/mean       | 0.181    |
+| stats_o/std        | 0.0913   |
+| test/episode       | 680      |
+| test/mean_Q        | -10.7    |
+| test/success_rate  | 0.565    |
+| train/episode      | 3.4e+03  |
+| train/success_rate | 0.178    |
+---------------------------------
+---------------------------------
+| epoch              | 34       |
+| stats_g/mean       | 0.803    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.181    |
+| stats_o/std        | 0.0914   |
+| test/episode       | 700      |
+| test/mean_Q        | -11.2    |
+| test/success_rate  | 0.55     |
+| train/episode      | 3.5e+03  |
+| train/success_rate | 0.187    |
+---------------------------------
+---------------------------------
+| epoch              | 35       |
+| stats_g/mean       | 0.804    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.181    |
+| stats_o/std        | 0.0915   |
+| test/episode       | 720      |
+| test/mean_Q        | -11      |
+| test/success_rate  | 0.63     |
+| train/episode      | 3.6e+03  |
+| train/success_rate | 0.188    |
+---------------------------------
+---------------------------------
+| epoch              | 36       |
+| stats_g/mean       | 0.804    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.182    |
+| stats_o/std        | 0.0917   |
+| test/episode       | 740      |
+| test/mean_Q        | -9.35    |
+| test/success_rate  | 0.65     |
+| train/episode      | 3.7e+03  |
+| train/success_rate | 0.182    |
+---------------------------------
+---------------------------------
+| epoch              | 37       |
+| stats_g/mean       | 0.805    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.182    |
+| stats_o/std        | 0.0918   |
+| test/episode       | 760      |
+| test/mean_Q        | -11.6    |
+| test/success_rate  | 0.615    |
+| train/episode      | 3.8e+03  |
+| train/success_rate | 0.168    |
+---------------------------------
+---------------------------------
+| epoch              | 38       |
+| stats_g/mean       | 0.806    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.182    |
+| stats_o/std        | 0.0918   |
+| test/episode       | 780      |
+| test/mean_Q        | -10.3    |
+| test/success_rate  | 0.585    |
+| train/episode      | 3.9e+03  |
+| train/success_rate | 0.174    |
+---------------------------------
+---------------------------------
+| epoch              | 39       |
+| stats_g/mean       | 0.807    |
+| stats_g/std        | 0.169    |
+| stats_o/mean       | 0.182    |
+| stats_o/std        | 0.0918   |
+| test/episode       | 800      |
+| test/mean_Q        | -10.6    |
+| test/success_rate  | 0.595    |
+| train/episode      | 4e+03    |
+| train/success_rate | 0.184    |
+---------------------------------
+---------------------------------
+| epoch              | 40       |
+| stats_g/mean       | 0.808    |
+| stats_g/std        | 0.168    |
+| stats_o/mean       | 0.182    |
+| stats_o/std        | 0.0919   |
+| test/episode       | 820      |
+| test/mean_Q        | -12.3    |
+| test/success_rate  | 0.455    |
+| train/episode      | 4.1e+03  |
+| train/success_rate | 0.203    |
+---------------------------------
+---------------------------------
+| epoch              | 41       |
+| stats_g/mean       | 0.808    |
+| stats_g/std        | 0.168    |
+| stats_o/mean       | 0.183    |
+| stats_o/std        | 0.0921   |
+| test/episode       | 840      |
+| test/mean_Q        | -11.7    |
+| test/success_rate  | 0.48     |
+| train/episode      | 4.2e+03  |
+| train/success_rate | 0.184    |
+---------------------------------
+---------------------------------
+| epoch              | 42       |
+| stats_g/mean       | 0.809    |
+| stats_g/std        | 0.168    |
+| stats_o/mean       | 0.183    |
+| stats_o/std        | 0.0921   |
+| test/episode       | 860      |
+| test/mean_Q        | -10.7    |
+| test/success_rate  | 0.58     |
+| train/episode      | 4.3e+03  |
+| train/success_rate | 0.159    |
+---------------------------------
+---------------------------------
+| epoch              | 43       |
+| stats_g/mean       | 0.81     |
+| stats_g/std        | 0.168    |
+| stats_o/mean       | 0.183    |
+| stats_o/std        | 0.0922   |
+| test/episode       | 880      |
+| test/mean_Q        | -10.9    |
+| test/success_rate  | 0.56     |
+| train/episode      | 4.4e+03  |
+| train/success_rate | 0.178    |
+---------------------------------
+---------------------------------
+| epoch              | 44       |
+| stats_g/mean       | 0.81     |
+| stats_g/std        | 0.167    |
+| stats_o/mean       | 0.183    |
+| stats_o/std        | 0.0923   |
+| test/episode       | 900      |
+| test/mean_Q        | -10.6    |
+| test/success_rate  | 0.535    |
+| train/episode      | 4.5e+03  |
+| train/success_rate | 0.18     |
+---------------------------------
+---------------------------------
+| epoch              | 45       |
+| stats_g/mean       | 0.811    |
+| stats_g/std        | 0.167    |
+| stats_o/mean       | 0.183    |
+| stats_o/std        | 0.0925   |
+| test/episode       | 920      |
+| test/mean_Q        | -10.9    |
+| test/success_rate  | 0.565    |
+| train/episode      | 4.6e+03  |
+| train/success_rate | 0.182    |
+---------------------------------
+---------------------------------
+| epoch              | 46       |
+| stats_g/mean       | 0.811    |
+| stats_g/std        | 0.167    |
+| stats_o/mean       | 0.183    |
+| stats_o/std        | 0.0926   |
+| test/episode       | 940      |
+| test/mean_Q        | -10.4    |
+| test/success_rate  | 0.64     |
+| train/episode      | 4.7e+03  |
+| train/success_rate | 0.173    |
+---------------------------------
+---------------------------------
+| epoch              | 47       |
+| stats_g/mean       | 0.812    |
+| stats_g/std        | 0.167    |
+| stats_o/mean       | 0.183    |
+| stats_o/std        | 0.0929   |
+| test/episode       | 960      |
+| test/mean_Q        | -11.2    |
+| test/success_rate  | 0.53     |
+| train/episode      | 4.8e+03  |
+| train/success_rate | 0.164    |
+---------------------------------
+---------------------------------
+| epoch              | 48       |
+| stats_g/mean       | 0.812    |
+| stats_g/std        | 0.167    |
+| stats_o/mean       | 0.184    |
+| stats_o/std        | 0.0931   |
+| test/episode       | 980      |
+| test/mean_Q        | -9.88    |
+| test/success_rate  | 0.65     |
+| train/episode      | 4.9e+03  |
+| train/success_rate | 0.188    |
+---------------------------------
+---------------------------------
+| epoch              | 49       |
+| stats_g/mean       | 0.813    |
+| stats_g/std        | 0.167    |
+| stats_o/mean       | 0.184    |
+| stats_o/std        | 0.0934   |
+| test/episode       | 1e+03    |
+| test/mean_Q        | -11.3    |
+| test/success_rate  | 0.585    |
+| train/episode      | 5e+03    |
+| train/success_rate | 0.179    |
+---------------------------------

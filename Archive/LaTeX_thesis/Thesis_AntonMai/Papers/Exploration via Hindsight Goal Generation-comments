@@ -1,0 +1,57 @@
+
+Introduction:
+
+RL (inc. policy gradient methods and Q-learning) show success for lots of hard decision problems like robotics.
+For sparse rewards, it takes some time to get any reward, so Q-functions become very inefficient.
+In practice, Humans need to design a fitting reward function.
+Hindsight Experience Replay (HER) greatly improves learning.
+
+
+This paper is about generating meaningful hindsight goals.
+
+
+
+Background:
+
+-Reinforcement Learning - ...
+-Goal oriented MDP - MDP with goal-conditioned sparse and binary reward function
+-Universal Value Function - idea: use neural network to represent many value functions
+-Access to Simulator - this paper doesn't need an universal simulator (reset possible at every point)
+
+
+
+Related Work:
+
+-Multi-Goal RL - multi-task learning (learning "not really goal" goals) improves learning 
+- Hindsight Experience Replay (HER) - When the goal was not reached, the end state is put as an alternative goal in the replay buffer so that it can get a reward and learn when replaying that goal
+- Curriculum Learning in RL -  using auxiliary tasks to guide policy optimization
+
+
+
+Automatic Hindsight Goal Generation:
+
+-Modify the replay buffer of HER so that the alternative goals (task distribution) become more useful to reach the actual goal.
+
+
+Algorithmic Framework:
+
+"Assumption 1. A value function of a policy π for a specific goal g has some generalizability to
+another goal g' close to g."
+
+-> Goals that are close to each other have similar value functions and are auxiliary to each other
+
+As a lower bound for the new substitute goal T', the value function of T' should be bigger than the value function if T minus the Wasserstein distance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+\begin{thebibliography}{10}
+
+\bibitem{roboarmuk}
+Everything you need to know about robotic arms.
+\newblock accessed 27.01.2020".
+
+\bibitem{leesedol}
+Software schlägt go-genie mit 4 zu 1, 2016.
+\newblock accessed 27.01.2020.
+
+\bibitem{herpaper}
+Marcin Andrychowicz, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong,
+  Peter Welinder, Bob McGrew, Josh Tobin, Pieter Abbeel, and Wojciech Zaremba.
+\newblock Hindsight experience replay, 2017.
+
+\bibitem{neural_networkpng}
+Faisal Awartani.
+\newblock Deep learning neural networks, 2018.
+\newblock accessed 27.01.2020.
+
+\bibitem{rl_general.jpg}
+Shweta Bhatt.
+\newblock 5 things you need to know about reinforcement learning, 2018.
+\newblock accessed 27.01.2020.
+
+\bibitem{gym}
+Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas Schneider, John Schulman,
+  Jie Tang, and Wojciech Zaremba.
+\newblock Openai gym, 2016.
+
+\bibitem{rlwiki}
+Wikipedia contributors.
+\newblock Reinforcement learning --- {W}ikipedia{,} the free encyclopedia,
+  2020.
+\newblock accessed 29.01.2020".
+
+\bibitem{baselines}
+Prafulla Dhariwal, Christopher Hesse, Oleg Klimov, Alex Nichol, Matthias
+  Plappert, Alec Radford, John Schulman, Szymon Sidor, Yuhuai Wu, and Peter
+  Zhokhov.
+\newblock Openai baselines.
+\newblock \url{https://github.com/openai/baselines}, 2017.
+
+\bibitem{curricher}
+Meng Fang, Tianyi Zhou, Yali Du, Lei Han, and Zhengyou Zhang.
+\newblock Curriculum-guided hindsight experience replay.
+\newblock In H.~Wallach, H.~Larochelle, A.~Beygelzimer, F.~d\textquotesingle
+  Alch\'{e}-Buc, E.~Fox, and R.~Garnett, editors, {\em Advances in Neural
+  Information Processing Systems 32}, pages 12602--12613. Curran Associates,
+  Inc., 2019.
+
+\bibitem{howroboarmworks}
+Tom Harris.
+\newblock The robotic arm, 2002.
+\newblock accessed 27.01.2020.
+
+\bibitem{dynpath}
+Stefan Klanke, Dmitry Lebedev, Robert Haschke, Jochen Steil, and Helge Ritter.
+\newblock Dynamic path planning for a 7-dof robot arm.
+\newblock pages 3879 -- 3884, 11 2006.
+
+\bibitem{egreedy}
+Rajendra Koppula.
+\newblock Exploration vs. exploitation in reinforcement learning.
+\newblock accessed 12.02.2020.
+
+\bibitem{archer}
+Sameera Lanka and Tianfu Wu.
+\newblock {ARCHER:} aggressive rewards to counter bias in hindsight experience
+  replay.
+\newblock {\em CoRR}, abs/1809.02070, 2018.
+
+\bibitem{backprop}
+Matt Mazur.
+\newblock A step by step backpropagation example, 2015.
+\newblock accessed 12.02.2020.
+
+\bibitem{roboarmhistory}
+Megan~Ray Nichols.
+\newblock Why was the robotic arm invented?, 2019.
+\newblock accessed 27.01.2020.
+
+\bibitem{neuralnetpath}
+Chris Nicholson.
+\newblock A beginner's guide to deep reinforcement learning, 2019.
+\newblock accessed 29.01.2020".
+
+\bibitem{plappert}
+Matthias Plappert, Marcin Andrychowicz, Alex Ray, Bob McGrew, Bowen Baker,
+  Glenn Powell, Jonas Schneider, Josh Tobin, Maciek Chociej, Peter Welinder,
+  Vikash Kumar, and Wojciech Zaremba.
+\newblock Multi-goal reinforcement learning: Challenging robotics environments
+  and request for research.
+\newblock {\em CoRR}, abs/1802.09464, 2018.
+
+\bibitem{neuron.jpeg}
+Prateek.
+\newblock Statistics is freaking hard: Wtf is activation function, 2017.
+\newblock accessed 27.01.2020.
+
+\bibitem{hgg}
+Zhizhou Ren, Kefan Dong, Yuan Zhou, Qiang Liu, and Jian Peng.
+\newblock Exploration via hindsight goal generation.
+\newblock {\em CoRR}, abs/1906.04279, 2019.
+
+\bibitem{machinelearning}
+Isha Salian.
+\newblock Supervize me: What’s the difference between supervised,
+  unsupervised, semi-supervised and reinforcement learning?, 2018.
+\newblock accessed 27.01.2020.
+
+\bibitem{nolimit}
+David Silver and Demis Hassabis.
+\newblock Alphago zero: Starting from scratch, 2017.
+\newblock accessed 13.02.2020.
+
+\bibitem{alphazero}
+David Silver, Thomas Hubert, Julian Schrittwieser, Ioannis Antonoglou, Matthew
+  Lai, Arthur Guez, Marc Lanctot, Laurent Sifre, Dharshan Kumaran, Thore
+  Graepel, Timothy Lillicrap, Karen Simonyan, and Demis Hassabis.
+\newblock Alphazero: Shedding new light on chess, shogi, and go, 2018.
+\newblock accessed 12.02.2020.
+
+\bibitem{ddpg}
+David Silver, Guy Lever, Nicolas Heess, Thomas Degris, Daan Wierstra, and
+  Martin Riedmiller.
+\newblock Deterministic policy gradient algorithms.
+\newblock In {\em Proceedings of the 31st International Conference on
+  International Conference on Machine Learning - Volume 32}, ICML’14, page
+  I–387–I–395. JMLR.org, 2014.
+
+\bibitem{mujoco}
+E.~{Todorov}, T.~{Erez}, and Y.~{Tassa}.
+\newblock Mujoco: A physics engine for model-based control.
+\newblock In {\em 2012 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems}, pages 5026--5033, Oct 2012.
+
+\bibitem{rllilianweng}
+Lilian Weng.
+\newblock A (long) peek into reinforcement learning, 2018.
+\newblock accessed 29.01.2020.
+
+\bibitem{energyher}
+Rui Zhao and Volker Tresp.
+\newblock Energy-based hindsight experience prioritization.
+\newblock {\em CoRR}, abs/1810.01363, 2018.
+
+\bibitem{curiousher}
+Rui Zhao and Volker Tresp.
+\newblock Curiosity-driven experience prioritization via density estimation.
+\newblock {\em CoRR}, abs/1902.08039, 2019.
+
+\end{thebibliography}
