@@ -1,19 +1,19 @@
 # bachelor_thesis
 
 
-Thesis_AntonMai: the LateX files of my thesis
+**Thesis_AntonMai:** the LateX files of my thesis
 
-Environments: the gym and baselines folder for my environments FetchSlideball and FetchToss, and their versions
+**Environments:** the gym and baselines folder for my environments FetchSlideball and FetchToss, and their versions
 
-Experiments: Training data of the environments and plots.
+**Experiments:** Training data of the environments and plots.
 
-Videos,Plots: The plots and videos (.mkv) for the experiments
+**Videos,Plots:** The plots and videos (.mkv) for the experiments
+
+------------------------------------------------------------------------
 
 
 
-
-
-Environments:
+**Environments:**
 
  Standard Environments by OpenAI:
 
@@ -44,10 +44,7 @@ Environments:
 
   -FetchToss-v3: Same as FetchToss-v1, but the weight is only 1%, the box was modified and friction was added (if the ball is thrown on the box instead of inside, it would have been staying still in v1)
 
-
-
-
-
+-----------------------------------------------
 
 
 Each except for FetchSlideball-v2 was trained for 50 epochs. following code was used for training:
@@ -56,10 +53,9 @@ mpirun -np 10 python -m baselines.run --alg=her --env=<environment> --num_env=2 
 
 Plappert et. al used 19 CPUs in their paper instead of only 10.
 
+----------------------------
 
-
-How to run the environments:
-
+**How to run the environments:**
 
 Go to the Environments/gym folder and run "pip install -e ." in the terminal.
 Then go to the Environments/baselines folder and also run "pip install -e ."
