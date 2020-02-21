@@ -42,7 +42,7 @@
 
   -FetchTosscube-v1: Same as FetchToss-v1, but with a cube
 
-  -FetchToss-v3: Same as FetchToss-v1, but the weight is only 1%, the box was modified and friction was added (if the ball is thrown on the box instead of inside, it would have been staying still in v1)
+  -FetchToss-v4: Same as FetchToss-v1, but the weight is only 1%, the box was modified and friction was added (if the ball is thrown on the box instead of inside, it would have been staying still in v1)
 
 -----------------------------------------------
 
