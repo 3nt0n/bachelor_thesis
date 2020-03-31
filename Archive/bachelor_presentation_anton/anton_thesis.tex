@@ -1,0 +1,1101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Rechteinhaber:
+%     Technische Universität München
+%     https://www.tum.de
+% 
+% Gestaltung:
+%     ediundsepp Gestaltungsgesellschaft, München
+%     http://www.ediundsepp.de
+% 
+% Technische Umsetzung:
+%     eWorks GmbH, Frankfurt am Main
+%     http://www.eworks.de
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zur Wahl des Seitenverhältnisses bitte einen der beiden folgenden Befehle
+% auskommentieren und den ausführen lassen:
+\input{./Ressourcen/Praesentation/Praeambel4zu3.tex} % Seitenverhältnis 4:3
+% \input{./Ressourcen/Praesentation/Praeambel16zu9.tex} % Seitenverhältnis 16:9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./_Einstellungen.tex}                    % !!! DATEI ANPASSEN !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\renewcommand{\PersonTitel}{}
+\newcommand{\Datum}{\today}
+
+\renewcommand{\PraesentationFusszeileZusatz}{| RL for Robotic Arms}
+\title{Reinforcement Learning for Path Planning of
+	Robotic Arms}
+\author{\PersonTitel{} \PersonVorname{} \PersonNachname}
+\institute[]{\UniversitaetName \\ \FakultaetName \\ \LehrstuhlName}
+\date[\Datum]{Munich, March 27th 2020}
+\subject{Reinforcement Learning for Path Planning of
+	Robotic Arms}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./Ressourcen/Praesentation/Anfang.tex} % !!! NICHT ENTFERNEN !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% !!!ÄNDERUNG HIER:!!!
+\PraesentationMasterStandard
+
+\PraesentationTitelseite % Fügt die Startseite ein
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Beispielfolien                                  %%
+%\input{./PraesentationBeispiele.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Kopfbereich links
+\PraesentationMasterKopfzeileDreizeiler
+
+\PraesentationTitelseite
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%TODO change some texts, replace the graphs
+
+
+% Seite 1
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Motivation}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 16cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/paper_toss_app.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 18cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/basketball.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{Outline}
+	
+	\vspace{1cm}
+	\begin{PraesentationAufzaehlung}
+		\item Motivation
+		\item Reinforcement Learning
+		\item Hindsight Experience Replay
+		\item Methodology
+		\item Experiment 1: FetchSlideball (Golf)
+		\item Experiment 2: FetchToss
+		\item Conclusion/Future Work
+	\end{PraesentationAufzaehlung}
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Seite 3
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Reinforcement Learning}	
+	\vspace{1cm}
+
+    \includegraphics[width=\textwidth, height=.55\textheight]{./Ressourcen/Figures/reinforcementlearning.pdf}%
+
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 4
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Hindsight Experience Replay}	
+	\vspace{1cm}
+	
+	\includegraphics[width=\textwidth, height=.55\textheight]{./Ressourcen/Figures/her2.pdf}%
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 5
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Methodology}	
+	\vspace{1cm}
+	
+	\begin{PraesentationAufzaehlung}
+		\item Run Benchmarks (by OpenAI)
+		\item Test a simpler environment first (Golf/Slideball)
+		\item Then create the tossing environment (Basketball)
+		\item For both golf and toss: \\
+		 - Compare using a ball \\
+		 - Try different distance, height, weight etc.\\
+	\end{PraesentationAufzaehlung}
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 6
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Benchmarks}	
+	\vspace{1cm}
+
+	%TODO video with all 4 ?
+	
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](3cm, 10cm - \PraesentationSeitenrand)%
+		FetchReach-v1
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/FetchReach-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.4\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 10cm - \PraesentationSeitenrand)%
+		FetchPush-v1
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/FetchPush-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](3cm, 17cm - \PraesentationSeitenrand)%
+		FetchSlide-v1
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/FetchSlide-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.4\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 17cm - \PraesentationSeitenrand)%
+		FetchPickAndPlace-v1
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/FetchPickAndPlace-v1.pdf}
+	\end{textblock*}
+	
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Benchmarks}	
+	\vspace{1cm}
+	
+	
+	\begin{textblock*}{0.5\paperwidth}[0,1](3cm, 11cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/fig_FetchReach-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + 2cm + \PraesentationSeitenrand, 11cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/fig_FetchPush-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[0,1](3cm, 17cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/fig_FetchSlide-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + 2cm + \PraesentationSeitenrand, 17cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.3\paperwidth]{./Ressourcen/Figures/fig_FetchPickAndPlace-v1.pdf}
+	\end{textblock*}
+	
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 8
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchSlideball}	
+	\vspace{1cm}
+	
+	%%Extending FetchSlide
+	%%Explain Idea etc.. Why did I do this ? -> to test longer distance for tossing later. simpler than tossing
+	FetchSlideball-v3
+	\includegraphics[width=\textwidth, height=.55\textheight]{./Ressourcen/Figures/FetchSlideball-v3.pdf}
+	
+	%Goal: bigger distance
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% Seite 9
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchSlideball Version 1}	
+	\vspace{1cm}
+	
+	Same as FetchSlide-v1, but with a ball
+	
+    %Bild FetchSlide-v1
+    
+    \begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 14cm - \PraesentationSeitenrand)%
+    	FetchSlideball-v1 (ball)
+    	\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v1.pdf}
+    \end{textblock*}
+    
+    	
+	%Bild FetchSlideball-v1
+	
+    \begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+    	FetchSlide-v1 (cylinder)
+        \includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlide-v1.pdf}
+    \end{textblock*}
+    
+
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Seite 10
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchSlideball Version 1}	
+	\vspace{1cm}
+	
+
+		%Bild env
+		\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 13cm - \PraesentationSeitenrand)%
+			\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v1.pdf}
+		\end{textblock*}
+		
+		%Bild FetchSlide-v1 vs FetchSlideball-v1
+		\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+			\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlide-v1_vs_FetchSlideball-v1.pdf}
+		\end{textblock*}
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% Seite 10
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchSlideball Version 2}	
+	\vspace{1cm}
+	Doubled the goal distance
+	
+	%Bild env
+	
+    \begin{textblock*}{0.4\paperwidth}[0,1](0cm, 15cm - \PraesentationSeitenrand)%
+        \includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v2.pdf}
+        
+        Problem: Arm not strong enough too push it far enough -> decrease friction
+    \end{textblock*}
+    
+    %Bild Success Rate
+    
+    \begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+    	\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball-v2.pdf}
+    \end{textblock*}
+	
+	
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% Seite 11
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchSlideball with lower friction}	
+	\vspace{1cm}
+	
+	%Bild env
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v2.pdf}
+		
+		-> learns direction but can't control distance 
+	\end{textblock*}
+	
+	%Bild Success Rate
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball_friction.pdf}
+	\end{textblock*}
+	
+
+	
+
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 11.5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchSlideball with lower friction - 		\textbf{Slideball-v3 Video}}	
+	\vspace{1cm}
+	
+	%Bild env
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v2.pdf}
+		
+		-> learns direction but can't control distance 
+	\end{textblock*}
+	
+	%Bild Success Rate
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball_friction.pdf}
+	\end{textblock*}
+	
+	
+	
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Seite 12
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchToss}	
+	\vspace{1cm}
+	
+	FetchToss-v1
+	\includegraphics[width=\textwidth, height=.55\textheight]{./Ressourcen/Figures/FetchToss-v1.pdf}
+	
+\end{frame}
+\clearpage
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 12.5
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchPickAndPlaceball-v1}	
+	\vspace{1cm}
+	
+	Same as FetchPickAndPlace-v1, but with a ball
+	
+	%Bild FetchSlide-v1
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 14cm - \PraesentationSeitenrand)%
+		FetchPickAndPlaceball-v1 (ball)
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchPickAndPlaceball-v1.pdf}
+	\end{textblock*}
+	
+	
+	%Bild FetchSlideball-v1
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		FetchPickAndPlace-v1 (cube)
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchPickAndPlace-v1.pdf}
+	\end{textblock*}
+	
+	
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 13
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchPickAndPlaceball-v1}	
+	\vspace{1cm}
+	
+	%Bild env
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 13cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchPickAndPlaceball-v1.pdf}
+	\end{textblock*}
+	
+	%Bild FetchPickAndPlace-v1 vs FetchPickAndPlaceball-v1
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchPickAndPlace-v1_vs_FetchPickAndPlaceball-v1.pdf}
+	\end{textblock*}
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% Seite 14
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchToss Version 1-4}	
+	\vspace{1cm}
+	
+	
+	%Bild env
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 16cm - \PraesentationSeitenrand)%
+		
+		Goal is only in the box \\
+		Changes from v1 to v4: Better box, friction added, double steps/episode, 1\% weight
+		
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v3.pdf}
+		
+		
+		
+		-> Fail: because the goal is \textbf{only} in the box
+		
+	\end{textblock*}
+	
+	%Bild Success Rate
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss-v1-v4.pdf}
+		
+
+	\end{textblock*}
+	
+	
+
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+% Seite 15
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchToss Version 5}	
+	\vspace{1cm}
+	
+	%Bild env
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		
+		no friction, 1\% weight \\
+		(25\% Toss, 75\% FetchPickAndPlace)
+		
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v5.pdf}
+		
+	\end{textblock*}
+	
+	%Bild Success Rate
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss-v5.pdf}
+		
+		
+	\end{textblock*}
+
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% Seite 16
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchToss with different height}	
+	\vspace{1cm}
+		
+		
+	%Bild env
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		FetchToss-v13 (height: 0.7)
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v13.pdf}
+		
+	\end{textblock*}
+	
+	%Bild Success Rate
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss_height.pdf}
+		
+		
+	\end{textblock*}
+		
+	%Bild env
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Seite 17
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{FetchToss with different weight}	
+	\vspace{1cm}
+	
+	goal distance is longer
+	
+	%Bild env
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		FetchToss-v10 (weight: 1\%)
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v10.pdf}
+		
+	\end{textblock*}
+	
+	
+	%Bild Success Rate
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss_weight.pdf}
+	\end{textblock*}	
+	
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+% Seite 18
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+	\frametitle{Conclusion and Future Work}	
+	\vspace{1cm}
+	
+    \begin{PraesentationAufzaehlung}
+    	\item Tossing in general works
+    	\item Struggle to toss up and long distances \\
+        \vspace{\baselineskip}
+    	\underline{Ideas for Future Works:}
+    	\item Try different parameters
+    	\item Different gripper (more human-like hand)
+    	\item Obstacles between robotic arm and goal
+    	\item Different Objects (paper plane)
+
+
+    	
+    \end{PraesentationAufzaehlung}
+    
+	
+\end{frame}
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{Presentation Sources}	
+	\vspace{1cm}
+	
+	https://blog.goodaudience.com/what-is-inverse-reinforcement-learning-e333228af146
+	
+	https://pixabay.com/de/photos/basketball-net-ergebnis-felge-2099656/
+	
+	https://pixabay.com/de/photos/golf-golfball-loch-golfplatz-pokal-1284012/
+	
+	https://en.wikipedia.org/wiki/Paper\_Toss/
+	
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%Backup Slides
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{Backup Slides}	
+	\vspace{1cm}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchReach-v1}	
+	\vspace{1cm}
+	
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchReach-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchReach-v1.pdf}
+	\end{textblock*}
+	
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchPush-v1}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchPush-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchPush-v1.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchSlide-v1}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlide-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlide-v1.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchPickAndPlace-v1}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchPickAndPlace-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchPickAndPlace-v1.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchSlideball-v1}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball-v1.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchSlideball-v2}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v2.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball-v2.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchSlideball-v3}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v3.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball-v3.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchSlideball-v4}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v4.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball-v4.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchSlideball-v6}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchSlideball-v6.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchSlideball-v6.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchPickAndPlaceball-v1}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchPickAndPlaceball-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchPickAndPlaceball-v1.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchToss-v1}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss-v1.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchToss-v2}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v2.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss-v2.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchToss-v3}	
+	\vspace{1cm}
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v3.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss-v3.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchToss-v0 (Tossing is possible)}	
+	\vspace{1cm}
+	
+	
+	%\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		%\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchToss-v0.pdf}
+	%\end{textblock*}
+	
+	%\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+		%\includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchToss-v0.pdf}
+	%\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+	\frametitle{FetchTosscube-v1}	
+	\vspace{1cm}
+	
+	Tossing a cube (with v3 parameters )
+	
+	\begin{textblock*}{0.4\paperwidth}[0,1](0cm, 14cm - \PraesentationSeitenrand)%
+		\includegraphics[width=0.4\paperwidth]{./Ressourcen/Figures/FetchTosscube-v1.pdf}
+	\end{textblock*}
+	
+	\begin{textblock*}{0.5\paperwidth}[1,1](\textwidth + \PraesentationSeitenrand, 15cm - \PraesentationSeitenrand)%
+	    \includegraphics[width=0.5\paperwidth]{./Ressourcen/Figures/fig_FetchTosscube-v1.pdf}
+	\end{textblock*}
+	
+\end{frame}
+\clearpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\PraesentationMasterWeissBlau
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Startseiten                                     %%
+
+% Setzt die Startseite auf eine mit Flaggen als Hintergrund:
+\PraesentationStartseiteFlaggen
+
+% Setzt die Startseite auf eine mit mit einer Zeichnung des TUM-Uhrenturms:
+%\PraesentationStartseiteUhrenturm
+
+% Setzt die Startseite auf eine ohne Hintergrund:
+%\PraesentationStartseiteLeer
+
+\PraesentationTitelseite % Fügt die Startseite ein
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+    \PraesentationUeberschriftZweizeilig{Präsentationsmuster}{%
+        kann auch als Kapiteltrenner verwendet werden}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\PraesentationMasterWeissSchwarz
+
+%\begin{frame}
+%    \frametitle{Präsentationsmuster}
+%\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document} % !!! NICHT ENTFERNEN !!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
