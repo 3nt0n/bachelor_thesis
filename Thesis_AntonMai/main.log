@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2020.1.22)  14 FEB 2020 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2020.1.22)  2 APR 2020 05:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1257,47 +1257,47 @@ LaTeX Font Info:    Try loading font information for TS1+ppl on input line 23.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-<figures/rl_general.jpg, id=282, 421.575pt x 162.6075pt>
-File: figures/rl_general.jpg Graphic file (type jpg)
+<figures/rl_general.pdf, id=282, 597.50792pt x 230.46735pt>
+File: figures/rl_general.pdf Graphic file (type pdf)
 
-<use figures/rl_general.jpg>
-Package pdftex.def Info: figures/rl_general.jpg used on input line 35.
-(pdftex.def)             Requested size: 428.9801pt x 165.4679pt.
- [6 <./figures/rl_general.jpg>] [7]
-<figures/neural_network.png, id=326, 1322.9425pt x 865.2325pt>
-File: figures/neural_network.png Graphic file (type png)
+<use figures/rl_general.pdf>
+Package pdftex.def Info: figures/rl_general.pdf used on input line 35.
+(pdftex.def)             Requested size: 428.9801pt x 165.46512pt.
+ [6 <./figures/rl_general.pdf>] [7]
+<figures/neural_network.pdf, id=327, 597.50792pt x 390.78287pt>
+File: figures/neural_network.pdf Graphic file (type pdf)
 
-<use figures/neural_network.png>
-Package pdftex.def Info: figures/neural_network.png used on input line 110.
-(pdftex.def)             Requested size: 428.9801pt x 280.55031pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/neuron.jpeg, id=330, 653.44125pt x 332.24126pt>
-File: figures/neuron.jpeg Graphic file (type jpg)
-
-<use figures/neuron.jpeg>
-Package pdftex.def Info: figures/neuron.jpeg used on input line 123.
-(pdftex.def)             Requested size: 428.9801pt x 218.11389pt.
+<use figures/neural_network.pdf>
+Package pdftex.def Info: figures/neural_network.pdf used on input line 110.
+(pdftex.def)             Requested size: 428.9801pt x 280.56442pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] [9 <./figures/neural_network.png (PNG copy)>] [10 <./figures/neuron.jpeg>])
+<figures/neuron.pdf, id=331, 597.50792pt x 303.80202pt>
+File: figures/neuron.pdf Graphic file (type pdf)
+
+<use figures/neuron.pdf>
+Package pdftex.def Info: figures/neuron.pdf used on input line 123.
+(pdftex.def)             Requested size: 428.9801pt x 218.1161pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8] [9 <./figures/neural_network.pdf>] [10 <./figures/neuron.pdf>])
 (./chapters/methodology.tex [11] [12
 
 ]
 chapter 3.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 19.
-[13] <figures/FetchPickAndPlace-v1.png, id=380, 1862.96pt x 1060.96375pt>
-File: figures/FetchPickAndPlace-v1.png Graphic file (type png)
+[13] <figures/FetchPickAndPlace-v1.pdf, id=384, 597.50792pt x 340.28336pt>
+File: figures/FetchPickAndPlace-v1.pdf Graphic file (type pdf)
 
-<use figures/FetchPickAndPlace-v1.png>
-Package pdftex.def Info: figures/FetchPickAndPlace-v1.png used on input line 51
+<use figures/FetchPickAndPlace-v1.pdf>
+Package pdftex.def Info: figures/FetchPickAndPlace-v1.pdf used on input line 51
 .
-(pdftex.def)             Requested size: 428.9801pt x 244.30792pt.
+(pdftex.def)             Requested size: 428.9801pt x 244.30804pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1306,7 +1306,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 1546) has occurred while \output is active []
 
  [14]
-[15 <./figures/FetchPickAndPlace-v1.png>]) (./chapters/experiments.tex [16]
+[15 <./figures/FetchPickAndPlace-v1.pdf>]) (./chapters/experiments.tex [16]
 chapter 4.
 
 Overfull \hbox (1.02103pt too wide) in paragraph at lines 4--11
@@ -1314,12 +1314,12 @@ Overfull \hbox (1.02103pt too wide) in paragraph at lines 4--11
 -Push", "Fetch-Slide" and "Fetch-
  []
 
-<figures/FetchReach-v1.png, id=404, 1860.9525pt x 1060.96375pt>
-File: figures/FetchReach-v1.png Graphic file (type png)
+<figures/FetchReach-v1.pdf, id=409, 597.50792pt x 340.6504pt>
+File: figures/FetchReach-v1.pdf Graphic file (type pdf)
 
-<use figures/FetchReach-v1.png>
-Package pdftex.def Info: figures/FetchReach-v1.png used on input line 43.
-(pdftex.def)             Requested size: 428.9801pt x 244.56696pt.
+<use figures/FetchReach-v1.pdf>
+Package pdftex.def Info: figures/FetchReach-v1.pdf used on input line 43.
+(pdftex.def)             Requested size: 428.9801pt x 244.57158pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1330,66 +1330,66 @@ Underfull \vbox (badness 3029) has occurred while \output is active []
  [17
 
 ]
-<figures/FetchPush-v1.png, id=411, 1862.96pt x 1064.97874pt>
-File: figures/FetchPush-v1.png Graphic file (type png)
+<figures/FetchPush-v1.pdf, id=416, 597.50792pt x 341.57106pt>
+File: figures/FetchPush-v1.pdf Graphic file (type pdf)
 
-<use figures/FetchPush-v1.png>
-Package pdftex.def Info: figures/FetchPush-v1.png used on input line 62.
-(pdftex.def)             Requested size: 428.9801pt x 245.23247pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[18 <./figures/FetchReach-v1.png>]
-<figures/FetchSlide-v1.png, id=421, 1862.96pt x 1057.9525pt>
-File: figures/FetchSlide-v1.png Graphic file (type png)
-
-<use figures/FetchSlide-v1.png>
-Package pdftex.def Info: figures/FetchSlide-v1.png used on input line 78.
-(pdftex.def)             Requested size: 428.9801pt x 243.61453pt.
+<use figures/FetchPush-v1.pdf>
+Package pdftex.def Info: figures/FetchPush-v1.pdf used on input line 62.
+(pdftex.def)             Requested size: 428.9801pt x 245.23257pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19 <./figures/FetchPush-v1.png>]
-File: figures/FetchPickAndPlace-v1.png Graphic file (type png)
- <use figures/FetchPickAndPlace-v1.png>
-Package pdftex.def Info: figures/FetchPickAndPlace-v1.png used on input line 95
+[18 <./figures/FetchReach-v1.pdf>]
+<figures/FetchSlide-v1.pdf, id=428, 597.50792pt x 339.31752pt>
+File: figures/FetchSlide-v1.pdf Graphic file (type pdf)
+
+<use figures/FetchSlide-v1.pdf>
+Package pdftex.def Info: figures/FetchSlide-v1.pdf used on input line 78.
+(pdftex.def)             Requested size: 428.9801pt x 243.61462pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19 <./figures/FetchPush-v1.pdf>]
+File: figures/FetchPickAndPlace-v1.pdf Graphic file (type pdf)
+ <use figures/FetchPickAndPlace-v1.pdf>
+Package pdftex.def Info: figures/FetchPickAndPlace-v1.pdf used on input line 95
 .
-(pdftex.def)             Requested size: 428.9801pt x 244.30792pt.
+(pdftex.def)             Requested size: 428.9801pt x 244.30804pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <./figures/FetchSlide-v1.png>]
-<figures/fig_FetchReach-v1.png, id=435, 462.528pt x 346.896pt>
-File: figures/fig_FetchReach-v1.png Graphic file (type png)
+[20 <./figures/FetchSlide-v1.pdf>]
+<figures/fig_FetchReach-v1.pdf, id=446, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchReach-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchReach-v1.png>
-Package pdftex.def Info: figures/fig_FetchReach-v1.png used on input line 113.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+<use figures/fig_FetchReach-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchReach-v1.pdf used on input line 113.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
-<figures/fig_FetchPush-v1.png, id=436, 462.528pt x 346.896pt>
-File: figures/fig_FetchPush-v1.png Graphic file (type png)
+<figures/fig_FetchPush-v1.pdf, id=447, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchPush-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchPush-v1.png>
-Package pdftex.def Info: figures/fig_FetchPush-v1.png used on input line 114.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+<use figures/fig_FetchPush-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchPush-v1.pdf used on input line 114.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
-<figures/fig_FetchSlide-v1.png, id=437, 462.528pt x 346.896pt>
-File: figures/fig_FetchSlide-v1.png Graphic file (type png)
+<figures/fig_FetchSlide-v1.pdf, id=448, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchSlide-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchSlide-v1.png>
-Package pdftex.def Info: figures/fig_FetchSlide-v1.png used on input line 115.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+<use figures/fig_FetchSlide-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchSlide-v1.pdf used on input line 115.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
-<figures/fig_FetchPickAndPlace-v1.png, id=438, 462.528pt x 346.896pt>
-File: figures/fig_FetchPickAndPlace-v1.png Graphic file (type png)
+<figures/fig_FetchPickAndPlace-v1.pdf, id=449, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchPickAndPlace-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchPickAndPlace-v1.png>
-Package pdftex.def Info: figures/fig_FetchPickAndPlace-v1.png used on input lin
+<use figures/fig_FetchPickAndPlace-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchPickAndPlace-v1.pdf used on input lin
 e 116.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1397,30 +1397,30 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22 <./figures/fig_FetchReach-v1.png> <./figures/fig_FetchPush-v1.png> <./figu
-res/fig_FetchSlide-v1.png> <./figures/fig_FetchPickAndPlace-v1.png>]
-<figures/FetchSlideball-v3.png, id=458, 1862.96pt x 1060.96375pt>
-File: figures/FetchSlideball-v3.png Graphic file (type png)
+ [22 <./figures/fig_FetchReach-v1.pdf> <./figures/fig_FetchPush-v1.pdf> <./figu
+res/fig_FetchSlide-v1.pdf> <./figures/fig_FetchPickAndPlace-v1.pdf>]
+<figures/FetchSlideball-v3.pdf, id=477, 597.50792pt x 340.28336pt>
+File: figures/FetchSlideball-v3.pdf Graphic file (type pdf)
 
-<use figures/FetchSlideball-v3.png>
-Package pdftex.def Info: figures/FetchSlideball-v3.png used on input line 156.
-(pdftex.def)             Requested size: 428.9801pt x 244.30792pt.
+<use figures/FetchSlideball-v3.pdf>
+Package pdftex.def Info: figures/FetchSlideball-v3.pdf used on input line 156.
+(pdftex.def)             Requested size: 428.9801pt x 244.30804pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: figures/fig_FetchSlide-v1.png Graphic file (type png)
-<use figures/fig_FetchSlide-v1.png>
-Package pdftex.def Info: figures/fig_FetchSlide-v1.png used on input line 173.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+File: figures/fig_FetchSlide-v1.pdf Graphic file (type pdf)
+<use figures/fig_FetchSlide-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchSlide-v1.pdf used on input line 173.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
-<figures/fig_FetchSlideball-v1.png, id=460, 462.528pt x 346.896pt>
-File: figures/fig_FetchSlideball-v1.png Graphic file (type png)
+<figures/fig_FetchSlideball-v1.pdf, id=479, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchSlideball-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchSlideball-v1.png>
-Package pdftex.def Info: figures/fig_FetchSlideball-v1.png used on input line 1
+<use figures/fig_FetchSlideball-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchSlideball-v1.pdf used on input line 1
 74.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1428,34 +1428,34 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [23]
 Underfull \vbox (badness 1609) has occurred while \output is active []
 
- [24 <./figures/FetchSlideball-v3.png> <./figures/fig_FetchSlideball-v1.png>]
-<figures/fig_FetchSlideball-v2.png, id=477, 462.528pt x 346.896pt>
-File: figures/fig_FetchSlideball-v2.png Graphic file (type png)
+ [24 <./figures/FetchSlideball-v3.pdf> <./figures/fig_FetchSlideball-v1.pdf>]
+<figures/fig_FetchSlideball-v2.pdf, id=500, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchSlideball-v2.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchSlideball-v2.png>
-Package pdftex.def Info: figures/fig_FetchSlideball-v2.png used on input line 1
+<use figures/fig_FetchSlideball-v2.pdf>
+Package pdftex.def Info: figures/fig_FetchSlideball-v2.pdf used on input line 1
 90.
-(pdftex.def)             Requested size: 428.9801pt x 321.75244pt.
+(pdftex.def)             Requested size: 428.9801pt x 321.73773pt.
 
-<figures/fig_FetchSlideball-v4.png, id=479, 462.528pt x 346.896pt>
-File: figures/fig_FetchSlideball-v4.png Graphic file (type png)
+<figures/fig_FetchSlideball-v4.pdf, id=502, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchSlideball-v4.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchSlideball-v4.png>
-Package pdftex.def Info: figures/fig_FetchSlideball-v4.png used on input line 2
+<use figures/fig_FetchSlideball-v4.pdf>
+Package pdftex.def Info: figures/fig_FetchSlideball-v4.pdf used on input line 2
 02.
-(pdftex.def)             Requested size: 428.9801pt x 321.75244pt.
+(pdftex.def)             Requested size: 428.9801pt x 321.73773pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[25 <./figures/fig_FetchSlideball-v2.png>]
-<figures/fig_FetchSlideball-v3.png, id=490, 462.528pt x 346.896pt>
-File: figures/fig_FetchSlideball-v3.png Graphic file (type png)
+[25 <./figures/fig_FetchSlideball-v2.pdf>]
+<figures/fig_FetchSlideball-v3.pdf, id=515, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchSlideball-v3.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchSlideball-v3.png>
-Package pdftex.def Info: figures/fig_FetchSlideball-v3.png used on input line 2
+<use figures/fig_FetchSlideball-v3.pdf>
+Package pdftex.def Info: figures/fig_FetchSlideball-v3.pdf used on input line 2
 16.
-(pdftex.def)             Requested size: 428.9801pt x 321.75244pt.
+(pdftex.def)             Requested size: 428.9801pt x 321.73773pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1463,57 +1463,57 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26 <./figures/fig_FetchSlideball-v4.png>] [27 <./figures/fig_FetchSlideball-v
-3.png>]
-<figures/FetchToss-v1.png, id=502, 1862.96pt x 1055.945pt>
-File: figures/FetchToss-v1.png Graphic file (type png)
+ [26 <./figures/fig_FetchSlideball-v4.pdf>] [27 <./figures/fig_FetchSlideball-v
+3.pdf>]
+<figures/FetchToss-v1.pdf, id=531, 597.50792pt x 338.67366pt>
+File: figures/FetchToss-v1.pdf Graphic file (type pdf)
 
-<use figures/FetchToss-v1.png>
-Package pdftex.def Info: figures/FetchToss-v1.png used on input line 250.
-(pdftex.def)             Requested size: 428.9801pt x 243.15227pt.
+<use figures/FetchToss-v1.pdf>
+Package pdftex.def Info: figures/FetchToss-v1.pdf used on input line 250.
+(pdftex.def)             Requested size: 428.9801pt x 243.15236pt.
 
 Underfull \vbox (badness 3029) has occurred while \output is active []
 
  [28]
-File: figures/fig_FetchPickAndPlace-v1.png Graphic file (type png)
+File: figures/fig_FetchPickAndPlace-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchPickAndPlace-v1.png>
-Package pdftex.def Info: figures/fig_FetchPickAndPlace-v1.png used on input lin
+<use figures/fig_FetchPickAndPlace-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchPickAndPlace-v1.pdf used on input lin
 e 262.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
-<figures/fig_FetchPickAndPlaceball-v1.png, id=507, 462.528pt x 346.896pt>
-File: figures/fig_FetchPickAndPlaceball-v1.png Graphic file (type png)
+<figures/fig_FetchPickAndPlaceball-v1.pdf, id=536, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchPickAndPlaceball-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchPickAndPlaceball-v1.png>
-Package pdftex.def Info: figures/fig_FetchPickAndPlaceball-v1.png used on input
+<use figures/fig_FetchPickAndPlaceball-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchPickAndPlaceball-v1.pdf used on input
  line 263.
-(pdftex.def)             Requested size: 210.2026pt x 157.65265pt.
+(pdftex.def)             Requested size: 210.2026pt x 157.64821pt.
 
 Overfull \hbox (3.01396pt too wide) in paragraph at lines 269--270
 \OT1/ppl/m/n/10.95 PichAnd-Place-ball al-ready slows down with be-ing more suc-
 cess-ful. Over-all Fetch-PickAnd-
  []
 
-<figures/fig_FetchToss-v1.png, id=509, 462.528pt x 346.896pt>
-File: figures/fig_FetchToss-v1.png Graphic file (type png)
+<figures/fig_FetchToss-v1.pdf, id=538, 597.50792pt x 448.13094pt>
+File: figures/fig_FetchToss-v1.pdf Graphic file (type pdf)
 
-<use figures/fig_FetchToss-v1.png>
-Package pdftex.def Info: figures/fig_FetchToss-v1.png used on input line 274.
-(pdftex.def)             Requested size: 428.9801pt x 321.75244pt.
- [29 <./figures/FetchToss-v1.png>]
-<figures/FetchToss-v0.png, id=520, 1862.96pt x 1057.9525pt>
-File: figures/FetchToss-v0.png Graphic file (type png)
+<use figures/fig_FetchToss-v1.pdf>
+Package pdftex.def Info: figures/fig_FetchToss-v1.pdf used on input line 274.
+(pdftex.def)             Requested size: 428.9801pt x 321.73773pt.
+ [29 <./figures/FetchToss-v1.pdf>]
+<figures/FetchToss-v0.pdf, id=551, 597.50792pt x 339.31752pt>
+File: figures/FetchToss-v0.pdf Graphic file (type pdf)
 
-<use figures/FetchToss-v0.png>
-Package pdftex.def Info: figures/FetchToss-v0.png used on input line 284.
-(pdftex.def)             Requested size: 428.9801pt x 243.61453pt.
+<use figures/FetchToss-v0.pdf>
+Package pdftex.def Info: figures/FetchToss-v0.pdf used on input line 284.
+(pdftex.def)             Requested size: 428.9801pt x 243.61462pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30 <./figures/fig_FetchPickAndPlaceball-v1.png>]) (./chapters/conclusion.tex
-[31 <./figures/fig_FetchToss-v1.png>] [32 <./figures/FetchToss-v0.png>]
+[30 <./figures/fig_FetchPickAndPlaceball-v1.pdf>]) (./chapters/conclusion.tex
+[31 <./figures/fig_FetchToss-v1.pdf>] [32 <./figures/FetchToss-v0.pdf>]
 chapter 5.
 [33
 
@@ -1552,8 +1552,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
  ) 
 Here is how much of TeX's memory you used:
- 13307 strings out of 493029
- 201220 string characters out of 6136234
+ 13305 strings out of 493029
+ 201207 string characters out of 6136234
  361914 words of memory out of 5000000
  16367 multiletter control sequences out of 15000+600000
  22962 words of font info for 61 fonts, out of 8000000 for 9000
@@ -1572,10 +1572,10 @@ ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 /texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (52 pages, 1675274 bytes).
+Output written on main.pdf (52 pages, 1611109 bytes).
 PDF statistics:
- 685 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
+ 722 PDF objects out of 1000 (max. 8388607)
+ 587 compressed objects within 6 object streams
  152 named destinations out of 1000 (max. 500000)
  370 words of extra memory for PDF output out of 10000 (max. 10000000)
 

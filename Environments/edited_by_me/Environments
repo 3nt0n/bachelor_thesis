@@ -1,0 +1,19 @@
+**Own files I put in gym**
+
+edit gym/gym/envs/__init__.py: add the environment to register it
+edit gym/gym/envs/robotics/__init__.py: import needed fetch environments
+
+insert gym/gym/envs/robotics/fetch_<somename>.py:i used the fetch_env.py file and edited the goal location 
+insert gym/gym/envs/robotics/assets/fetch/<somename>.xml: copy another xml file and edit it or make one yourself. this is for the physical model of your environment 
+insert gym/gym/envs/robotics/fetch/<somename>.py: copy another environment and change the parameters as needed
+
+edit baselines/baselines/run.py: add environment to let baselines know that it is used with the robotics environment
+
+
+
+
+If you just want to run the files, you can put the files I used in the right folders.
+
+Alternatively, you can copy the gym and baselines files I used.
+
+

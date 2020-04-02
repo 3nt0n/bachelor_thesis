@@ -1,1 +1,0 @@
-Logging to ./Bachelor_Thesis/policies/her/logs/fetchslidetest

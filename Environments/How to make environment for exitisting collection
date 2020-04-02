@@ -1,0 +1,40 @@
+
+
+I assume that you installed gym (and baselines) and it works.
+
+There are two ways: You can make an environment yourself, or just insert the files you need into the existing gym or baselines folders. Usually it is better to create an environment yourself, but because there are a lot of dependencies, I decided to put the files I needed into the gym or baselines folder. The disadvantage to this is that it is a little harder to organize it.
+
+
+ Example: Making my own environment "Slideball-v1" for the robotics environment collection
+
+ - make gym/gym/envs/robotics/fetch_env_ball.py to change the goal distance, if needed, this needs to be imported/referenced by the next file instead of fetch_env. If you don't change the goal distance, this is not needed
+
+ - make a file gym/gym/envs/robotics/fetch/slideball.py, I copied an existing environment (slide) and changed the parameters, names and references how I needed it
+
+ - make gym/gym/envs/robotics/assets/fetch/slideball.xml, my slideball1.py environment was referencing to the xml-file, and I wanted to change an object to a ball, so I had to make this xml-file
+
+ - Edit gym/gym/envs/__init__.py, this registers your environment
+
+ - Edit gym/gym/envs/robotics/__init__.py. this is also needed
+
+
+Your environment should be working already. Test your environment by running: 
+Terminal:
+$ python
+...
+>>> import gym
+>>> env = gym.make("*your environment id (in envs/__init__.py)*")
+>>> env.reset()
+>>> env.render()
+
+If it doesn't work, the error messages should tell you where you have a mistake in your code (most likely you forgot to change a name somewhere)
+
+ - Edit baselines/baselines/run.py, if you want to run it with baselines.
+
+
+Also check my Learning Notes or check the gym folder and files, to have a better understanding about the structure of the gym folder.
+
+
+
+
+

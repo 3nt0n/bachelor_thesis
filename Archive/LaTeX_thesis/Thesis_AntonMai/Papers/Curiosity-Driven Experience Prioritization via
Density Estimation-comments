@@ -1,5 +1,0 @@
-To address this problem,
-we propose a novel Curiosity-Driven Prioritization (CDP) framework to encourage
-the agent to over-sample those trajectories that have rare achieved goal states. The
-CDP framework mimics the human learning process and focuses more on relatively
-uncommon events.

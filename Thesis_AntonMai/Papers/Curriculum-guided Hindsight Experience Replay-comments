@@ -1,9 +1,0 @@
-In this paper, we propose to 1) adaptively select
-the failed experiences for replay according to the proximity to true goals and the
-curiosity of exploration over diverse pseudo goals, and 2) gradually change the
-proportion of the goal-proximity and the diversity-based curiosity in the selection
-criteria: we adopt a human-like learning strategy that enforces more curiosity in
-earlier stages and changes to larger goal-proximity later. This “Goal-and-Curiosity-
-driven Curriculum Learning” leads to “Curriculum-guided HER (CHER)”, which
-adaptively and dynamically controls the exploration-exploitation trade-off during
-the learning process via hindsight experience selection.
