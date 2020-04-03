@@ -112,7 +112,7 @@ Plappert et. al used 19 CPUs in their paper instead of only 10.
 
 6. FetchPickAndPlaceball-v1 changes FetchPickAndPlace-v1 by using a ball instead of a cube -> ball performs worse
 
-7. FetchToss-v1 - v4 and FetchTosscube are tries to make tossing work. It failed, because the goal was *only* in the box. To learn something, all steps in between have to be included as goals.
+7. FetchToss-v1 - v4 and FetchTosscube are tries to make tossing work. It failed, because the goal was *only* in the box. To learn something, all steps in between have to be included as goals. FetchPickAndPlaceAir-v1 is FetchPickAndPlace but without the goals on the ground, which shows, that the robotic arm doesn't learns to pick up without goals on the ground.
 
 8. That's why FetchToss-v5 has the goal distributed to being to 75% FetchPickAndPlace to learn how to pick up the ball first and to 25% the goal will be on a higher table (height 0.5, lower table is only 0.4) to learn how to toss -> it works.
 
