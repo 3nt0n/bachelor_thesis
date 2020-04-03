@@ -146,7 +146,9 @@ Example: To run FetchSlideball-v1, use "python -m baselines.run --alg=her --env=
 
 
 
+----------------------------------------
 
+If you have any questions, feel free to ask me or send me a mail via anton.mai@tum.de
 
 
 
