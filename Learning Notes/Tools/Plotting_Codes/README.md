@@ -3,7 +3,8 @@ source: original by OpenAi and can be found in OpenAi baselines under baselines/
 Changes by me (anton): - The number behind "plot" tell you how many arguments can be taken (-> how many graphs in the plot) 
                        - The resulting plot will be output in the current working directory
 
-                   
+                       - copy and edit the plot<number>.py files to change the description of the graphs
+
 
 How to use:
 

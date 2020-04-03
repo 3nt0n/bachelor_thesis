@@ -1,4 +1,0 @@
-python -m baselines.run --alg=her --env=FetchToss-v10 --num_timesteps=0 --load_path=~/anton_git/bachelor_thesis/Archive/Experiments/FetchToss-v10_training/250k-10c-2env/fetchtoss-v10-250k-10c-2env --play
-
-
-python Testrun
